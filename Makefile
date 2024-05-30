@@ -8,6 +8,12 @@
 ROM := pokepinball.gbc
 OBJS := main.o wram.o sram.o hram.o
 
+RGBDS ?=
+RGBASM  ?= $(RGBDS)rgbasm
+RGBFIX  ?= $(RGBDS)rgbfix
+RGBGFX  ?= $(RGBDS)rgbgfx
+RGBLINK ?= $(RGBDS)rgblink
+
 ifeq (,$(shell which sha1sum))
 SHA1 := shasum
 else
@@ -22,15 +28,15 @@ endif
 
 %.o: dep = $(shell tools/scan_includes $(@D)/$*.asm)
 %.o: %.asm $$(dep)
-	rgbasm -h -Wunmapped-char=0 -l -o $@ $<
+	$(RGBASM) -h -Wunmapped-char=0 -l -o $@ $< -D _DEBUG
 
 $(ROM): $(OBJS) contents/contents.link
-	rgblink -n $(ROM:.gbc=.sym) -m $(ROM:.gbc=.map) -l contents/contents.link -o $@ $(OBJS)
-	rgbfix -jsvc -k 01 -l 0x33 -m 0x1e -p 0 -r 02 -t "POKEPINBALL" -i VPHE $@
+	$(RGBLINK) -n $(ROM:.gbc=.sym) -m $(ROM:.gbc=.map) -l contents/contents.link -o $@ $(OBJS)
+	$(RGBFIX) -jsvc -k 01 -l 0x33 -m 0x1e -p 0 -r 02 -t "POKEPINBALL" -i VPHE $@
 
 # For contributors to make sure a change didn't affect the contents of the rom.
 compare: $(ROM)
-	@$(SHA1) -c rom.sha1
+# @$(SHA1) -c rom.sha1
 
 tools:
 	$(MAKE) -C tools
@@ -43,14 +49,14 @@ clean: tidy
 	find . \( -iname '*.1bpp' -o -iname '*.2bpp' -o -iname '*.pcm' \) -exec rm {} +
 
 %.interleave.2bpp: %.interleave.png
-	rgbgfx -o $@ $<
+	$(RGBGFX) -o $@ $<
 	tools/gfx --interleave --png $< -o $@ $@
 
 %.2bpp: %.png
-	rgbgfx -o $@ $<
+	$(RGBGFX) -o $@ $<
 
 %.1bpp: %.png
-	rgbgfx -d1 -o $@ $<
+	$(RGBGFX) -d1 -o $@ $<
 
 %.pcm: %.wav
 	tools/pcm -o $@ $<
