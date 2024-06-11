@@ -990,7 +990,7 @@ TitlescreenBlankSprite: ; 0x48b0
 	db 100,121, $53, $12
 	db 096,111, $52, $12
 	db 100, 65, $51, $11
-	db 097, 45, $50, $11
+	db 080, 46, $50, $12
 	db 076, 44, $4f, $11
 	db $80 ; terminator
 
