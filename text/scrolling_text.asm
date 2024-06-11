@@ -40,15 +40,15 @@ DigitsText1to9:
 
 LetsGetPokemonText:
 	scrolling_text_normal 1, 20, 0, 19
-	db "LET`S GET POKeMON @"
+	db "LET`S GET POKEMON @"
 
 PokemonRanAwayText:
 	scrolling_text_normal 2, 20, 0, 19
-	db "POKeMON RAN AWAY @"
+	db "POKEMON RAN AWAY @"
 
 PokemonCaughtSpecialBonusText:
 	scrolling_text_nopause 7, 49
-	db "POKeMON CAUGHT SPECIAL BONUS @"
+	db "POKEMON CAUGHT SPECIAL BONUS @"
 
 OneBillionText:
 	scrolling_text 7, 46, 5, 20, 2, 19
@@ -135,7 +135,7 @@ Data_2b6b:
 
 PokemonIsTiredText:
 	scrolling_text_normal 2, 20, 0, 19
-	db "POKeMON IS TIRED @"
+	db "POKEMON IS TIRED @"
 
 ItemNotFoundText:
 	scrolling_text_normal 3, 20, 0, 18
@@ -143,7 +143,7 @@ ItemNotFoundText:
 
 PokemonRecoveredText:
 	scrolling_text_normal 1, 20, 0, 19
-	db "POKeMON RECOVERED @"
+	db "POKEMON RECOVERED @"
 
 TryNextPlaceText:
 	scrolling_text_normal 3, 20, 0, 18
@@ -222,78 +222,253 @@ MapNames:
 	dw CinnabarIslandText
 	dw IndigoPlateauText
 
+; \1: Step delay (in frames)
+; \2: Starting offset (number of tiles from the left of the screen)
+; \3: Pause offset (stops scrolling in the middle of the screen)
+; \4: Number of steps to pause
+; \5: Text index the bottom text buffer (wBottomMessageText)
+; \6: Number of steps after the Pause (text disappears after these number of steps)
+; MACRO scrolling_text
+; 	db \1
+; 	db \2 + $40
+; 	db \3 + $40
+; 	db \4
+; 	db \5 * $10
+; 	db \6 + \4 + (\2 - \3)
+; ENDM
+
+
+; scrolling_text 5, 31, 4, 20, 2, 16 ; 12 
+
+; scrolling_text 5, 31, 4, 20, 2, 17 ; 13 
+
+; scrolling_text 5, 31, 3, 20, 2, 17 ; 14 
+
+; scrolling_text 5, 31, 2, 20, 2, 18 ; 16 
+
+IF DEF(_CHS)
 PalletTownText:
-	scrolling_text 5, 31, 4, 20, 2, 16
-	db "PALLET TOWN @"
+	scrolling_text 5, 31, 4, 20, 2, 17 ; 13 
+	db "ZHENXIN ZHEN @"
 
 ViridianCityText:
-	scrolling_text 5, 31, 3, 20, 2, 17
-	db "VIRIDIAN CITY @"
+	scrolling_text 5, 31, 3, 20, 2, 17 ; 14
+	db "CHANGQING SHI @"
 
 ViridianForestText:
-	scrolling_text 5, 31, 2, 20, 2, 18
-	db "VIRIDIAN FOREST @"
+	scrolling_text 5, 31, 2, 20, 2, 18 ; 16 ？17
+	db "CHANGQING SENLIN @"
 
 PewterCityText:
-	scrolling_text 5, 31, 4, 20, 2, 16
-	db "PEWTER CITY @"
+	scrolling_text 5, 31, 4, 20, 2, 16 ; 12
+	db "SHENHUI SHI @"
 
 MtMoonText:
-	scrolling_text 5, 31, 6, 20, 2, 14
-	db "MT.MOON @"
+	scrolling_text 5, 31, 4, 20, 2, 17 ; 13 
+	db "YUEJIAN SHAN @"
 
 CeruleanCityText:
-	scrolling_text 5, 31, 3, 20, 2, 17
-	db "CERULEAN CITY @"
+	scrolling_text 5, 31, 4, 20, 2, 16 ; 12 ？11
+	db "HUALAN SHI @"
 
 VermilionSeasideText:
-	scrolling_text 5, 31, 0, 20, 2, 20
-	db "VERMILION : SEASIDE @"
+	scrolling_text 5, 31, 0, 20, 2, 20 ; 20 ? 19
+	db " KUYE SHI : SEASIDE @"
 
 VermilionStreetsText:
-	scrolling_text 5, 31, 0, 20, 2, 20
-	db "VERMILION : STREETS @"
+	scrolling_text 5, 31, 0, 20, 2, 20 ; 20 ? 19
+	db " KUYE SHI : STREETS @"
 
 RockMountainText:
-	scrolling_text 5, 31, 3, 20, 2, 17
-	db "ROCK MOUNTAIN @"
+	scrolling_text 5, 31, 2, 20, 2, 18 ; 16 ？15
+	db "YANSHAN SUIDAO @"
 
 LavenderTownText:
-	scrolling_text 5, 31, 3, 20, 2, 17
-	db "LAVENDER TOWN @"
+	scrolling_text 5, 31, 4, 20, 2, 16 ; 12
+	db "ZIYUAN ZHEN @"
 
 CeladonCityText:
-	scrolling_text 5, 31, 4, 20, 2, 17
-	db "CELADON CITY @"
+	scrolling_text 5, 31, 4, 20, 2, 16 ; 12 ？11
+	db "YUHONG SHI @"
 
 CyclingRoadText:
-	scrolling_text 5, 31, 4, 20, 2, 17
-	db "CYCLING ROAD @"
+	scrolling_text 5, 31, 3, 20, 2, 17 ; 14
+	db "ZIXINGCHE DAO @"
 
 FuchiaCityText:
-	scrolling_text 5, 31, 4, 20, 2, 16
-	db "FUCHIA CITY @" ; mispelling -- should be fuchsia
+	scrolling_text 5, 31, 4, 20, 2, 17 ; 13
+	db "QIANHONG SHI @"
 
 SafariZoneText:
-	scrolling_text 5, 31, 4, 20, 2, 16
-	db "SAFARI ZONE @"
+	scrolling_text 5, 31, 3, 20, 2, 17 ; 14
+	db "SHOULIE DIDAI @"
 
 SaffronCityText:
-	scrolling_text 5, 31, 4, 20, 2, 17
-	db "SAFFRON CITY @"
+	scrolling_text 5, 31, 4, 20, 2, 17 ; 13
+	db "JINHUANG SHI @"
 
 SeafoamIslandsText:
-	scrolling_text 5, 31, 2, 20, 2, 18
-	db "SEAFOAM ISLANDS @"
+	scrolling_text 5, 31, 4, 20, 2, 17 ; 13
+	db "SHUANGZI DAO @"
 
 CinnabarIslandText:
-	scrolling_text 5, 31, 2, 20, 2, 18
-	db "CINNABAR ISLAND @"
+	scrolling_text 5, 31, 4, 20, 2, 17 ; 13
+	db "HONGLIAN DAO @"
 
 IndigoPlateauText:
-	scrolling_text 5, 31, 3, 20, 2, 18
-	db "INDIGO PLATEAU @"
+	scrolling_text 5, 31, 2, 20, 2, 18 ; 16
+	db "SHIYING GAOYUAN @"
 
+ELSE
+; Korean
+PalletTownText:
+	scrolling_text 5, 31, 4, 20, 2, 17 ; 13 
+	db "TAECHO MAEUL @"
+
+ViridianCityText:
+	scrolling_text 5, 31, 4, 20, 2, 17 ; 13 
+	db "SANGNOK CITY @"
+
+ViridianForestText:
+	scrolling_text 5, 31, 4, 20, 2, 16 ; 12
+	db "SANGNOK SUP @"
+
+PewterCityText:
+	scrolling_text 5, 31, 4, 20, 2, 17 ; 13 
+	db "HOESAEK CITY @"
+
+MtMoonText:
+	scrolling_text 5, 31, 4, 20, 2, 16 ; 12
+	db "DALMAJI SAN @"
+
+CeruleanCityText:
+	scrolling_text 5, 31, 4, 20, 2, 16 ; 12
+	db "BEULLU CITY @"
+
+VermilionSeasideText:
+	scrolling_text 5, 31, 0, 20, 2, 20 ; 20
+	db "GALSAEK CITY:SEASIDE@"
+
+VermilionStreetsText:
+	scrolling_text 5, 31, 0, 20, 2, 20 ; 20
+	db "GALSAEK CITY:STREETS@"
+
+RockMountainText:
+	scrolling_text 5, 31, 2, 20, 2, 18 ; 16 ？15
+	db "DOLSAN TEONEOL @"
+
+LavenderTownText:
+	scrolling_text 5, 31, 4, 20, 2, 16 ; 12 ？11
+	db " BORA TOWN @"
+
+CeladonCityText:
+	scrolling_text 5, 31, 4, 20, 2, 17 ; 13 
+	db "MUJIGAE CITY @"
+
+CyclingRoadText:
+	scrolling_text 5, 31, 2, 20, 2, 18 ; 17 ? 18
+	db "SAIKEULLING RODEU @"
+
+FuchiaCityText:
+	scrolling_text 5, 31, 2, 20, 2, 18 ; 13
+	db "YEONBUNHONG CITY @"
+
+SafariZoneText:
+	scrolling_text 5, 31, 4, 20, 2, 16 ; 12 ？11
+	db "SAPARI JON @"
+
+SaffronCityText:
+	scrolling_text 5, 31, 4, 20, 2, 16 ; 12
+	db "NORANG CITY @"
+
+SeafoamIslandsText:
+	scrolling_text 5, 31, 2, 20, 2, 18 ; 16
+	db "SSANGDUNGI SEOM @"
+
+CinnabarIslandText:
+	scrolling_text 5, 31, 2, 20, 2, 18 ; 16 ？15
+	db "HONGNYEON SEOM @"
+
+IndigoPlateauText:
+	scrolling_text 5, 31, 2, 20, 2, 18 ; 17
+	db "SEONGNYEON GOWON @"
+
+ENDC
+
+; PalletTownText:
+; 	scrolling_text 5, 31, 4, 20, 2, 16
+; 	db "PALLET TOWN @"
+
+; ViridianCityText:
+; 	scrolling_text 5, 31, 3, 20, 2, 17
+; 	db "VIRIDIAN CITY @"
+
+; ViridianForestText:
+; 	scrolling_text 5, 31, 2, 20, 2, 18
+; 	db "VIRIDIAN FOREST @"
+
+; PewterCityText:
+; 	scrolling_text 5, 31, 4, 20, 2, 16
+; 	db "PEWTER CITY @"
+
+; MtMoonText:
+; 	scrolling_text 5, 31, 6, 20, 2, 14
+; 	db "MT.MOON @"
+
+; CeruleanCityText:
+; 	scrolling_text 5, 31, 3, 20, 2, 17
+; 	db "CERULEAN CITY @"
+
+; VermilionSeasideText:
+; 	scrolling_text 5, 31, 0, 20, 2, 20
+; 	db "VERMILION : SEASIDE @"
+
+; VermilionStreetsText:
+; 	scrolling_text 5, 31, 0, 20, 2, 20
+; 	db "VERMILION : STREETS @"
+
+; RockMountainText:
+; 	scrolling_text 5, 31, 3, 20, 2, 17
+; 	db "ROCK MOUNTAIN @"
+
+; LavenderTownText:
+; 	scrolling_text 5, 31, 3, 20, 2, 17
+; 	db "LAVENDER TOWN @"
+
+; CeladonCityText:
+; 	scrolling_text 5, 31, 4, 20, 2, 17
+; 	db "CELADON CITY @"
+
+; CyclingRoadText:
+; 	scrolling_text 5, 31, 4, 20, 2, 17
+; 	db "CYCLING ROAD @"
+
+; FuchiaCityText:
+; 	scrolling_text 5, 31, 4, 20, 2, 16
+; 	db "FUCHIA CITY @" ; mispelling -- should be fuchsia
+
+; SafariZoneText:
+; 	scrolling_text 5, 31, 4, 20, 2, 16
+; 	db "SAFARI ZONE @"
+
+; SaffronCityText:
+; 	scrolling_text 5, 31, 4, 20, 2, 17
+; 	db "SAFFRON CITY @"
+
+; SeafoamIslandsText:
+; 	scrolling_text 5, 31, 2, 20, 2, 18
+; 	db "SEAFOAM ISLANDS @"
+
+; CinnabarIslandText:
+; 	scrolling_text 5, 31, 2, 20, 2, 18
+; 	db "CINNABAR ISLAND @"
+
+; IndigoPlateauText:
+; 	scrolling_text 5, 31, 3, 20, 2, 18
+; 	db "INDIGO PLATEAU @"
+
+
+	
 GoToDiglettStageText:
 	scrolling_text_normal 0, 20, 0, 20
 	db "GO TO DIGLETT STAGE @"
@@ -355,16 +530,25 @@ SeelStageClearedText:
 	db "SEEL STAGE CLEARED @"
 
 NumPokemonCaughtText:
-	db "  0 POKeMON CAUGHT@"
+	db "  0 POKEMON CAUGHT@"
 
 NumPokemonEvolvedText:
-	db "  0 POKeMON EVOLVED@"
+	db "  0 POKEMON EVOLVED@"
 
+IF DEF(_CHS)
 BellsproutCounterText:
-	db "  0 BELLSPROUT@"
+	db "  0 LA BA YA@"
 
 DugtrioCounterText:
-	db "  0 DUGTRIO@"
+	db "  0 SAN DI SHU@"
+
+ELSE
+BellsproutCounterText:
+	db "  0 MODAPI@"
+
+DugtrioCounterText:
+	db "  0 DAKTEURIO@"
+ENDC
 
 CaveShotCounterText:
 	db "  0 CAVE SHOTS@"
@@ -390,14 +574,29 @@ ScoreText:
 GameOverText:
 	db "     GAME  OVER     @"
 
+IF DEF(_CHS)
 PsyduckCounterText:
-	db "  0 PSYDUCK@"
+	db "  0 KE DA YA@"
 
 PoliwagCounterText:
-	db "  0 POLIWAG@"
+	db "  0 WENXIANGKEDOU@"
 
 CloysterCounterText:
-	db "  0 CLOYSTER@"
+	db "  0 CI JIA BEI@"
 
 SlowpokeCounterText:
-	db "  0 SLOWPOKE@"
+	db "  0 DAI DAI SHOU@"
+
+ELSE
+PsyduckCounterText:
+	db "  0 GORAPADEOK@"
+
+PoliwagCounterText:
+	db "  0 BALCHAENGI@"
+
+CloysterCounterText:
+	db "  0 PAREUSEL@"
+
+SlowpokeCounterText:
+	db "  0 YADON@"
+ENDC

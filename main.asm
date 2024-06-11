@@ -1,3 +1,5 @@
+INCLUDE "charmap_w.asm"
+INCLUDE "charmap_d.asm"
 INCLUDE "charmap.asm"
 INCLUDE "macros.asm"
 INCLUDE "constants.asm"
@@ -157,10 +159,17 @@ INCLUDE "engine/pinball_game/map_move.asm"
 
 SECTION "bankd", ROMX
 
+IF DEF(_CHS)
 SlotOnPic: ; 0x34000
-	INCBIN "gfx/billboard/slot/slot_on.2bpp"
+	INCBIN "gfx/billboard/slot/chs/slot_on.2bpp"
 SlotOffPic: ; 0x34180
-	INCBIN "gfx/billboard/slot/slot_off.2bpp"
+	INCBIN "gfx/billboard/slot/chs/slot_off.2bpp"
+ELSE
+SlotOnPic: ; 0x34000
+	INCBIN "gfx/billboard/slot/kor/slot_on.2bpp"
+SlotOffPic: ; 0x34180
+	INCBIN "gfx/billboard/slot/kor/slot_off.2bpp"
+ENDC
 
 SECTION "bankd.2", ROMX
 
@@ -287,7 +296,11 @@ MewtwoBonusBaseGameBoyGfx: ; 0x7f000
 	INCBIN "gfx/stage/mewtwo_bonus/mewtwo_bonus_base_gameboy.2bpp"
 
 EraseAllDataGfx: ; 0x7fd00: ; 0x7fd00
-	INCBIN "gfx/erase_all_data.2bpp"
+IF DEF(_CHS)
+	INCBIN "gfx/erase_all_data_chs.2bpp"
+ELSE
+	INCBIN "gfx/erase_all_data_kor.2bpp"
+ENDC
 
 SECTION "bank20", ROMX
 
@@ -319,7 +332,11 @@ FieldSelectScreenGfx:
 FieldSelectBlinkingBorderGfx: ; 0x8b000
 	INCBIN "gfx/field_select/blinking_border.2bpp"
 FieldSelectGfx: ; 0x8b100
-	INCBIN "gfx/field_select/field_select_tiles.2bpp"
+IF DEF(_CHS)
+	INCBIN "gfx/field_select/field_select_tiles_chs.2bpp"
+ELSE
+	INCBIN "gfx/field_select/field_select_tiles_kor.2bpp"
+ENDC
 
 GengarBonusGastlyGfx: ; 0x8bd00
 	INCBIN "gfx/stage/gengar_bonus/gastly.interleave.2bpp"
@@ -479,8 +496,13 @@ PinballMasterballMiniGfx: ; 0xa9600
 PinballBallSuperMiniGfx: ; 0xa9800
 	INCBIN "gfx/stage/ball_mini.w32.interleave.2bpp"
 
+
 HighScoresBaseGameBoyGfx: ; 0xa9a00
-	INCBIN "gfx/high_scores/high_scores_base_gameboy.2bpp"
+IF DEF(_CHS)
+	INCBIN "gfx/high_scores/high_scores_base_gameboy_chs.2bpp"
+ELSE
+	INCBIN "gfx/high_scores/high_scores_base_gameboy_kor.2bpp"
+ENDC
 
 MeowthBonusBaseGameBoyColorGfx: ; 0xab200
 	INCBIN "gfx/stage/meowth_bonus/meowth_bonus_base_gameboycolor.2bpp"
@@ -494,7 +516,13 @@ INCLUDE "data/mon_gfx/mon_animated_palettes_1.asm"
 SECTION "bank2b", ROMX
 
 TitlescreenFadeInGfx: ; 0xac000
-	INCBIN "gfx/titlescreen/titlescreen_fade_in.2bpp"
+IF DEF(_CHS)
+	; INCBIN "gfx/titlescreen/chs/titlescreen_fade_in.2bpp"
+	INCBIN "gfx/titlescreen/chs/titlescreen.2bpp"
+ELSE
+	; INCBIN "gfx/titlescreen/kor/titlescreen_fade_in.2bpp"
+	INCBIN "gfx/titlescreen/kor/titlescreen.2bpp"
+ENDC
 
 PokedexInitialGfx:
 	INCBIN "gfx/pokedex/pokedex_initial.2bpp"
@@ -523,22 +551,37 @@ StageRedFieldTopCollisionAttributes6: ; 0xb3000
 	INCBIN "data/collision/unused_trailing_data.bin"
 
 FieldSelectTilemap: ; 0xb3800
-	INCBIN "gfx/tilemaps/field_select.map"
+IF DEF(_CHS)
+	INCBIN "gfx/tilemaps/field_select_chs.map"
+ELSE
+	INCBIN "gfx/tilemaps/field_select_kor.map"
+ENDC
 FieldSelectBGAttributes: ; 0xb3c00
 	INCBIN "gfx/bgattr/field_select.bgattr"
 
 SECTION "bank2d", ROMX
 
 TitlescreenGfx: ; 0xb4000
-	INCBIN "gfx/titlescreen/titlescreen.2bpp"
+IF DEF(_CHS)
+	INCBIN "gfx/titlescreen/chs/titlescreen.2bpp"
+ELSE
+	INCBIN "gfx/titlescreen/kor/titlescreen.2bpp"
+ENDC
 
 OptionMenuAndKeyConfigGfx:
 OptionMenuBlankGfx: ; 0xb5800
 	INCBIN "gfx/option_menu/blank.2bpp"
 OptionMenuArrowGfx: ; 0xb5a00
 	INCBIN "gfx/option_menu/arrow.2bpp"
+
+IF DEF(_CHS)
 OptionMenuPikaBubbleGfx: ; 0xb5a20
-	INCBIN "gfx/option_menu/pika_bubble.2bpp"
+	INCBIN "gfx/option_menu/pika_bubble_chs.2bpp"
+ELSE
+OptionMenuPikaBubbleGfx:
+	INCBIN "gfx/option_menu/pika_bubble_kor.2bpp"
+ENDC
+
 OptionMenuBouncingPokeballGfx: ; 0xb5a80
 	INCBIN "gfx/option_menu/bouncing_pokeball.2bpp"
 OptionMenuRumblePikachuAnimationGfx: ; 0xb5b40
@@ -555,40 +598,85 @@ OptionMenuPikachuGfx: ; 0xb6080
 	INCBIN "gfx/option_menu/pikachu.2bpp"
 OptionMenuPsyduckFeetGfx: ; 0xb6170
 	INCBIN "gfx/option_menu/psyduck_feet.2bpp"
+
+IF DEF(_CHS)
 OptionMenuUnknown2Gfx: ; 0xb6200
-	INCBIN "gfx/option_menu/blank2.2bpp"
+	INCBIN "gfx/option_menu/blank2_chs.2bpp"
 OptionMenuRumbleTextGfx: ; 0xb6250
-	INCBIN "gfx/option_menu/rumble_text.2bpp"
+	INCBIN "gfx/option_menu/rumble_text_chs.2bpp"
 OptionMenuUnknown3Gfx: ; 0xb62b0
-	INCBIN "gfx/option_menu/blank3.2bpp"
+	INCBIN "gfx/option_menu/blank3_chs.2bpp"
 OptionMenuKeyCoTextGfx: ; 0xb6320
-	INCBIN "gfx/option_menu/key_co_text.2bpp"
+	INCBIN "gfx/option_menu/key_co_text_chs.2bpp"
 OptionMenuSoundTestDigitsGfx: ; 0xb6370
 	INCBIN "gfx/option_menu/sound_test_digits.2bpp"
 OptionMenuNfigTextGfx: ; 0xb6470
-	INCBIN "gfx/option_menu/nfig_text.2bpp"
+	INCBIN "gfx/option_menu/nfig_text_chs.2bpp"
 OptionMenuUnknown4Gfx: ; 0xb64a0
-	INCBIN "gfx/option_menu/blank4.2bpp"
-
+	INCBIN "gfx/option_menu/blank4_chs.2bpp"
 KeyConfigResetTextGfx: ; 0xb6500
-	INCBIN "gfx/key_config/reset_text.2bpp"
+	INCBIN "gfx/key_config/reset_text_chs.2bpp"
 KeyConfigBallStartTextGfx: ; 0xb6560
-	INCBIN "gfx/key_config/ball_start_text.2bpp"
+	INCBIN "gfx/key_config/ball_start_text_chs.2bpp"
 KeyConfigLeftFlipperTextGfx: ; 0xb65f0
-	INCBIN "gfx/key_config/left_flipper_text.2bpp"
+	INCBIN "gfx/key_config/left_flipper_text_chs.2bpp"
 KeyConfigRightFlipperTextGfx: ; 0xb6680
-	INCBIN "gfx/key_config/right_flipper_text.2bpp"
+	INCBIN "gfx/key_config/right_flipper_text_chs.2bpp"
 KeyConfigTiltTextGfx: ; 0xb6710
-	INCBIN "gfx/key_config/tilt_text.2bpp"
+	INCBIN "gfx/key_config/tilt_text_chs.2bpp"
 KeyConfigMenuTextGfx: ; 0xb6810
-	INCBIN "gfx/key_config/menu_text.2bpp"
+	INCBIN "gfx/key_config/menu_text_chs.2bpp"
 KeyConfigKeyConfigTextGfx: ; 0xb6880
 	INCBIN "gfx/key_config/key_config_text.2bpp"
 KeyConfigIconsGfx: ; 0xb6900
 	INCBIN "gfx/key_config/icons.2bpp"
+ELSE
+OptionMenuUnknown2Gfx: ; 0xb6200
+	INCBIN "gfx/option_menu/blank2_kor.2bpp"
+OptionMenuRumbleTextGfx: ; 0xb6250
+	INCBIN "gfx/option_menu/rumble_text_kor.2bpp"
+OptionMenuUnknown3Gfx: ; 0xb62b0
+	INCBIN "gfx/option_menu/blank3_kor.2bpp"
+OptionMenuKeyCoTextGfx: ; 0xb6320
+	INCBIN "gfx/option_menu/key_co_text_kor.2bpp"
+OptionMenuSoundTestDigitsGfx: ; 0xb6370
+	INCBIN "gfx/option_menu/sound_test_digits.2bpp"
+OptionMenuNfigTextGfx: ; 0xb6470
+	INCBIN "gfx/option_menu/nfig_text_kor.2bpp"
+OptionMenuUnknown4Gfx: ; 0xb64a0
+	INCBIN "gfx/option_menu/blank4_kor.2bpp"
+KeyConfigResetTextGfx: ; 0xb6500
+	INCBIN "gfx/key_config/reset_text_kor.2bpp"
+KeyConfigBallStartTextGfx: ; 0xb6560
+	INCBIN "gfx/key_config/ball_start_text_kor.2bpp"
+KeyConfigLeftFlipperTextGfx: ; 0xb65f0
+	INCBIN "gfx/key_config/left_flipper_text_kor.2bpp"
+KeyConfigRightFlipperTextGfx: ; 0xb6680
+	INCBIN "gfx/key_config/right_flipper_text_kor.2bpp"
+KeyConfigTiltTextGfx: ; 0xb6710
+	INCBIN "gfx/key_config/tilt_text_kor.2bpp"
+KeyConfigMenuTextGfx: ; 0xb6810
+	INCBIN "gfx/key_config/menu_text_kor.2bpp"
+KeyConfigKeyConfigTextGfx: ; 0xb6880
+	INCBIN "gfx/key_config/key_config_text.2bpp"
+KeyConfigIconsGfx: ; 0xb6900
+	INCBIN "gfx/key_config/icons.2bpp"
+ENDC
 
+
+
+
+
+
+
+IF DEF(_CHS)
 OptionMenuSoundTextTextGfx: ; 0xb6a40
-	INCBIN "gfx/option_menu/sound_test_text.2bpp"
+	INCBIN "gfx/option_menu/sound_test_text_chs.2bpp"
+ELSE
+OptionMenuSoundTextTextGfx: ; 0xb6a40
+	INCBIN "gfx/option_menu/sound_test_text_kor.2bpp"
+ENDC
+
 OptionMenuOnOffTextGfx: ; 0xb6ad0
 	INCBIN "gfx/option_menu/on_off_text.2bpp"
 OptionMenuBGMSETextGfx: ; 0xb6b10
@@ -673,7 +761,11 @@ StageBlueFieldTopTilemap_GameBoy: ; 0xbf000
 SECTION "bank2f.3", ROMX
 
 EraseAllDataTilemap: ; 0xbf800
-	INCBIN "gfx/tilemaps/erase_all_data.map"
+IF DEF(_CHS)
+	INCBIN "gfx/tilemaps/erase_all_data_chs.map"
+ELSE
+	INCBIN "gfx/tilemaps/erase_all_data_kor.map"
+ENDC
 EraseAllDataBGAttributes: ; 0xbfc00
 	INCBIN "gfx/bgattr/erase_all_data.bgattr"
 
@@ -705,7 +797,12 @@ StageBlueFieldTopCollisionAttributes: ; 0xc2800
 	INCBIN "data/collision/unused_trailing_data.bin"
 
 OptionMenuTilemap2: ; 0xc3000
-	INCBIN "gfx/tilemaps/option_menu_2.map"
+IF DEF(_CHS)
+	INCBIN "gfx/tilemaps/option_menu_2_chs.map"
+ELSE
+	INCBIN "gfx/tilemaps/option_menu_2_kor.map"
+ENDC
+	
 
 SECTION "bank30.3", ROMX
 
@@ -714,7 +811,11 @@ OptionMenuTilemap4: ; 0xc3400
 	INCBIN "gfx/tilemaps/unused_tilemap_c3640.map"
 
 OptionMenuTilemap: ; 0xc3800
-	INCBIN "gfx/tilemaps/option_menu.map"
+IF DEF(_CHS)
+	INCBIN "gfx/tilemaps/option_menu_chs.map"
+ELSE
+	INCBIN "gfx/tilemaps/option_menu_kor.map"
+ENDC
 
 SECTION "bank30.4", ROMX
 
@@ -738,10 +839,19 @@ PokedexTilemap2:
 PokedexBGAttributes2:
 	INCBIN "gfx/bgattr/pokedex_2.bgattr"
 
+
+IF DEF(_CHS)
 TitlescreenTilemap: ; 0xc5800
-	INCBIN "gfx/tilemaps/titlescreen.map"
+	INCBIN "gfx/tilemaps/titlescreen_chs.map"
 TitlescreenBGAttributes: ; 0xc5c00
-	INCBIN "gfx/bgattr/titlescreen.bgattr"
+	INCBIN "gfx/bgattr/titlescreen_chs.bgattr"
+ELSE
+TitlescreenTilemap: ; 0xc5800
+	INCBIN "gfx/tilemaps/titlescreen_kor.map"
+TitlescreenBGAttributes: ; 0xc5c00
+	INCBIN "gfx/bgattr/titlescreen_kor.bgattr"
+ENDC
+
 
 SECTION "bank31.2", ROMX
 
@@ -1115,3 +1225,133 @@ SECTION "bank3f", ROMX
 
 FlipperCollisionNormalAngles2: ; 0xfc000
 	INCBIN "data/collision/flippers/normal_angles_1"
+
+SECTION "bank41", ROMX
+	INCBIN "font/chs/font_0x41.2bpp.bin"
+
+SECTION "bank42", ROMX
+	INCBIN "font/chs/font_0x42.2bpp.bin"
+
+SECTION "bank43", ROMX
+	INCBIN "font/chs/font_0x43.2bpp.bin"
+
+SECTION "bank44", ROMX
+	INCBIN "font/chs/font_0x44.2bpp.bin"
+
+SECTION "bank45", ROMX
+	INCBIN "font/chs/font_0x45.2bpp.bin"
+
+SECTION "bank46", ROMX
+	INCBIN "font/chs/font_0x46.2bpp.bin"
+
+SECTION "bank47", ROMX
+	INCBIN "font/chs/font_0x47.2bpp.bin"
+
+SECTION "bank48", ROMX
+	INCBIN "font/chs/font_0x48.2bpp.bin"
+
+SECTION "bank49", ROMX
+	INCBIN "font/chs/font_0x49.2bpp.bin"
+
+SECTION "bank4a", ROMX
+	INCBIN "font/chs/font_0x4a.2bpp.bin"
+
+SECTION "bank4b", ROMX
+	INCBIN "font/chs/font_0x4b.2bpp.bin"
+
+SECTION "bank4c", ROMX
+	INCBIN "font/chs/font_0x4c.2bpp.bin"
+
+SECTION "bank4d", ROMX
+	INCBIN "font/chs/font_0x4d.2bpp.bin"
+
+SECTION "bank4e", ROMX
+	INCBIN "font/chs/font_0x4e.2bpp.bin"
+
+SECTION "bank4f", ROMX
+	INCBIN "font/chs/font_0x4f.2bpp.bin"
+
+SECTION "bank50", ROMX
+	INCBIN "font/chs/font_0x50.2bpp.bin"
+
+; KOR
+
+SECTION "bank51", ROMX
+	INCBIN "font/kor/font_0x51.2bpp.bin"
+
+SECTION "bank52", ROMX
+	INCBIN "font/kor/font_0x52.2bpp.bin"
+
+SECTION "bank53", ROMX
+	INCBIN "font/kor/font_0x53.2bpp.bin"
+
+SECTION "bank54", ROMX
+	INCBIN "font/kor/font_0x54.2bpp.bin"
+
+SECTION "bank55", ROMX
+	INCBIN "font/kor/font_0x55.2bpp.bin"
+
+SECTION "bank56", ROMX
+	INCBIN "font/kor/font_0x56.2bpp.bin"
+
+SECTION "bank57", ROMX
+	INCBIN "font/kor/font_0x57.2bpp.bin"
+
+SECTION "bank58", ROMX
+	INCBIN "font/kor/font_0x58.2bpp.bin"
+
+SECTION "bank59", ROMX
+	INCBIN "font/kor/font_0x59.2bpp.bin"
+
+SECTION "bank5a", ROMX
+	INCBIN "font/kor/font_0x5a.2bpp.bin"
+
+
+
+SECTION "bank61", ROMX
+	INCBIN "font/chs12px/font_0x61.2bpp.bin"
+
+SECTION "bank62", ROMX
+	INCBIN "font/chs12px/font_0x62.2bpp.bin"
+
+SECTION "bank63", ROMX
+	INCBIN "font/chs12px/font_0x63.2bpp.bin"
+
+SECTION "bank64", ROMX
+	INCBIN "font/chs12px/font_0x64.2bpp.bin"
+
+SECTION "bank65", ROMX
+	INCBIN "font/chs12px/font_0x65.2bpp.bin"
+
+SECTION "bank66", ROMX
+	INCBIN "font/chs12px/font_0x66.2bpp.bin"
+
+SECTION "bank67", ROMX
+	INCBIN "font/chs12px/font_0x67.2bpp.bin"
+
+SECTION "bank68", ROMX
+	INCBIN "font/chs12px/font_0x68.2bpp.bin"
+
+SECTION "bank69", ROMX
+	INCBIN "font/chs12px/font_0x69.2bpp.bin"
+
+SECTION "bank6a", ROMX
+	INCBIN "font/chs12px/font_0x6a.2bpp.bin"
+
+SECTION "bank6b", ROMX
+	INCBIN "font/chs12px/font_0x6b.2bpp.bin"
+
+SECTION "bank6c", ROMX
+	INCBIN "font/chs12px/font_0x6c.2bpp.bin"
+
+SECTION "bank6d", ROMX
+	INCBIN "font/chs12px/font_0x6d.2bpp.bin"
+
+SECTION "bank6e", ROMX
+	INCBIN "font/chs12px/font_0x6e.2bpp.bin"
+
+SECTION "bank6f", ROMX
+	INCBIN "font/chs12px/font_0x6f.2bpp.bin"
+
+SECTION "bank70", ROMX
+	INCBIN "font/chs12px/font_0x70.2bpp.bin"

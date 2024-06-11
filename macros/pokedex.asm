@@ -5,6 +5,15 @@ MACRO dex_number
 	db "@"
 ENDM
 
+MACRO dex_height_metrics
+	db $20
+	db $30 + (\1 % 10)
+	db $30 + (\2 % 10)
+	db "@"
+	db "@"
+ENDM
+
+
 ; \1 = feet
 ; \2 = inches
 MACRO dex_height
@@ -20,7 +29,7 @@ MACRO dex_height
 	IF inches_tens_digit > 0
 		db $70
 	ELSE
-		db $72
+		db " "
 	ENDC
 	DEF inches_ones_digit = \2 % 10
 	db inches_ones_digit + "0"
@@ -43,8 +52,10 @@ MACRO dex_weight
 	IF \1 >= 10
 		db ((\1 / 10) % 10) + "0"
 	ELSE
-		db " "
+		db "0"
 	ENDC
+
+
 
 	db (\1 % 10) + "0"
 	db $00, $83

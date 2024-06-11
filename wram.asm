@@ -21,10 +21,15 @@ wc150:: ; 0xc150
 wc1b8:: ; 0xc1b8
 	ds $c8
 
+UNION
 wSendHighScoresTopBarTilemap:: ; 0xc280
+
 ; This is the tilemap data that is sent via infrared in the High Scores screen.
 ; It actually takes up $400 bytes of spaces, but there are other labels that use this space, too.
 	ds $180
+NEXTU
+	ds $80
+ENDU
 
 wMonAnimatedCollisionMask:: ; 0xc400
 	ds $80
@@ -47,9 +52,14 @@ wBottomMessageBuffer:: ; 0xc600
 ; The lower-left most tile is at 0xc640, so everything before isn't visible on screen.
 	ds $100
 
+UNION
+; wtmp12pxFontBuffer::
 wStageCollisionMap:: ; 0xc700
 	ds $300
-
+NEXTU
+	ds $200
+wtmp12pxFontBuffer::
+ENDU
 wca00::
 	ds $100
 

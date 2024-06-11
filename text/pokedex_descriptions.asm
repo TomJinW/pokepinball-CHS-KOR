@@ -151,1361 +151,1823 @@ PokedexDescriptionPointers: ; 0x2c002
 	dw MewtwoPokedexDescription
 	dw MewPokedexDescription
 
-RhydonPokedexDescription: ; 0x2c130
-	dex_text "Protected by an"
-	dex_line "armor-like hide,"
-	dex_line "it is capable of"
-	dex_line "living in molten"
-	dex_line "lava of 3,600"
-	dex_line "degrees."
-	dex_end
-
-KangaskhanPokedexDescription: ; 0x2c18a
-	dex_text "The infant rarely"
-	dex_line "ventures out of"
-	dex_line "its mother`s"
-	dex_line "protective pouch"
-	dex_line "until it is 3"
-	dex_line "years old."
-	dex_end
-
-NidoranMPokedexDescription: ; 0x2c1e3
-	dex_text "Stiffens its ears"
-	dex_line "to sense danger."
-	dex_line "The larger its"
-	dex_line "horns, the more"
-	dex_line "powerful its"
-	dex_line "secreted venom."
-	dex_end
-
-ClefairyPokedexDescription: ; 0x2c242
-	dex_text "Its magical and"
-	dex_line "cute appeal has"
-	dex_line "many admirers."
-	dex_line "It is rare and"
-	dex_line "found only in"
-	dex_line "certain areas."
-	dex_end
-
-SpearowPokedexDescription: ; 0x2c29d
-	dex_text "Eats bugs in"
-	dex_line "grassy areas. It"
-	dex_line "has to flap its"
-	dex_line "short wings at"
-	dex_line "high speed to"
-	dex_line "stay airborne."
-	dex_end
-
-VoltorbPokedexDescription: ; 0x2c2f7
-	dex_text "Usually found in"
-	dex_line "power plants."
-	dex_line "Easily mistaken"
-	dex_line "for a POKé BALL,"
-	dex_line "they have zapped"
-	dex_line "many people."
-	dex_end
-
-NidokingPokedexDescription: ; 0x2c355
-	dex_text "It uses its"
-	dex_line "powerful tail in"
-	dex_line "battle to smash,"
-	dex_line "constrict, then"
-	dex_line "break the prey`s"
-	dex_line "bones."
-	dex_end
-
-SlowbroPokedexDescription: ; 0x2c3ab
-	dex_text "The SHELLDER that"
-	dex_line "is latched onto"
-	dex_line "SLOWPOKE`s tail"
-	dex_line "is said to feed"
-	dex_line "on the host`s left"
-	dex_line "over scraps."
-	dex_end
-
-IvysaurPokedexDescription: ; 0x2c40d
-	dex_text "When the bulb on"
-	dex_line "its back grows"
-	dex_line "large, it appears"
-	dex_line "to lose the"
-	dex_line "ability to stand"
-	dex_line "on its hind legs."
-	dex_end
-
-ExeggutorPokedexDescription: ; 0x2c46e
-	dex_text "Legend has it that"
-	dex_line "on rare occasions,"
-	dex_line "one of its heads"
-	dex_line "will drop off and"
-	dex_line "continue on as an"
-	dex_line "EXEGGCUTE."
-	dex_end
-
-LickitungPokedexDescription: ; 0x2c4d4
-	dex_text "Its tongue can be"
-	dex_line "extended like a"
-	dex_line "chameleon`s. It"
-	dex_line "leaves a tingling"
-	dex_line "sensation when it"
-	dex_line "licks enemies."
-	dex_end
-
-ExeggcutePokedexDescription: ; 0x2c539
-	dex_text "Often mistaken"
-	dex_line "for eggs."
-	dex_line "When disturbed,"
-	dex_line "they quickly"
-	dex_line "gather and attack"
-	dex_line "in swarms."
-	dex_end
-
-GrimerPokedexDescription: ; 0x2c58c
-	dex_text "Appears in filthy"
-	dex_line "areas. Thrives by"
-	dex_line "sucking up"
-	dex_line "polluted sludge"
-	dex_line "that is pumped"
-	dex_line "out of factories."
-	dex_end
-
-GengarPokedexDescription: ; 0x2c5ec
-	dex_text "Under a full moon,"
-	dex_line "this POKéMON"
-	dex_line "likes to mimic"
-	dex_line "the shadows of"
-	dex_line "people and laugh"
-	dex_line "at their fright."
-	dex_end
-
-NidoranFPokedexDescription: ; 0x2c64c
-	dex_text "Although small,"
-	dex_line "its venomous"
-	dex_line "barbs render this"
-	dex_line "POKéMON dangerous."
-	dex_line "The female has"
-	dex_line "smaller horns."
-	dex_end
-
-NidoqueenPokedexDescription: ; 0x2c6ac
-	dex_text "Its hard scales"
-	dex_line "provide strong"
-	dex_line "protection. It"
-	dex_line "uses its hefty"
-	dex_line "bulk to execute"
-	dex_line "powerful moves."
-	dex_end
-
-CubonePokedexDescription: ; 0x2c709
-	dex_text "Because it never"
-	dex_line "removes its skull"
-	dex_line "helmet, no one"
-	dex_line "has ever seen"
-	dex_line "this POKéMON`s"
-	dex_line "real face."
-	dex_end
-
-RhyhornPokedexDescription: ; 0x2c763
-	dex_text "Its massive bones"
-	dex_line "are 1000 times"
-	dex_line "harder than human"
-	dex_line "bones. It can"
-	dex_line "easily knock a"
-	dex_line "trailer flying."
-	dex_end
-
-LaprasPokedexDescription: ; 0x2c7c3
-	dex_text "A POKéMON that"
-	dex_line "has been over-"
-	dex_line "hunted almost to"
-	dex_line "extinction. It"
-	dex_line "can ferry people"
-	dex_line "across the water."
-	dex_end
-
-ArcaninePokedexDescription: ; 0x2c824
-	dex_text "A POKéMON that"
-	dex_line "has been admired"
-	dex_line "since the past"
-	dex_line "for its beauty."
-	dex_line "It runs agilely"
-	dex_line "as if on wings."
-	dex_end
-
-MewPokedexDescription: ; 0x2c883
-	dex_text "So rare that it"
-	dex_line "is still said to"
-	dex_line "be a mirage by"
-	dex_line "many experts. Only"
-	dex_line "a few people have"
-	dex_line "seen it worldwide. "
-	dex_end
-
-GyaradosPokedexDescription: ; 0x2c8ec
-	dex_text "Rarely seen in"
-	dex_line "the wild. Huge"
-	dex_line "and vicious, it"
-	dex_line "is capable of"
-	dex_line "destroying entire"
-	dex_line "cities in a rage."
-	dex_end
-
-ShellderPokedexDescription: ; 0x2c94c
-	dex_text "Its hard shell"
-	dex_line "repels any kind"
-	dex_line "of attack."
-	dex_line "It is vulnerable"
-	dex_line "only when its"
-	dex_line "shell is open."
-	dex_end
-
-TentacoolPokedexDescription: ; 0x2c9a4
-	dex_text "Drifts in shallow"
-	dex_line "seas. Anglers who"
-	dex_line "hook them by"
-	dex_line "accident are"
-	dex_line "often punished by"
-	dex_line "its stinging acid."
-	dex_end
-
-GastlyPokedexDescription: ; 0x2ca07
-	dex_text "Almost invisible,"
-	dex_line "this gaseous"
-	dex_line "POKéMON cloaks"
-	dex_line "the target and"
-	dex_line "puts it to sleep"
-	dex_line "without notice."
-	dex_end
-
-ScytherPokedexDescription: ; 0x2ca65
-	dex_text "With ninja-like"
-	dex_line "agility and speed,"
-	dex_line "it can create the"
-	dex_line "illusion that"
-	dex_line "there is more"
-	dex_line "than one."
-	dex_end
-
-StaryuPokedexDescription: ; 0x2cac0
-	dex_text "An enigmatic"
-	dex_line "POKéMON that can"
-	dex_line "effortlessly"
-	dex_line "regenerate any"
-	dex_line "appendage it"
-	dex_line "loses in battle."
-	dex_end
-
-BlastoisePokedexDescription: ; 0x2cb18
-	dex_text "A brutal POKéMON"
-	dex_line "with pressurized"
-	dex_line "water jets on its"
-	dex_line "shell. They are"
-	dex_line "used for high"
-	dex_line "speed tackles."
-	dex_end
-
-PinsirPokedexDescription: ; 0x2cb79
-	dex_text "If it fails to"
-	dex_line "crush the victim"
-	dex_line "in its pincers,"
-	dex_line "it will swing it"
-	dex_line "around and toss"
-	dex_line "it hard."
-	dex_end
-
-TangelaPokedexDescription: ; 0x2cbd3
-	dex_text "The whole body is"
-	dex_line "swathed with wide"
-	dex_line "vines that are"
-	dex_line "similar to sea-"
-	dex_line "weed. Its vines"
-	dex_line "shake as it walks."
-	dex_end
-
-GrowlithePokedexDescription: ; 0x2cc39
-	dex_text "Very protective"
-	dex_line "of its territory."
-	dex_line "It will bark and"
-	dex_line "bite to repel"
-	dex_line "intruders from"
-	dex_line "its space."
-	dex_end
-
-OnixPokedexDescription: ; 0x2cc94
-	dex_text "As it grows, the"
-	dex_line "stone portions of"
-	dex_line "its body harden"
-	dex_line "to become similar"
-	dex_line "to a diamond, but"
-	dex_line "colored black."
-	dex_end
-
-FearowPokedexDescription: ; 0x2ccfa
-	dex_text "With its huge and"
-	dex_line "magnificent wings,"
-	dex_line "it can keep aloft"
-	dex_line "without ever"
-	dex_line "having to land"
-	dex_line "for rest."
-	dex_end
-
-PidgeyPokedexDescription: ; 0x2cd57
-	dex_text "A common sight in"
-	dex_line "forests and woods."
-	dex_line "It flaps its"
-	dex_line "wings at ground"
-	dex_line "level to kick up"
-	dex_line "blinding sand."
-	dex_end
-
-SlowpokePokedexDescription: ; 0x2cdb9
-	dex_text "Incredibly slow"
-	dex_line "and dopey. It"
-	dex_line "takes 5 seconds"
-	dex_line "for it to feel"
-	dex_line "pain when under"
-	dex_line "attack."
-	dex_end
-
-KadabraPokedexDescription: ; 0x2ce0e
-	dex_text "It emits special"
-	dex_line "alpha waves from"
-	dex_line "its body that"
-	dex_line "induce headaches"
-	dex_line "just by being"
-	dex_line "close by."
-	dex_end
-
-GravelerPokedexDescription: ; 0x2ce67
-	dex_text "Rolls down slopes"
-	dex_line "to move. It rolls"
-	dex_line "over any obstacle"
-	dex_line "without slowing"
-	dex_line "or changing its"
-	dex_line "direction."
-	dex_end
-
-ChanseyPokedexDescription: ; 0x2cec8
-	dex_text "A rare and elusive"
-	dex_line "POKéMON that is"
-	dex_line "said to bring"
-	dex_line "happiness to those"
-	dex_line "who manage to get"
-	dex_line "it."
-	dex_end
-
-MachokePokedexDescription: ; 0x2cf22
-	dex_text "Its muscular body"
-	dex_line "is so powerful, it"
-	dex_line "must wear a power"
-	dex_line "save belt to be"
-	dex_line "able to regulate"
-	dex_line "its motions."
-	dex_end
-
-MrMimePokedexDescription: ; 0x2cf87
-	dex_text "If interrupted"
-	dex_line "while it is"
-	dex_line "miming, it will"
-	dex_line "slap around the"
-	dex_line "offender with its"
-	dex_line "broad hands."
-	dex_end
-
-HitmonleePokedexDescription: ; 0x2cfe1
-	dex_text "When in a hurry,"
-	dex_line "its legs lengthen"
-	dex_line "progressively."
-	dex_line "It runs smoothly"
-	dex_line "with extra long,"
-	dex_line "loping strides."
-	dex_end
-
-HitmonchanPokedexDescription: ; 0x2d045
-	dex_text "While apparently"
-	dex_line "doing nothing, it"
-	dex_line "fires punches in"
-	dex_line "lightning fast"
-	dex_line "volleys that are"
-	dex_line "impossible to see. "
-	dex_end
-
-ArbokPokedexDescription: ; 0x2d0ad
-	dex_text "It is rumored that"
-	dex_line "the ferocious"
-	dex_line "warning markings"
-	dex_line "on its belly"
-	dex_line "differ from area"
-	dex_line "to area."
-	dex_end
-
-ParasectPokedexDescription: ; 0x2d106
-	dex_text "A host-parasite"
-	dex_line "pair in which the"
-	dex_line "parasite mushroom"
-	dex_line "has taken over the"
-	dex_line "host bug. Prefers"
-	dex_line "damp places. "
-	dex_end
-
-PsyduckPokedexDescription: ; 0x2d16d
-	dex_text "While lulling its"
-	dex_line "enemies with its"
-	dex_line "vacant look, this"
-	dex_line "wily POKéMON will"
-	dex_line "use psychokinetic"
-	dex_line "powers."
-	dex_end
-
-DrowzeePokedexDescription: ; 0x2d1ce
-	dex_text "Puts enemies to"
-	dex_line "sleep then eats"
-	dex_line "their dreams."
-	dex_line "Occasionally gets"
-	dex_line "sick from eating"
-	dex_line "bad dreams."
-	dex_end
-
-GolemPokedexDescription: ; 0x2d22b
-	dex_text "Its boulder-like"
-	dex_line "body is extremely"
-	dex_line "hard. It can"
-	dex_line "easily withstand"
-	dex_line "dynamite blasts"
-	dex_line "without damage."
-	dex_end
-
-MagmarPokedexDescription: ; 0x2d28c
-	dex_text "Its body always"
-	dex_line "burns with an"
-	dex_line "orange glow that"
-	dex_line "enables it to"
-	dex_line "hide perfectly"
-	dex_line "among flames."
-	dex_end
-
-ElectabuzzPokedexDescription: ; 0x2d2e6
-	dex_text "Normally found"
-	dex_line "near power plants,"
-	dex_line "they can wander"
-	dex_line "away and cause"
-	dex_line "major blackouts"
-	dex_line "in cities."
-	dex_end
-
-MagnetonPokedexDescription: ; 0x2d342
-	dex_text "Formed by several"
-	dex_line "MAGNEMITEs linked"
-	dex_line "together. They"
-	dex_line "frequently appear"
-	dex_line "when sunspots"
-	dex_line "flare up."
-	dex_end
-
-KoffingPokedexDescription: ; 0x2d39f
-	dex_text "Because it stores"
-	dex_line "several kinds of"
-	dex_line "toxic gases in"
-	dex_line "its body, it is"
-	dex_line "prone to exploding"
-	dex_line "without warning."
-	dex_end
-
-MankeyPokedexDescription: ; 0x2d405
-	dex_text "Extremely quick to"
-	dex_line "anger. It could"
-	dex_line "be docile one"
-	dex_line "moment then"
-	dex_line "thrashing away"
-	dex_line "the next instant."
-	dex_end
-
-SeelPokedexDescription: ; 0x2d463
-	dex_text "The protruding"
-	dex_line "horn on its head"
-	dex_line "is very hard."
-	dex_line "It is used for"
-	dex_line "bashing through"
-	dex_line "thick ice."
-	dex_end
-
-DiglettPokedexDescription: ; 0x2d4bb
-	dex_text "Lives about one"
-	dex_line "yard underground"
-	dex_line "where it feeds on"
-	dex_line "plant roots. It"
-	dex_line "sometimes appears"
-	dex_line "above ground."
-	dex_end
-
-TaurosPokedexDescription: ; 0x2d51e
-	dex_text "When it targets"
-	dex_line "an enemy, it"
-	dex_line "charges furiously"
-	dex_line "while whipping its"
-	dex_line "body with its"
-	dex_line "long tails."
-	dex_end
-
-FarfetchdPokedexDescription: ; 0x2d57a
-	dex_text "The sprig of"
-	dex_line "green onions it"
-	dex_line "holds is its"
-	dex_line "weapon. It is"
-	dex_line "used much like a"
-	dex_line "metal sword."
-	dex_end
-
-VenonatPokedexDescription: ; 0x2d5d0
-	dex_text "Lives in the"
-	dex_line "shadows of tall"
-	dex_line "trees where it"
-	dex_line "eats insects. It"
-	dex_line "is attracted by"
-	dex_line "light at night."
-	dex_end
-
-DragonitePokedexDescription: ; 0x2d62d
-	dex_text "An extremely"
-	dex_line "rarely seen"
-	dex_line "marine POKéMON."
-	dex_line "Its intelligence"
-	dex_line "is said to match"
-	dex_line "that of humans."
-	dex_end
-
-DoduoPokedexDescription: ; 0x2d688
-	dex_text "A bird that makes"
-	dex_line "up for its poor"
-	dex_line "flying with its"
-	dex_line "fast foot speed."
-	dex_line "Leaves giant"
-	dex_line "footprints."
-	dex_end
-
-PoliwagPokedexDescription: ; 0x2d6e4
-	dex_text "Its newly grown"
-	dex_line "legs prevent it"
-	dex_line "from running. It"
-	dex_line "appears to prefer"
-	dex_line "swimming than"
-	dex_line "trying to stand."
-	dex_end
-
-JynxPokedexDescription: ; 0x2d746
-	dex_text "It seductively"
-	dex_line "wiggles its hips"
-	dex_line "as it walks. It"
-	dex_line "can cause people"
-	dex_line "to dance in"
-	dex_line "unison with it."
-	dex_end
-
-MoltresPokedexDescription: ; 0x2d7a3
-	dex_text "Known as the"
-	dex_line "legendary bird of"
-	dex_line "fire. Every flap"
-	dex_line "of its wings"
-	dex_line "creates a dazzling"
-	dex_line "flash of flames."
-	dex_end
-
-ArticunoPokedexDescription: ; 0x2d804
-	dex_text "A legendary bird"
-	dex_line "POKéMON that is"
-	dex_line "said to appear to"
-	dex_line "doomed people who"
-	dex_line "are lost in icy"
-	dex_line "mountains."
-	dex_end
-
-ZapdosPokedexDescription: ; 0x2d864
-	dex_text "A legendary bird"
-	dex_line "POKéMON that is"
-	dex_line "said to appear"
-	dex_line "from clouds while"
-	dex_line "dropping enormous"
-	dex_line "lightning bolts."
-	dex_end
-
-DittoPokedexDescription: ; 0x2d8c9
-	dex_text "Capable of copying"
-	dex_line "an enemy`s genetic"
-	dex_line "code to instantly"
-	dex_line "transform itself"
-	dex_line "into a duplicate"
-	dex_line "of the enemy."
-	dex_end
-
-MeowthPokedexDescription: ; 0x2d931
-	dex_text "Adores circular"
-	dex_line "objects. Wanders"
-	dex_line "the streets on a"
-	dex_line "nightly basis to"
-	dex_line "look for dropped"
-	dex_line "loose change."
-	dex_end
-
-KrabbyPokedexDescription: ; 0x2d993
-	dex_text "Its pincers are"
-	dex_line "not only powerful"
-	dex_line "weapons, they are"
-	dex_line "used for balance"
-	dex_line "when walking"
-	dex_line "sideways."
-	dex_end
-
-VulpixPokedexDescription: ; 0x2d9ef
-	dex_text "At the time of"
-	dex_line "birth, it has"
-	dex_line "just one tail."
-	dex_line "The tail splits"
-	dex_line "from its tip as"
-	dex_line "it grows older."
-	dex_end
-
-NinetalesPokedexDescription: ; 0x2da4b
-	dex_text "Very smart and"
-	dex_line "very vengeful."
-	dex_line "Grabbing one of"
-	dex_line "its many tails"
-	dex_line "could result in a"
-	dex_line "1000-year curse."
-	dex_end
-
-PikachuPokedexDescription: ; 0x2daab
-	dex_text "When several of"
-	dex_line "these POKéMON"
-	dex_line "gather, their"
-	dex_line "electricity could"
-	dex_line "build and cause"
-	dex_line "lightning storms."
-	dex_end
-
-RaichuPokedexDescription: ; 0x2db0b
-	dex_text "Its long tail"
-	dex_line "serves as a"
-	dex_line "ground to protect"
-	dex_line "itself from its"
-	dex_line "own high voltage"
-	dex_line "power."
-	dex_end
-
-DratiniPokedexDescription: ; 0x2db5f
-	dex_text "Long considered a"
-	dex_line "mythical POKéMON"
-	dex_line "until recently"
-	dex_line "when a small"
-	dex_line "colony was found"
-	dex_line "living underwater."
-	dex_end
-
-DragonairPokedexDescription: ; 0x2dbc2
-	dex_text "A mystical POKéMON"
-	dex_line "that exudes a"
-	dex_line "gentle aura."
-	dex_line "Has the ability"
-	dex_line "to change climate"
-	dex_line "conditions."
-	dex_end
-
-KabutoPokedexDescription: ; 0x2dc1e
-	dex_text "A POKéMON that"
-	dex_line "was resurrected"
-	dex_line "from a fossil"
-	dex_line "found in what was"
-	dex_line "once the ocean"
-	dex_line "floor eons ago."
-	dex_end
-
-KabutopsPokedexDescription: ; 0x2dc7c
-	dex_text "Its sleek shape is"
-	dex_line "perfect for swim-"
-	dex_line "ming. It slashes"
-	dex_line "prey with its"
-	dex_line "claws and drains"
-	dex_line "the body fluids."
-	dex_end
-
-HorseaPokedexDescription: ; 0x2dce2
-	dex_text "Known to shoot"
-	dex_line "down flying bugs"
-	dex_line "with precision"
-	dex_line "blasts of ink"
-	dex_line "from the surface"
-	dex_line "of the water."
-	dex_end
-
-SeadraPokedexDescription: ; 0x2dd3e
-	dex_text "Capable of swim-"
-	dex_line "ming backwards by"
-	dex_line "rapidly flapping"
-	dex_line "its wing-like"
-	dex_line "pectoral fins and"
-	dex_line "stout tail."
-	dex_end
-
-SandshrewPokedexDescription: ; 0x2dd9e
-	dex_text "Burrows deep"
-	dex_line "underground in"
-	dex_line "arid locations"
-	dex_line "far from water."
-	dex_line "It only emerges"
-	dex_line "to hunt for food."
-	dex_end
-
-SandslashPokedexDescription: ; 0x2ddfb
-	dex_text "Curls up into a"
-	dex_line "spiny ball when"
-	dex_line "threatened. It"
-	dex_line "can roll while"
-	dex_line "curled up to"
-	dex_line "attack or escape."
-	dex_end
-
-OmanytePokedexDescription: ; 0x2de58
-	dex_text "Although long"
-	dex_line "extinct, in rare"
-	dex_line "cases, it can be"
-	dex_line "genetically"
-	dex_line "resurrected from"
-	dex_line "fossils."
-	dex_end
-
-OmastarPokedexDescription: ; 0x2deae
-	dex_text "A prehistoric"
-	dex_line "POKéMON that died"
-	dex_line "out when its"
-	dex_line "heavy shell made"
-	dex_line "it impossible to"
-	dex_line "catch prey."
-	dex_end
-
-JigglypuffPokedexDescription: ; 0x2df09
-	dex_text "When its huge eyes"
-	dex_line "light up, it sings"
-	dex_line "a mysteriously"
-	dex_line "soothing melody"
-	dex_line "that lulls its"
-	dex_line "enemies to sleep."
-	dex_end
-
-WigglytuffPokedexDescription: ; 0x2df6f
-	dex_text "The body is soft"
-	dex_line "and rubbery. When"
-	dex_line "angered, it will"
-	dex_line "suck in air and"
-	dex_line "inflate itself to"
-	dex_line "an enormous size."
-	dex_end
-
-EeveePokedexDescription: ; 0x2dfd7
-	dex_text "Its genetic code"
-	dex_line "is irregular."
-	dex_line "It may mutate if"
-	dex_line "it is exposed to"
-	dex_line "radiation from"
-	dex_line "element STONEs."
-	dex_end
-
-FlareonPokedexDescription: ; 0x2e037
-	dex_text "When storing"
-	dex_line "thermal energy in"
-	dex_line "its body, its"
-	dex_line "temperature could"
-	dex_line "soar to over 1600"
-	dex_line "degrees."
-	dex_end
-
-JolteonPokedexDescription: ; 0x2e091
-	dex_text "It accumulates"
-	dex_line "negative ions in"
-	dex_line "the atmosphere to"
-	dex_line "blast out 10000-"
-	dex_line "volt lightning"
-	dex_line "bolts."
-	dex_end
-
-VaporeonPokedexDescription: ; 0x2e0ea
-	dex_text "Lives close to"
-	dex_line "water. Its long"
-	dex_line "tail is ridged"
-	dex_line "with a fin which"
-	dex_line "is often mistaken"
-	dex_line "for a mermaid`s."
-	dex_end
-
-MachopPokedexDescription: ; 0x2e14c
-	dex_text "Loves to build"
-	dex_line "its muscles."
-	dex_line "It trains in all"
-	dex_line "styles of martial"
-	dex_line "arts to become"
-	dex_line "even stronger."
-	dex_end
-
-ZubatPokedexDescription: ; 0x2e1a9
-	dex_text "Forms colonies in"
-	dex_line "perpetually dark"
-	dex_line "places. Uses"
-	dex_line "ultrasonic waves"
-	dex_line "to identify and"
-	dex_line "approach targets."
-	dex_end
-
-EkansPokedexDescription: ; 0x2e20c
-	dex_text "Moves silently"
-	dex_line "and stealthily."
-	dex_line "Eats the eggs of"
-	dex_line "birds, such as"
-	dex_line "PIDGEY and"
-	dex_line "SPEAROW, whole."
-	dex_end
-
-ParasPokedexDescription: ; 0x2e266
-	dex_text "Burrows to suck"
-	dex_line "tree roots. The"
-	dex_line "mushrooms on its"
-	dex_line "back grow by draw-"
-	dex_line "ing nutrients from"
-	dex_line "the bug host."
-	dex_end
-
-PoliwhirlPokedexDescription: ; 0x2e2cb
-	dex_text "Capable of living"
-	dex_line "in or out of"
-	dex_line "water. When out"
-	dex_line "of water, it"
-	dex_line "sweats to keep"
-	dex_line "its body slimy."
-	dex_end
-
-PoliwrathPokedexDescription: ; 0x2e326
-	dex_text "An adept swimmer"
-	dex_line "at both the front"
-	dex_line "crawl and breast"
-	dex_line "stroke. Easily"
-	dex_line "overtakes the best"
-	dex_line "human swimmers."
-	dex_end
-
-WeedlePokedexDescription: ; 0x2e38c
-	dex_text "Often found in"
-	dex_line "forests, eating"
-	dex_line "leaves."
-	dex_line "It has a sharp"
-	dex_line "venomous stinger"
-	dex_line "on its head."
-	dex_end
-
-KakunaPokedexDescription: ; 0x2e3e0
-	dex_text "Almost incapable"
-	dex_line "of moving, this"
-	dex_line "POKéMON can only"
-	dex_line "harden its shell"
-	dex_line "to protect itself"
-	dex_line "from predators."
-	dex_end
-
-BeedrillPokedexDescription: ; 0x2e445
-	dex_text "Flies at high"
-	dex_line "speed and attacks"
-	dex_line "using its large"
-	dex_line "venomous stingers"
-	dex_line "on its forelegs"
-	dex_line "and tail."
-	dex_end
-
-DodrioPokedexDescription: ; 0x2e4a1
-	dex_text "Uses its three"
-	dex_line "brains to execute"
-	dex_line "complex plans."
-	dex_line "While two heads"
-	dex_line "sleep, one head"
-	dex_line "stays awake."
-	dex_end
-
-PrimeapePokedexDescription: ; 0x2e4fe
-	dex_text "Always furious"
-	dex_line "and tenacious to"
-	dex_line "boot. It will not"
-	dex_line "abandon chasing"
-	dex_line "its quarry until"
-	dex_line "it is caught."
-	dex_end
-
-DugtrioPokedexDescription: ; 0x2e55f
-	dex_text "A team of DIGLETT"
-	dex_line "triplets."
-	dex_line "It triggers huge"
-	dex_line "earthquakes by"
-	dex_line "burrowing 60 miles"
-	dex_line "underground."
-	dex_end
-
-VenomothPokedexDescription: ; 0x2e5bb
-	dex_text "The dust-like"
-	dex_line "scales covering"
-	dex_line "its wings are"
-	dex_line "color coded to"
-	dex_line "indicate the kinds"
-	dex_line "of poison it has."
-	dex_end
-
-DewgongPokedexDescription: ; 0x2e61b
-	dex_text "Stores thermal"
-	dex_line "energy in its"
-	dex_line "body. Swims at a"
-	dex_line "steady 8 knots"
-	dex_line "even in intensely"
-	dex_line "cold waters. "
-	dex_end
-
-CaterpiePokedexDescription: ; 0x2e678
-	dex_text "Its short feet"
-	dex_line "are tipped with"
-	dex_line "suction pads that"
-	dex_line "enable it to"
-	dex_line "tirelessly climb"
-	dex_line "slopes and walls."
-	dex_end
-
-MetapodPokedexDescription: ; 0x2e6d9
-	dex_text "This POKéMON is"
-	dex_line "vulnerable to"
-	dex_line "attack while its"
-	dex_line "shell is soft,"
-	dex_line "exposing its weak"
-	dex_line "and tender body."
-	dex_end
-
-ButterfreePokedexDescription: ; 0x2e73a
-	dex_text "In battle, it"
-	dex_line "flaps its wings"
-	dex_line "at high speed to"
-	dex_line "release highly"
-	dex_line "toxic dust into"
-	dex_line "the air."
-	dex_end
-
-MachampPokedexDescription: ; 0x2e791
-	dex_text "Using its heavy"
-	dex_line "muscles, it throws"
-	dex_line "powerful punches"
-	dex_line "that can send the"
-	dex_line "victim clear over"
-	dex_line "the horizon. "
-	dex_end
-
-GolduckPokedexDescription: ; 0x2e7f7
-	dex_text "Often seen swim-"
-	dex_line "ming elegantly by"
-	dex_line "lake shores. It"
-	dex_line "is often mistaken"
-	dex_line "for the Japanese"
-	dex_line "monster, Kappa."
-	dex_end
-
-HypnoPokedexDescription: ; 0x2e85d
-	dex_text "When it locks eyes"
-	dex_line "with an enemy, it"
-	dex_line "will use a mix of"
-	dex_line "PSI moves such as"
-	dex_line "HYPNOSIS and"
-	dex_line "CONFUSION."
-	dex_end
-
-GolbatPokedexDescription: ; 0x2e8be
-	dex_text "Once it strikes,"
-	dex_line "it will not stop"
-	dex_line "draining energy"
-	dex_line "from the victim"
-	dex_line "even if it gets"
-	dex_line "too heavy to fly."
-	dex_end
-
-MewtwoPokedexDescription: ; 0x2e922
-	dex_text "It was created by"
-	dex_line "a scientist after"
-	dex_line "years of horrific"
-	dex_line "gene splicing and"
-	dex_line "DNA engineering"
-	dex_line "experiments."
-	dex_end
-
-SnorlaxPokedexDescription: ; 0x2e987
-	dex_text "Very lazy. Just"
-	dex_line "eats and sleeps."
-	dex_line "As its rotund"
-	dex_line "bulk builds, it"
-	dex_line "becomes steadily"
-	dex_line "more slothful."
-	dex_end
-
-MagikarpPokedexDescription: ; 0x2e9e6
-	dex_text "In the distant"
-	dex_line "past, it was"
-	dex_line "somewhat stronger"
-	dex_line "than the horribly"
-	dex_line "weak descendants"
-	dex_line "that exist today."
-	dex_end
-
-MukPokedexDescription: ; 0x2ea49
-	dex_text "Thickly covered"
-	dex_line "with a filthy,"
-	dex_line "vile sludge. It"
-	dex_line "is so toxic, even"
-	dex_line "its footprints"
-	dex_line "contain poison."
-	dex_end
-
-KinglerPokedexDescription: ; 0x2eaa9
-	dex_text "The large pincer"
-	dex_line "has 10000 hp of"
-	dex_line "crushing power."
-	dex_line "However, its huge"
-	dex_line "size makes it"
-	dex_line "unwieldy to use."
-	dex_end
-
-CloysterPokedexDescription: ; 0x2eb0b
-	dex_text "When attacked, it"
-	dex_line "launches its"
-	dex_line "horns in quick"
-	dex_line "volleys. Its"
-	dex_line "innards have"
-	dex_line "never been seen."
-	dex_end
-
-ElectrodePokedexDescription: ; 0x2eb64
-	dex_text "It stores electric"
-	dex_line "energy under very"
-	dex_line "high pressure."
-	dex_line "It often explodes"
-	dex_line "with little or no"
-	dex_line "provocation."
-	dex_end
-
-ClefablePokedexDescription: ; 0x2ebc9
-	dex_text "A timid fairy"
-	dex_line "POKéMON that is"
-	dex_line "rarely seen. It"
-	dex_line "will run and hide"
-	dex_line "the moment it"
-	dex_line "senses people."
-	dex_end
-
-WeezingPokedexDescription: ; 0x2ec26
-	dex_text "Where two kinds"
-	dex_line "of poison gases"
-	dex_line "meet, 2 KOFFINGs"
-	dex_line "can fuse into a"
-	dex_line "WEEZING over many"
-	dex_line "years."
-	dex_end
-
-PersianPokedexDescription: ; 0x2ec80
-	dex_text "Although its fur"
-	dex_line "has many admirers,"
-	dex_line "it is tough to"
-	dex_line "raise as a pet"
-	dex_line "because of its"
-	dex_line "fickle meanness."
-	dex_end
-
-MarowakPokedexDescription: ; 0x2ece2
-	dex_text "The bone it holds"
-	dex_line "is its key weapon."
-	dex_line "It throws the"
-	dex_line "bone skillfully"
-	dex_line "like a boomerang"
-	dex_line "to KO targets."
-	dex_end
-
-HaunterPokedexDescription: ; 0x2ed45
-	dex_text "Because of its"
-	dex_line "ability to slip"
-	dex_line "through block"
-	dex_line "walls, it is said"
-	dex_line "to be from an-"
-	dex_line "other dimension."
-	dex_end
-
-AbraPokedexDescription: ; 0x2eda4
-	dex_text "Using its ability"
-	dex_line "to read minds, it"
-	dex_line "will identify"
-	dex_line "impending danger"
-	dex_line "and TELEPORT to"
-	dex_line "safety."
-	dex_end
-
-AlakazamPokedexDescription: ; 0x2edff
-	dex_text "Its brain can out-"
-	dex_line "perform a super-"
-	dex_line "computer."
-	dex_line "Its intelligence"
-	dex_line "quotient is said"
-	dex_line "to be 5,000."
-	dex_end
-
-PidgeottoPokedexDescription: ; 0x2ee5c
-	dex_text "Very protective"
-	dex_line "of its sprawling"
-	dex_line "territorial area,"
-	dex_line "this POKéMON will"
-	dex_line "fiercely peck at"
-	dex_line "any intruder."
-	dex_end
-
-PidgeotPokedexDescription: ; 0x2eec0
-	dex_text "When hunting, it"
-	dex_line "skims the surface"
-	dex_line "of water at high"
-	dex_line "speed to pick off"
-	dex_line "unwary prey such"
-	dex_line "as MAGIKARP."
-	dex_end
-
-StarmiePokedexDescription: ; 0x2ef24
-	dex_text "Its central core"
-	dex_line "glows with the"
-	dex_line "seven colors of"
-	dex_line "the rainbow. Some"
-	dex_line "people value the"
-	dex_line "core as a gem."
-	dex_end
-
-BulbasaurPokedexDescription: ; 0x2ef86
-	dex_text "A strange seed was"
-	dex_line "planted on its"
-	dex_line "back at birth."
-	dex_line "The plant sprouts"
-	dex_line "and grows with"
-	dex_line "this POKéMON."
-	dex_end
-
-VenusaurPokedexDescription: ; 0x2efe6
-	dex_text "The plant blooms"
-	dex_line "when it is"
-	dex_line "absorbing solar"
-	dex_line "energy. It stays"
-	dex_line "on the move to"
-	dex_line "seek sunlight."
-	dex_end
-
-TentacruelPokedexDescription: ; 0x2f041
-	dex_text "The tentacles are"
-	dex_line "normally kept"
-	dex_line "short. On hunts,"
-	dex_line "they are extended"
-	dex_line "to ensnare and"
-	dex_line "immobilize prey."
-	dex_end
-
-GoldeenPokedexDescription: ; 0x2f0a4
-	dex_text "Its tail fin"
-	dex_line "billows like an"
-	dex_line "elegant ballroom"
-	dex_line "dress, giving it"
-	dex_line "the nickname of"
-	dex_line "the Water Queen."
-	dex_end
-
-SeakingPokedexDescription: ; 0x2f104
-	dex_text "In the autumn"
-	dex_line "spawning season,"
-	dex_line "they can be seen"
-	dex_line "swimming power-"
-	dex_line "fully up rivers"
-	dex_line "and creeks."
-	dex_end
-
-PonytaPokedexDescription: ; 0x2f160
-	dex_text "Its hooves are 10"
-	dex_line "times harder than"
-	dex_line "diamonds. It can"
-	dex_line "trample anything"
-	dex_line "completely flat"
-	dex_line "in little time."
-	dex_end
-
-RapidashPokedexDescription: ; 0x2f1c6
-	dex_text "Very competitive,"
-	dex_line "this POKéMON will"
-	dex_line "chase anything"
-	dex_line "that moves fast"
-	dex_line "in the hopes of"
-	dex_line "racing it."
-	dex_end
-
-RattataPokedexDescription: ; 0x2f224
-	dex_text "Bites anything"
-	dex_line "when it attacks."
-	dex_line "Small and very"
-	dex_line "quick, it is a"
-	dex_line "common sight in"
-	dex_line "many places."
-	dex_end
-
-RaticatePokedexDescription: ; 0x2f27f
-	dex_text "It uses its whis-"
-	dex_line "kers to maintain"
-	dex_line "its balance."
-	dex_line "It apparently"
-	dex_line "slows down if"
-	dex_line "they are cut off."
-	dex_end
-
-NidorinoPokedexDescription: ; 0x2f2dd
-	dex_text "An aggressive"
-	dex_line "POKéMON that is"
-	dex_line "quick to attack."
-	dex_line "The horn on its"
-	dex_line "head secretes a"
-	dex_line "powerful venom."
-	dex_end
-
-NidorinaPokedexDescription: ; 0x2f33c
-	dex_text "The female`s horn"
-	dex_line "develops slowly."
-	dex_line "Prefers physical"
-	dex_line "attacks such as"
-	dex_line "clawing and"
-	dex_line "biting."
-	dex_end
-
-GeodudePokedexDescription: ; 0x2f394
-	dex_text "Found in fields"
-	dex_line "and mountains."
-	dex_line "Mistaking them"
-	dex_line "for boulders,"
-	dex_line "people often step"
-	dex_line "or trip on them."
-	dex_end
-
-PorygonPokedexDescription: ; 0x2f3f3
-	dex_text "A POKéMON that"
-	dex_line "consists entirely"
-	dex_line "of programming"
-	dex_line "code. Capable of"
-	dex_line "moving freely in"
-	dex_line "cyberspace."
-	dex_end
-
-AerodactylPokedexDescription: ; 0x2f451
-	dex_text "A ferocious, pre-"
-	dex_line "historic POKéMON"
-	dex_line "that goes for the"
-	dex_line "enemy`s throat"
-	dex_line "with its serrated"
-	dex_line "saw-like fangs."
-	dex_end
-
-MagnemitePokedexDescription: ; 0x2f4b7
-	dex_text "Uses anti-gravity"
-	dex_line "to stay suspended."
-	dex_line "Appears without"
-	dex_line "warning and uses"
-	dex_line "THUNDER WAVE and"
-	dex_line "similar moves."
-	dex_end
-
-CharmanderPokedexDescription: ; 0x2f51d
-	dex_text "Obviously prefers"
-	dex_line "hot places. When"
-	dex_line "it rains, steam"
-	dex_line "is said to spout"
-	dex_line "from the tip of"
-	dex_line "its tail."
-	dex_end
-
-SquirtlePokedexDescription: ; 0x2f57b
-	dex_text "After birth, its"
-	dex_line "back swells and"
-	dex_line "hardens into a"
-	dex_line "shell. Powerfully"
-	dex_line "sprays foam from"
-	dex_line "its mouth."
-	dex_end
-
-CharmeleonPokedexDescription: ; 0x2f5d9
-	dex_text "When it swings"
-	dex_line "its burning tail,"
-	dex_line "it elevates the"
-	dex_line "temperature to"
-	dex_line "unbearably high"
-	dex_line "levels."
-	dex_end
-
-WartortlePokedexDescription: ; 0x2f631
-	dex_text "Often hides in"
-	dex_line "water to stalk"
-	dex_line "unwary prey. For"
-	dex_line "swimming fast, it"
-	dex_line "moves its ears to"
-	dex_line "maintain balance."
-	dex_end
-
-CharizardPokedexDescription: ; 0x2f696
-	dex_text "Spits fire that"
-	dex_line "is hot enough to"
-	dex_line "melt boulders."
-	dex_line "Known to cause"
-	dex_line "forest fires"
-	dex_line "unintentionally."
-	dex_end
-
-OddishPokedexDescription: ; 0x2f6f3
-	dex_text "During the day,"
-	dex_line "it keeps its face"
-	dex_line "buried in the"
-	dex_line "ground. At night,"
-	dex_line "it wanders around"
-	dex_line "sowing its seeds."
-	dex_end
-
-GloomPokedexDescription: ; 0x2f759
-	dex_text "The fluid that"
-	dex_line "oozes from its"
-	dex_line "mouth isn`t drool."
-	dex_line "It is a nectar"
-	dex_line "that is used to"
-	dex_line "attract prey."
-	dex_end
-
-VileplumePokedexDescription: ; 0x2f7b7
-	dex_text "The larger its"
-	dex_line "petals, the more"
-	dex_line "toxic pollen it"
-	dex_line "contains. Its big"
-	dex_line "head is heavy and"
-	dex_line "hard to hold up."
-	dex_end
-
-BellsproutPokedexDescription: ; 0x2f81c
-	dex_text "A carnivorous"
-	dex_line "POKéMON that traps"
-	dex_line "and eats bugs."
-	dex_line "It uses its root"
-	dex_line "feet to soak up"
-	dex_line "needed moisture."
-	dex_end
-
-WeepinbellPokedexDescription: ; 0x2f87e
-	dex_text "It spits out"
-	dex_line "POISONPOWDER to"
-	dex_line "immobilize the"
-	dex_line "enemy and then"
-	dex_line "finishes it with"
-	dex_line "a spray of ACID."
-	dex_end
-
-VictreebellPokedexDescription: ; 0x2f8d8
-	dex_text "Said to live in"
-	dex_line "huge colonies"
-	dex_line "deep in jungles,"
-	dex_line "although no one"
-	dex_line "has ever returned"
-	dex_line "from there."
-	dex_end
+IF DEF(_CHS)
+INCLUDE "text/pokedex_descriptionsCHS.asm"
+ELSE
+INCLUDE "text/pokedex_descriptionsKOR.asm"
+ENDC
+; INCLUDE "text/pokedex_descriptionsENG.asm"
+
+; LGPE Ver ,pikachu eevee changed to original yellow
+; BulbasaurPokedexDescription:
+;  dex_text_w "背上的种子里储存着营养，"
+;  dex_line_w "所以即使好几天不吃东西"
+;  dex_line_w "也可以活得好好的！"
+;  dex
+
+; IvysaurPokedexDescription:
+;  dex_text_w "它的花苞会在吸收养分后"
+;  dex_line_w "长大。当花苞发出香味时，"
+;  dex_line_w "就预示着它快要开花了。"
+;  dex
+
+; VenusaurPokedexDescription:
+;  dex_text_w "它背上开出的大花"
+;  dex_line_w "能够吸收太阳光"
+;  dex_line_w "并将其转换为能量。"
+;  dex
+
+; CharmanderPokedexDescription:
+;  dex_text_w "要是把它带到安静的地方，"
+;  dex_line_w "就能听到它的尾巴燃烧时"
+;  dex_line_w "发出的微小的声音。"
+;  dex
+
+; CharmeleonPokedexDescription:
+;  dex_text_w "在与强敌战斗的过程中，"
+;  dex_line_w "如果情绪变得兴奋起来，"
+;  dex_line_w "有时会喷出青白色的烈火。"
+;  dex
+
+; CharizardPokedexDescription:
+;  dex_text_w "从口中喷出灼热的火焰时，"
+;  dex_line_w "尾巴尖端的红色火焰"
+;  dex_line_w "会燃烧得更加猛烈。"
+;  dex
+
+; SquirtlePokedexDescription:
+;  dex_text_w "通过从水面喷水来捕食。"
+;  dex_line_w "在危急时刻会将四肢"
+;  dex_line_w "缩入龟壳里保护自己。"
+;  dex
+
+; WartortlePokedexDescription:
+;  dex_text_w "如果拍打它的头部，它会"
+;  dex_line_w "把头缩进壳里，但尾巴"
+;  dex_line_w "还是会露出来一点点。"
+;  dex
+
+; BlastoisePokedexDescription:
+;  dex_text_w "一旦锁定了目标，"
+;  dex_line_w "它会以超越了消防"
+;  dex_line_w "水枪的力道来喷水。"
+;  dex
+
+; CaterpiePokedexDescription:
+;  dex_text_w "如果你碰到了它头上的"
+;  dex_line_w "触角，它就会分泌出"
+;  dex_line_w "难闻的气味来保护自己。"
+;  dex
+
+; MetapodPokedexDescription:
+;  dex_text_w "它会让外壳变硬来保护自己。"
+;  dex_line_w "然而在遇到强烈的冲击力时，"
+;  dex_line_w "它的身体还是会被撞出来。"
+;  dex
+
+; ButterfreePokedexDescription:
+;  dex_text_w "它翅膀上的剧毒鳞粉"
+;  dex_line_w "能够防水，因此即使是"
+;  dex_line_w "雨天也可以飞来飞去。"
+;  dex
+
+; WeedlePokedexDescription:
+;  dex_text_w "头上长有尖锐的针。"
+;  dex_line_w "它喜欢藏在森林或"
+;  dex_line_w "草丛里大量吞食树叶。"
+;  dex
+
+; KakunaPokedexDescription:
+;  dex_text_w "虽然几乎动也动不了，"
+;  dex_line_w "但是如果遇到了危险，"
+;  dex_line_w "有时似乎会竖起毒刺来反抗。"
+;  dex
+
+; BeedrillPokedexDescription:
+;  dex_text_w "它会用双手和"
+;  dex_line_w "尾部的３根毒针"
+;  dex_line_w "反复刺伤敌人。"
+;  dex
+
+; PidgeyPokedexDescription:
+;  dex_text_w "性格沉着冷静，即使受到"
+;  dex_line_w "攻击也很少反击，只会朝"
+;  dex_line_w "对手扬起沙子保护自己。"
+;  dex
+
+; PidgeottoPokedexDescription:
+;  dex_text_w "拥有超群的体力，而且"
+;  dex_line_w "飞翔范围广，经常飞到"
+;  dex_line_w "很远的地方寻找食物。"
+;  dex
+
+; PidgeotPokedexDescription:
+;  dex_text_w "以２马赫的飞行速度来"
+;  dex_line_w "觅食。它巨大的爪子是"
+;  dex_line_w "非常令人惧怕的武器。"
+;  dex
+
+; RattataPokedexDescription:
+;  dex_text_w "有两颗大门牙，见什么咬什么。"
+;  dex_line_w "只要看到１只小拉达出没，"
+;  dex_line_w "附近肯定还住着40只以上。"
+;  dex
+
+; RaticatePokedexDescription:
+;  dex_text_w "它的后脚上长着"
+;  dex_line_w "小蹼，以便它在"
+;  dex_line_w "水中游泳寻找食物。"
+;  dex
+
+; SpearowPokedexDescription:
+;  dex_text_w "不擅长高空飞行。"
+;  dex_line_w "会以超高速在地盘里四处盘旋，"
+;  dex_line_w "以保护自己的地盘不被侵犯。"
+;  dex
+
+; FearowPokedexDescription:
+;  dex_text_w "很久以前就存在的宝可梦。"
+;  dex_line_w "哪怕只察觉到一丝危险，"
+;  dex_line_w "都会立即飞向高空。"
+;  dex
+
+; EkansPokedexDescription:
+;  dex_text_w "身体会随着年龄增长不断变长。"
+;  dex_line_w "每到夜里，它会一圈圈地"
+;  dex_line_w "将身体缠绕在树枝上休息。"
+;  dex
+
+; ArbokPokedexDescription:
+;  dex_text_w "根据研究证实，它腹部"
+;  dex_line_w "那可怕的纹路大约有"
+;  dex_line_w "６个种类已经得到确认。"
+;  dex
+
+; PikachuPokedexDescription:
+;  dex_text_w "会将尾巴竖起来来感觉周围是否安全。"
+;  dex_line_w "所以如果随便去拉它的尾巴，"
+;  dex_line_w "会被咬喔。"
+;  dex
+
+; RaichuPokedexDescription:
+;  dex_text_w "体内的电力累积到一定程度时，"
+;  dex_line_w "性格会变得带有攻击性。"
+;  dex_line_w "在昏暗处看起来就像是在发亮。"
+;  dex
+
+; SandshrewPokedexDescription:
+;  dex_text_w "身体很干燥。但据说"
+;  dex_line_w "在夜里降温时，它的"
+;  dex_line_w "表皮上会有露水凝结。"
+;  dex
+
+; SandslashPokedexDescription:
+;  dex_text_w "它很擅长用爪子抓伤敌人。"
+;  dex_line_w "虽然在战斗中偶尔会折断爪子，"
+;  dex_line_w "但到第二天就会长出新的来。"
+;  dex
+
+; NidoranFPokedexDescription:
+;  dex_text_w "虽然它性格温顺不喜欢战斗，"
+;  dex_line_w "但由于小犄角中含有毒液，"
+;  dex_line_w "请一定要小心提防。"
+;  dex
+
+; NidorinaPokedexDescription:
+;  dex_text_w "待在巢穴深处的时候，"
+;  dex_line_w "它一定会把身上的刺收起来。"
+;  dex_line_w "这表明它正处于放松状态。"
+;  dex
+
+; NidoqueenPokedexDescription:
+;  dex_text_w "坚硬的鳞片覆盖着"
+;  dex_line_w "强壮的身体。据说它的"
+;  dex_line_w "鳞片会自己长出新的。"
+;  dex
+
+; NidoranMPokedexDescription:
+;  dex_text_w "一直竖起它的大耳朵"
+;  dex_line_w "感知周围的情形。当它"
+;  dex_line_w "察觉到危险便会使用毒针。"
+;  dex
+
+; NidorinoPokedexDescription:
+;  dex_text_w "头上的犄角里含有毒素，"
+;  dex_line_w "当犄角撞穿了什么东西时，"
+;  dex_line_w "毒素就会随着冲击而流出。"
+;  dex
+
+; NidokingPokedexDescription:
+;  dex_text_w "通过活用自己钢一般坚硬的"
+;  dex_line_w "皮肤来使出强力的撞击。它的"
+;  dex_line_w "犄角坚硬得能够刺穿钻石。"
+;  dex
+
+; ClefairyPokedexDescription:
+;  dex_text_w "因外形和动作可爱而深受"
+;  dex_line_w "大家的喜爱。但或许是由于"
+;  dex_line_w "数量稀少，它们很难被发现。"
+;  dex
+
+; ClefablePokedexDescription:
+;  dex_text_w "妖精的一种。"
+;  dex_line_w "似乎非常珍惜自己的世界，"
+;  dex_line_w "很少在人类面前现身。"
+;  dex
+
+; VulpixPokedexDescription:
+;  dex_text_w "皮毛和尾巴都非常美丽。"
+;  dex_line_w "随着自身的成长，尾巴的末端"
+;  dex_line_w "会渐渐分开，数量也会增加。"
+;  dex
+
+; NinetalesPokedexDescription:
+;  dex_text_w "传说这种宝可梦"
+;  dex_line_w "是由９位圣者"
+;  dex_line_w "合体之后而诞生的。"
+;  dex
+
+; JigglypuffPokedexDescription:
+;  dex_text_w "它会用圆溜溜的大眼睛盯着"
+;  dex_line_w "对手唱起不可思议的歌曲，这"
+;  dex_line_w "令人舒服的歌曲会让对手睡着。"
+;  dex
+
+; WigglytuffPokedexDescription:
+;  dex_text_w "身体非常有弹性，"
+;  dex_line_w "当它用力吸气时，"
+;  dex_line_w "身体可以无限制地膨胀。"
+;  dex
+
+; ZubatPokedexDescription:
+;  dex_text_w "由于需要调查前方的"
+;  dex_line_w "状况，它会一边从嘴里"
+;  dex_line_w "发出超音波一边飞行。"
+;  dex
+
+; GolbatPokedexDescription:
+;  dex_text_w "难以察觉它会从哪里悄悄"
+;  dex_line_w "接近。它会用尖锐的牙"
+;  dex_line_w "咬住对手，同时使劲地吸血。"
+;  dex
+
+; OddishPokedexDescription:
+;  dex_text_w "要是以为它是普通的草而"
+;  dex_line_w "将它拔起，就会听到它的叫声。"
+;  dex_line_w "这让人感到莫名的恐怖。"
+;  dex
+
+; GloomPokedexDescription:
+;  dex_text_w "奇臭无比！即使如此，"
+;  dex_line_w "一千个人里总会出现"
+;  dex_line_w "一个人喜欢闻这种味道。"
+;  dex
+
+; VileplumePokedexDescription:
+;  dex_text_w "为了散布有毒的花粉"
+;  dex_line_w "而摇动其巨大的花瓣，"
+;  dex_line_w "同时发出震耳的响声。"
+;  dex
+
+; ParasPokedexDescription:
+;  dex_text_w "它会通过挖洞来从树根里"
+;  dex_line_w "吸取营养，但大部分营养"
+;  dex_line_w "都会被背上的蘑菇抢走。"
+;  dex
+
+; ParasectPokedexDescription:
+;  dex_text_w "由于虫子的精华不断被吸走，"
+;  dex_line_w "在思考的似乎已经不是虫子，"
+;  dex_line_w "而是背上的蘑菇了。"
+;  dex
+
+; VenonatPokedexDescription:
+;  dex_text_w "在明亮的地方你便能发现它"
+;  dex_line_w "具有雷达功能的大眼其实是"
+;  dex_line_w "由许多个小眼睛聚集而成的。"
+;  dex
+
+; VenomothPokedexDescription:
+;  dex_text_w "如果不小心把它翅膀上的鳞粉"
+;  dex_line_w "沾到了身上，那不但会很难去除，"
+;  dex_line_w "更糟的是毒素也会从那里渗入。"
+;  dex
+
+; DiglettPokedexDescription:
+;  dex_text_w "喜欢阴暗的地方。"
+;  dex_line_w "大部分时间都待在地下，"
+;  dex_line_w "只有在洞窟里会经常探头出来。"
+;  dex
+
+; DugtrioPokedexDescription:
+;  dex_text_w "三合一的力量能让它们"
+;  dex_line_w "挖地深至100公里，甚至"
+;  dex_line_w "有报告说它们会引发地震。"
+;  dex
+
+; MeowthPokedexDescription:
+;  dex_text_w "貌似一到晚上就精力充沛。"
+;  dex_line_w "喜欢又圆又亮的东西，"
+;  dex_line_w "发现了就一定要捡走。"
+;  dex
+
+; PersianPokedexDescription:
+;  dex_text_w "额头上的宝石闪闪发亮！"
+;  dex_line_w "走路的姿态也十分优美，"
+;  dex_line_w "就像女王一样华丽高贵。"
+;  dex
+
+; PsyduckPokedexDescription:
+;  dex_text_w "一直被头痛困扰。能使用"
+;  dex_line_w "念力，但不知道那是否是"
+;  dex_line_w "出于它自己的意识。"
+;  dex
+
+; GolduckPokedexDescription:
+;  dex_text_w "它靠修长的四肢"
+;  dex_line_w "和发达的大脚蹼"
+;  dex_line_w "在湖里优雅地游泳。"
+;  dex
+
+; MankeyPokedexDescription:
+;  dex_text_w "身体轻盈，在树上生活。"
+;  dex_line_w "常因鸡毛蒜皮的小事发火"
+;  dex_line_w "而飞扑到周围的东西上。"
+;  dex
+
+; PrimeapePokedexDescription:
+;  dex_text_w "只有在谁都不在身边的"
+;  dex_line_w "时候才不生气，但几乎"
+;  dex_line_w "没有人目击过这种情况。"
+;  dex
+
+; GrowlithePokedexDescription:
+;  dex_text_w "性格很容易和人亲近，"
+;  dex_line_w "但是会对进入自己"
+;  dex_line_w "领地的敌人狂吠。"
+;  dex
+
+; ArcaninePokedexDescription:
+;  dex_text_w "东方古老传说中的宝可梦。"
+;  dex_line_w "曾有不计其数的人为它"
+;  dex_line_w "轻巧跑动的身姿而倾倒。"
+;  dex
+
+; PoliwagPokedexDescription:
+;  dex_text_w "漩涡的旋转方向好像会"
+;  dex_line_w "因出生地区而不同。"
+;  dex_line_w "比起走路，它更擅长游泳。"
+;  dex
+
+; PoliwhirlPokedexDescription:
+;  dex_text_w "据说它会在要被对手"
+;  dex_line_w "攻击时用腹部的漩涡"
+;  dex_line_w "让对方睡着，趁机逃跑。"
+;  dex
+
+; PoliwrathPokedexDescription:
+;  dex_text_w "他会用全身的肌肉"
+;  dex_line_w "奋力游泳，连世界级的"
+;  dex_line_w "选手都甘拜下风。"
+;  dex
+
+; AbraPokedexDescription:
+;  dex_text_w "它每天要睡18个小时。"
+;  dex_line_w "遇到危险时，即使在睡梦中"
+;  dex_line_w "也可以用瞬间移动来逃脱。"
+;  dex
+
+; KadabraPokedexDescription:
+;  dex_text_w "当勇基拉在附近时，"
+;  dex_line_w "似乎会发生像是"
+;  dex_line_w "时钟倒转这样的怪事。"
+;  dex
+
+; AlakazamPokedexDescription:
+;  dex_text_w "什么事情都能记住。只要是"
+;  dex_line_w "曾经体验过的事情就绝对"
+;  dex_line_w "不会忘记，头脑非常聪明。"
+;  dex
+
+; MachopPokedexDescription:
+;  dex_text_w "它体格虽小却力大无比。"
+;  dex_line_w "不但如此，它还精通各种"
+;  dex_line_w "格斗技能，实力十分惊人。"
+;  dex
+
+; MachokePokedexDescription:
+;  dex_text_w "只要解开系在腰上的"
+;  dex_line_w "限制它力量的腰带，"
+;  dex_line_w "豪力就会变得势不可挡。"
+;  dex
+
+; MachampPokedexDescription:
+;  dex_text_w "仅靠1只手臂的力量便可"
+;  dex_line_w "推动一座山。4只手一起"
+;  dex_line_w "可以打出极为强力的拳击。"
+;  dex
+
+; BellsproutPokedexDescription:
+;  dex_text_w "喜欢温度高，有一定"
+;  dex_line_w "湿度的地方。它会用"
+;  dex_line_w "身上的藤蔓抓小虫来吃。"
+;  dex
+
+; WeepinbellPokedexDescription:
+;  dex_text_w "它在肚子饿的时候会"
+;  dex_line_w "吞掉周围会动的东西，"
+;  dex_line_w "分泌溶解液让其致命。"
+;  dex
+
+; VictreebellPokedexDescription:
+;  dex_text_w "用花蜜的香味引诱猎物。"
+;  dex_line_w "据说被它吞入嘴里的东西，"
+;  dex_line_w "只要1天就会溶解到连骨头都不剩。"
+;  dex
+
+; TentacoolPokedexDescription:
+;  dex_text_w "有时能在沙滩上发现它"
+;  dex_line_w "干巴巴的身体，但是"
+;  dex_line_w "它只要沾到水就能复活。"
+;  dex
+
+; TentacruelPokedexDescription:
+;  dex_text_w "它能让80条触手自由"
+;  dex_line_w "伸缩，靠缠住猎物后"
+;  dex_line_w "注入毒素来让其变弱。"
+;  dex
+
+; GeodudePokedexDescription:
+;  dex_text_w "大多栖息于山路。由于"
+;  dex_line_w "不留神踩到它会使它"
+;  dex_line_w "大发雷霆，得多加小心。"
+;  dex
+
+; GravelerPokedexDescription:
+;  dex_text_w "常在山路上滚来滚去。"
+;  dex_line_w "滚动时从来不关心"
+;  dex_line_w "前面的路上都有什么。"
+;  dex
+
+; GolemPokedexDescription:
+;  dex_text_w "刚蜕皮时浑身都白白的"
+;  dex_line_w "非常柔软，但是接触到"
+;  dex_line_w "空气之后会迅速变坚硬。"
+;  dex
+
+; PonytaPokedexDescription:
+;  dex_text_w "在用力跳跃之后，会"
+;  dex_line_w "用蹄子和脚上的肌肉"
+;  dex_line_w "来缓解着地时的撞击。"
+;  dex
+
+; RapidashPokedexDescription:
+;  dex_text_w "总之就是喜欢跑步。如果"
+;  dex_line_w "发现有谁跑得比自己更快，"
+;  dex_line_w "就会用尽全力去追赶。"
+;  dex
+
+; SlowpokePokedexDescription:
+;  dex_text_w "非常呆，动作也很缓慢。"
+;  dex_line_w "从不在意时间的流逝，"
+;  dex_line_w "过着悠闲的生活。"
+;  dex
+
+; SlowbroPokedexDescription:
+;  dex_text_w "在海边悠闲地生活。如果"
+;  dex_line_w "尾巴上的大舌贝脱落了，"
+;  dex_line_w "它就会变回呆呆兽。"
+;  dex
+
+; MagnemitePokedexDescription:
+;  dex_text_w "天生就拥有遮断重力"
+;  dex_line_w "的能力，可以一边发出"
+;  dex_line_w "电磁波一边在空中移动。"
+;  dex
+
+; MagnetonPokedexDescription:
+;  dex_text_w "在它发射出神秘电波后，"
+;  dex_line_w "方圆１千米以内的"
+;  dex_line_w "气温会上升２度。"
+;  dex
+
+; FarfetchdPokedexDescription:
+;  dex_text_w "居住在茎状植物生长的地方。"
+;  dex_line_w "由于这种植物极为稀少而罕见，"
+;  dex_line_w "大葱鸭的数量似乎也在减少。"
+;  dex
+
+; DoduoPokedexDescription:
+;  dex_text_w "羽毛较短所以不擅长飞行，"
+;  dex_line_w "但是拥有发达的双脚，"
+;  dex_line_w "能够以很快的速度奔跑。"
+;  dex
+
+; DodrioPokedexDescription:
+;  dex_text_w "由嘟嘟的某个头分裂"
+;  dex_line_w "出的变种。以60千米的"
+;  dex_line_w "时速在草原上奔跑。"
+;  dex
+
+; SeelPokedexDescription:
+;  dex_text_w "喜欢天寒地冻的地方，"
+;  dex_line_w "就算零下10度"
+;  dex_line_w "也能愉快地游泳。"
+;  dex
+
+; DewgongPokedexDescription:
+;  dex_text_w "全身像雪一样白。十分耐寒，"
+;  dex_line_w "即使是在有浮冰的大海里"
+;  dex_line_w "也能很精神地游来游去。"
+;  dex
+
+; GrimerPokedexDescription:
+;  dex_text_w "它由囤积的淤泥而形成。"
+;  dex_line_w "臭到让人无法碰触，凡是"
+;  dex_line_w "它走过的地方都寸草不生。"
+;  dex
+
+; MukPokedexDescription:
+;  dex_text_w "非常难闻！气味臭到让人"
+;  dex_line_w "窒息，但由于鼻子的退化，"
+;  dex_line_w "它自己完全闻不到味道。"
+;  dex
+
+; ShellderPokedexDescription:
+;  dex_text_w "它的硬壳可以承受任何"
+;  dex_line_w "攻击，但是一旦硬壳打开，"
+;  dex_line_w "它柔软的内部就会完全暴露。"
+;  dex
+
+; CloysterPokedexDescription:
+;  dex_text_w "不但有比钻石还要坚硬的"
+;  dex_line_w "外壳保护着，还能发射"
+;  dex_line_w "壳上的刺，不太好对付。"
+;  dex
+
+; GastlyPokedexDescription:
+;  dex_text_w "它似乎会在没人居住的"
+;  dex_line_w "旧屋子里出现。形状不清，"
+;  dex_line_w "仿佛就像是气体一样。"
+;  dex
+
+; HaunterPokedexDescription:
+;  dex_text_w "被它舔到时生命力会被吸走，"
+;  dex_line_w "身体会不受控制地不停颤抖，"
+;  dex_line_w "最后一命呜呼。"
+;  dex
+
+; GengarPokedexDescription:
+;  dex_text_w "如果你突然感到寒气逼近，"
+;  dex_line_w "就说明耿鬼在你身边，或许"
+;  dex_line_w "它已经在你身上下了诅咒。"
+;  dex
+
+; OnixPokedexDescription:
+;  dex_text_w "以惊人之势钻地觅食。在它"
+;  dex_line_w "通过之后形成的洞穴会"
+;  dex_line_w "被地鼠们当作自己的住处。"
+;  dex
+
+; DrowzeePokedexDescription:
+;  dex_text_w "如果你每晚与它一起睡觉，"
+;  dex_line_w "它偶尔会让你梦见"
+;  dex_line_w "它以前吃过的梦。"
+;  dex
+
+; HypnoPokedexDescription:
+;  dex_text_w "无意中遇到它的时候，如果"
+;  dex_line_w "不小心和它对上视线会很危险。"
+;  dex_line_w "它手里拿着的钟摆会让人睡着。"
+;  dex
+
+; KrabbyPokedexDescription:
+;  dex_text_w "钳子是它强悍的武器，但在"
+;  dex_line_w "攻击时钳子偶尔会脱落。"
+;  dex_line_w "脱落后很快会长出新的来。"
+;  dex
+
+; KinglerPokedexDescription:
+;  dex_text_w "一边的钳子很是巨大，"
+;  dex_line_w "虽说硬如钢铁还拥有"
+;  dex_line_w "１万马力，但还是太重了。"
+;  dex
+
+; VoltorbPokedexDescription:
+;  dex_text_w "据说它与精灵球相似的外形"
+;  dex_line_w "其实是它的保护色，但它"
+;  dex_line_w "很容易自爆这一点也出人意料。"
+;  dex
+
+; ElectrodePokedexDescription:
+;  dex_text_w "只要受到一点撞击，"
+;  dex_line_w "就会由于体内的"
+;  dex_line_w "电能溢出导致爆炸。"
+;  dex
+
+; ExeggcutePokedexDescription:
+;  dex_text_w "每一个蛋都相互吸引着"
+;  dex_line_w "旋转。６个蛋凑不齐时"
+;  dex_line_w "它就无法保持平衡。"
+;  dex
+
+; ExeggutorPokedexDescription:
+;  dex_text_w "由于三个头各自都在"
+;  dex_line_w "思考自己喜欢的事情，"
+;  dex_line_w "所以它的叫声非常吵闹。"
+;  dex
+
+; CubonePokedexDescription:
+;  dex_text_w "它头上戴着死去母亲的头骨。"
+;  dex_line_w "它的哭声会在头骨里"
+;  dex_line_w "回响出悲伤的旋律。"
+;  dex
+
+; MarowakPokedexDescription:
+;  dex_text_w "身体曾经又小又弱，在"
+;  dex_line_w "习惯了使用骨头战斗后"
+;  dex_line_w "才变成了粗暴的性格。"
+;  dex
+
+; HitmonleePokedexDescription:
+;  dex_text_w "在踢中敌人的瞬间，"
+;  dex_line_w "脚底会变得像钻石般坚硬，"
+;  dex_line_w "将对手踢成碎片。"
+;  dex
+
+; HitmonchanPokedexDescription:
+;  dex_text_w "它的拳击好似钻头一般！"
+;  dex_line_w "在它的攻击之下，哪怕是"
+;  dex_line_w "水泥墙也会被钻出洞来。"
+;  dex
+
+; LickitungPokedexDescription:
+;  dex_text_w "它２米长的舌头比前肢更"
+;  dex_line_w "能灵活地移动。不知为何，"
+;  dex_line_w "被它舔到之后会觉得发麻。"
+;  dex
+
+; KoffingPokedexDescription:
+;  dex_text_w "在炎热的地方，它体内的"
+;  dex_line_w "气体会由于膨胀而产生"
+;  dex_line_w "爆炸的危险，需要注意。"
+;  dex
+
+; WeezingPokedexDescription:
+;  dex_text_w "它要靠吸收垃圾"
+;  dex_line_w "里的毒气、细菌和"
+;  dex_line_w "灰尘来维持生命。"
+;  dex
+
+; RhyhornPokedexDescription:
+;  dex_text_w "单细胞的脑子只能思考"
+;  dex_line_w "一件事情。一旦它开始猛撞，"
+;  dex_line_w "直到睡着前都不会停止。"
+;  dex
+
+; RhydonPokedexDescription:
+;  dex_text_w "可以只用后腿行走，智力也"
+;  dex_line_w "发达了许多。像盔甲一样的"
+;  dex_line_w "皮肤可以抵挡住岩浆。"
+;  dex
+
+; ChanseyPokedexDescription:
+;  dex_text_w "性格温柔的宝可梦，当它"
+;  dex_line_w "看到受伤的宝可梦时，会把"
+;  dex_line_w "营养丰富的蛋分给对方。"
+;  dex
+
+; TangelaPokedexDescription:
+;  dex_text_w "全身被蓝色的蔓藤覆盖，"
+;  dex_line_w "真面目不为人知。据说，"
+;  dex_line_w "它的蔓藤会持续不断地生长。"
+;  dex
+
+; KangaskhanPokedexDescription:
+;  dex_text_w "在腹部的袋子里养育自己的"
+;  dex_line_w "宝宝。为了保护宝宝，遇到"
+;  dex_line_w "什么样的敌人都不会退缩。"
+;  dex
+
+; HorseaPokedexDescription:
+;  dex_text_w "在感到危险时会从"
+;  dex_line_w "嘴里用力地喷出水"
+;  dex_line_w "或者特殊的墨汁。"
+;  dex
+
+; SeadraPokedexDescription:
+;  dex_text_w "摸它的背鳍会导致麻痹。"
+;  dex_line_w "为了避免在睡觉时被水冲走，"
+;  dex_line_w "它会用尾巴缠住珊瑚。"
+;  dex
+
+; GoldeenPokedexDescription:
+;  dex_text_w "到了产卵期你就可以"
+;  dex_line_w "看到成群的角金鱼"
+;  dex_line_w "逆流而行或是攀登瀑布。"
+;  dex
+
+; SeakingPokedexDescription:
+;  dex_text_w "雄性的职责是"
+;  dex_line_w "用头上的角打穿"
+;  dex_line_w "河里的石头筑巢。"
+;  dex
+
+; StaryuPokedexDescription:
+;  dex_text_w "据说只要它身体的中心"
+;  dex_line_w "部分还存活着，即使"
+;  dex_line_w "被切成小块也能再生。"
+;  dex
+
+; StarmiePokedexDescription:
+;  dex_text_w "据说当被称为其核心的"
+;  dex_line_w "中心部分闪烁着七色光芒时，"
+;  dex_line_w "就代表着它正在传达信息。"
+;  dex
+
+; MrMimePokedexDescription:
+;  dex_text_w "擅长表演哑剧，一直都在练习。"
+;  dex_line_w "即使空无一物，也能让人"
+;  dex_line_w "觉得那里真的有东西存在。"
+;  dex
+
+; ScytherPokedexDescription:
+;  dex_text_w "突然从草丛里窜出来，"
+;  dex_line_w "用锋利的镰刀斩砍的"
+;  dex_line_w "样子仿佛就像是忍者。"
+;  dex
+
+; JynxPokedexDescription:
+;  dex_text_w "以独特的节奏悠然移动，"
+;  dex_line_w "仿佛是在跳舞。走路的"
+;  dex_line_w "姿势如同在扭腰一样。"
+;  dex
+
+; ElectabuzzPokedexDescription:
+;  dex_text_w "要是发生了大片的停电，"
+;  dex_line_w "那一定是电击兽偷偷"
+;  dex_line_w "吃掉了发电站的电能。"
+;  dex
+
+; MagmarPokedexDescription:
+;  dex_text_w "出生在火山口。因为它的"
+;  dex_line_w "全身都在燃烧，所以人们"
+;  dex_line_w "难以分辨它和火球的区别。"
+;  dex
+
+; PinsirPokedexDescription:
+;  dex_text_w "用犄角全力夹击！由于"
+;  dex_line_w "低温会使它无法动弹，所以"
+;  dex_line_w "它会选择在温暖的地方生活。"
+;  dex
+
+; TaurosPokedexDescription:
+;  dex_text_w "精力充沛且个性火暴。"
+;  dex_line_w "一旦开始奔跑，在撞到"
+;  dex_line_w "东西之前都不会停下脚步。"
+;  dex
+
+; MagikarpPokedexDescription:
+;  dex_text_w "因靠不住而出名的宝可梦。海里、"
+;  dex_line_w "河里、池子里、还有水洼里……"
+;  dex_line_w "它们会在各种地方游来游去。"
+;  dex
+
+; GyaradosPokedexDescription:
+;  dex_text_w "性格蛮横喜欢破坏。在古代，"
+;  dex_line_w "这个恐怖的宝可梦曾经有过"
+;  dex_line_w "把整座城市烧成焦土的记录。"
+;  dex
+
+; LaprasPokedexDescription:
+;  dex_text_w "它拥有可以理解人类"
+;  dex_line_w "语言的温柔之心。"
+;  dex_line_w "会把人载在背上渡过大海。"
+;  dex
+
+; DittoPokedexDescription:
+;  dex_text_w "看到敌人的一瞬间身体便如同"
+;  dex_line_w "要融化一般开始转变，几乎能"
+;  dex_line_w "变身成和对方完全相同的样子。"
+;  dex
+
+; EeveePokedexDescription:
+;  dex_text_w "由于基因不稳定，"
+;  dex_line_w "进化的可能多种多样。"
+;  dex_line_w "只是生存数量很少。"
+;  dex
+
+; VaporeonPokedexDescription:
+;  dex_text_w "它的细胞与水分子"
+;  dex_line_w "相似，在它溶入于水后，"
+;  dex_line_w "你就完全看不见它了。"
+;  dex
+
+; JolteonPokedexDescription:
+;  dex_text_w "稍微受点刺激就会"
+;  dex_line_w "大叫或生气，每当"
+;  dex_line_w "心情变化时都会蓄电。"
+;  dex
+
+; FlareonPokedexDescription:
+;  dex_text_w "体内的火袋能让它将吸入的"
+;  dex_line_w "气体转化为1700度的"
+;  dex_line_w "火焰，接着从口中喷出。"
+;  dex
+
+; PorygonPokedexDescription:
+;  dex_text_w "人们期待它能成为唯一"
+;  dex_line_w "能够飞到宇宙的宝可梦，"
+;  dex_line_w "然而至今也努力未果。"
+;  dex
+
+; OmanytePokedexDescription:
+;  dex_text_w "用化石复原出的宝可梦，"
+;  dex_line_w "靠巧妙地弯曲它的10条腿"
+;  dex_line_w "在古代的大海里飘荡。"
+;  dex
+
+; OmastarPokedexDescription:
+;  dex_text_w "它拥有锋利的牙齿，但"
+;  dex_line_w "据说它由于外壳过大，"
+;  dex_line_w "不易移动而导致灭绝。"
+;  dex
+
+; KabutoPokedexDescription:
+;  dex_text_w "由化石复活而成的宝可梦。"
+;  dex_line_w "在藏匿于海底时似乎会用"
+;  dex_line_w "背上的眼睛观察周围的情况。"
+;  dex
+
+; KabutopsPokedexDescription:
+;  dex_text_w "用纤细的身体快速"
+;  dex_line_w "游动。似乎会用镰刀"
+;  dex_line_w "撕裂猎物吸取体液。"
+;  dex
+
+; AerodactylPokedexDescription:
+;  dex_text_w "通过研究从琥珀中提取"
+;  dex_line_w "出来的基因复活而成，是"
+;  dex_line_w "远古时期的凶恶宝可梦。"
+;  dex
+
+; SnorlaxPokedexDescription:
+;  dex_text_w "就算是有些发霉的食物"
+;  dex_line_w "也能毫不在意地吃完，"
+;  dex_line_w "并且完全不会吃坏肚子。"
+;  dex
+
+; ArticunoPokedexDescription:
+;  dex_text_w "传说的鸟宝可梦。它能将"
+;  dex_line_w "冬日空中的空气中含有的"
+;  dex_line_w "水分冻结，降下雪花。"
+;  dex
+
+; ZapdosPokedexDescription:
+;  dex_text_w "当天空黑暗，落雷"
+;  dex_line_w "不断时，这只传说的"
+;  dex_line_w "宝可梦就会出现。"
+;  dex
+
+; MoltresPokedexDescription:
+;  dex_text_w "传说的鸟宝可梦。当它"
+;  dex_line_w "挥舞起剧烈燃烧着的双翅，"
+;  dex_line_w "哪怕是夜空也会被点亮。"
+;  dex
+
+; DratiniPokedexDescription:
+;  dex_text_w "原本被认为只存在于幻想之中，"
+;  dex_line_w "直到最近有人将它钓起，"
+;  dex_line_w "它的存在才得到了证实。"
+;  dex
+
+; DragonairPokedexDescription:
+;  dex_text_w "根据目击者的描述，"
+;  dex_line_w "哈克龙的身上散发着"
+;  dex_line_w "一种神秘的气场。"
+;  dex
+
+; DragonitePokedexDescription:
+;  dex_text_w "据说它生活在无垠大海的"
+;  dex_line_w "某个地方，靠飞行来移动。"
+;  dex_line_w "但这也只是一个传言罢了。"
+;  dex
+
+; MewtwoPokedexDescription:
+;  dex_text_w "超梦的基因几乎和梦幻"
+;  dex_line_w "完全一样，但是大小和"
+;  dex_line_w "性格却迥异得让人吃惊。"
+;  dex
+
+; MewPokedexDescription:
+;  dex_text_w "用显微镜可以看到"
+;  dex_line_w "它身上极短极细"
+;  dex_line_w "且密集的体毛。"
+;  dex
+
+; 8px ver
+; BulbasaurPokedexDescription:
+; 	dex_text_w "背上的种子里储存着营养，"
+; 	dex_line_w "所以即使好几天不吃东西"
+; 	dex_line_w "也可以活得好好的！"
+; 	dex
+
+; IvysaurPokedexDescription:
+; 	dex_text_w "它的花苞会在吸收养分后长大。"
+; 	dex_line_w "当花苞发出香味时，"
+; 	dex_line_w "就预示着它快要开花了。"
+; 	dex
+
+; VenusaurPokedexDescription:
+; 	dex_text_w "它背上开出的大花"
+; 	dex_line_w "能够吸收太阳光"
+; 	dex_line_w "并将其转换为能量。"
+; 	dex
+
+; CharmanderPokedexDescription:
+; 	dex_text_w "要是把它带到安静的地方，"
+; 	dex_line_w "就能听到它的尾巴燃烧时"
+; 	dex_line_w "发出的微小的声音。"
+; 	dex
+
+; CharmeleonPokedexDescription:
+; 	dex_text_w "在与强敌战斗的过程中，"
+; 	dex_line_w "如果情绪变得兴奋起来，"
+; 	dex_line_w "有时会喷出青白色的烈火。"
+; 	dex
+
+; CharizardPokedexDescription:
+; 	dex_text_w "从口中喷出灼热的火焰时，"
+; 	dex_line_w "尾巴尖端的红色火焰会"
+; 	dex_line_w "燃烧得更加猛烈。"
+; 	dex
+
+; SquirtlePokedexDescription:
+; 	dex_text_w "通过从水面喷水来捕食。"
+; 	dex_line_w "在危急时刻会将四肢"
+; 	dex_line_w "缩入龟壳里保护自己。"
+; 	dex
+
+; WartortlePokedexDescription:
+; 	dex_text_w "如果拍打它的头部，"
+; 	dex_line_w "它会把头缩进壳里，"
+; 	dex_line_w "但尾巴还是会露出来一点点。"
+; 	dex
+
+; BlastoisePokedexDescription:
+; 	dex_text_w "一旦锁定了目标，"
+; 	dex_line_w "它会以超越了"
+; 	dex_line_w "消防水枪的力道来喷水。"
+; 	dex
+
+; CaterpiePokedexDescription:
+; 	dex_text_w "如果你碰到了它头上的触角，"
+; 	dex_line_w "它就会分泌出"
+; 	dex_line_w "难闻的气味来保护自己。"
+; 	dex
+
+; MetapodPokedexDescription:
+; 	dex_text_w "它会让外壳变硬来保护自己。"
+; 	dex_line_w "但遇到强烈冲击时，"
+; 	dex_line_w "它的身体还是会被撞出来。"
+; 	dex
+
+; ButterfreePokedexDescription:
+; 	dex_text_w "它翅膀上的剧毒鳞粉能够防水，"
+; 	dex_line_w "因此即使是雨天"
+; 	dex_line_w "也可以飞来飞去。"
+; 	dex
+
+; WeedlePokedexDescription:
+; 	dex_text_w "头上长有尖锐的针。"
+; 	dex_line_w "它喜欢藏在森林或草丛里"
+; 	dex_line_w "大量吞食树叶。"
+; 	dex
+
+; KakunaPokedexDescription:
+; 	dex_text_w "虽然几乎动也动不了，"
+; 	dex_line_w "但是如果遇到了危险，"
+; 	dex_line_w "有时似乎会竖起毒刺来反抗。"
+; 	dex
+
+; BeedrillPokedexDescription:
+; 	dex_text_w "它会用双手"
+; 	dex_line_w "和尾部的３根毒针"
+; 	dex_line_w "反复刺伤敌人。"
+; 	dex
+
+; PidgeyPokedexDescription:
+; 	dex_text_w "性格沉着冷静，"
+; 	dex_line_w "即使受到攻击也很少反击，"
+; 	dex_line_w "只会朝对手扬起沙子保护自己。"
+; 	dex
+
+; PidgeottoPokedexDescription:
+; 	dex_text_w "拥有超群的体力，"
+; 	dex_line_w "而且飞翔范围广，"
+; 	dex_line_w "经常飞到很远的地方寻找食物。"
+; 	dex
+
+; PidgeotPokedexDescription:
+; 	dex_text_w "以２马赫的飞行速度来觅食。"
+; 	dex_line_w "它巨大的爪子"
+; 	dex_line_w "是非常令人惧怕的武器。"
+; 	dex
+
+; RattataPokedexDescription:
+; 	dex_text_w "有两颗大门牙，见啥咬啥。"
+; 	dex_line_w "只要看到１只小拉达出没，"
+; 	dex_line_w "附近必还住着４０只以上。"
+; 	dex
+
+; RaticatePokedexDescription:
+; 	dex_text_w "它的后脚上长着小蹼，"
+; 	dex_line_w "以便它在水中游泳"
+; 	dex_line_w "寻找食物。"
+; 	dex
+
+; SpearowPokedexDescription:
+; 	dex_text_w "不擅长高空飞行。"
+; 	dex_line_w "会以超高速在地盘里四处盘旋，"
+; 	dex_line_w "以保护自己地盘不被侵犯。"
+; 	dex
+
+; FearowPokedexDescription:
+; 	dex_text_w "很久以前就存在的宝可梦。"
+; 	dex_line_w "哪怕只察觉到一丝危险，"
+; 	dex_line_w "都会立即飞向高空。"
+; 	dex
+
+; EkansPokedexDescription:
+; 	dex_text_w "身体会随年龄增长而变长。"
+; 	dex_line_w "每到夜里，它会一圈圈地"
+; 	dex_line_w "将身体缠绕在树枝上休息。"
+; 	dex
+
+; ArbokPokedexDescription:
+; 	dex_text_w "根据研究证实，"
+; 	dex_line_w "它腹部那可怕的纹路大约有"
+; 	dex_line_w "６个种类已经得到确认。"
+; 	dex
+
+; PikachuPokedexDescription:
+; 	dex_text_w "会将尾巴竖起来来感觉周围是否安全。"
+; 	dex_line_w "所以如果随便去拉它的尾巴，"
+; 	dex_line_w "会被咬喔。"
+; 	dex
+
+; RaichuPokedexDescription:
+; 	dex_text_w "体内电力累积到一定程度时"
+; 	dex_line_w "性格会变得带有攻击性。"
+; 	dex_line_w "在暗处看着就像是在发亮。"
+; 	dex
+
+; SandshrewPokedexDescription:
+; 	dex_text_w "身体很干燥。"
+; 	dex_line_w "但据说在夜里降温时，"
+; 	dex_line_w "它的表皮上会有露水凝结。"
+; 	dex
+
+; SandslashPokedexDescription:
+; 	dex_text_w "它很擅长用爪子抓伤敌人。"
+; 	dex_line_w "偶尔在战斗中会折断爪子，"
+; 	dex_line_w "但到次日就会长出新的来。"
+; 	dex
+
+; NidoranFPokedexDescription:
+; 	dex_text_w "它性格温顺不喜欢战斗，"
+; 	dex_line_w "但由于小犄角中含有毒液，"
+; 	dex_line_w "请一定要小心提防。"
+; 	dex
+
+; NidorinaPokedexDescription:
+; 	dex_text_w "待在巢穴深处的时候，"
+; 	dex_line_w "它必会把身上的刺收起来。"
+; 	dex_line_w "这表明它正处于放松状态。"
+; 	dex
+
+; NidoqueenPokedexDescription:
+; 	dex_text_w "坚硬的鳞片覆盖着强壮的身体。"
+; 	dex_line_w "据说它的鳞片"
+; 	dex_line_w "会自己长出新的。"
+; 	dex
+
+; NidoranMPokedexDescription:
+; 	dex_text_w "一直竖起它的大耳朵感知"
+; 	dex_line_w "周围的情形。当它察觉到"
+; 	dex_line_w "危险便会使用毒针。"
+; 	dex
+
+; NidorinoPokedexDescription:
+; 	dex_text_w "头上的犄角里含有毒素，"
+; 	dex_line_w "当犄角撞穿了什么东西时，"
+; 	dex_line_w "毒素就会随着冲击而流出。"
+; 	dex
+
+; NidokingPokedexDescription:
+; 	dex_text_w "通过活用自己钢一般坚硬的"
+; 	dex_line_w "皮肤来使出强力的撞击。"
+; 	dex_line_w "犄角坚硬得能够刺穿钻石。"
+; 	dex
+
+; ClefairyPokedexDescription:
+; 	dex_text_w "因外形和动作可爱而深受大家的喜爱。"
+; 	dex_line_w "但或许因数量稀少，"
+; 	dex_line_w "它们很难被发现。"
+; 	dex
+
+; ClefablePokedexDescription:
+; 	dex_text_w "妖精的一种。"
+; 	dex_line_w "似乎非常珍惜自己的世界，"
+; 	dex_line_w "很少在人类面前现身。"
+; 	dex
+
+; VulpixPokedexDescription:
+; 	dex_text_w "皮毛和尾巴都非常美丽。"
+; 	dex_line_w "随着自身成长，尾巴的末端渐渐分开，"
+; 	dex_line_w "数量也会增加。"
+; 	dex
+
+; NinetalesPokedexDescription:
+; 	dex_text_w "传说这种宝可梦"
+; 	dex_line_w "是由９位圣者"
+; 	dex_line_w "合体之后而诞生的。"
+; 	dex
+
+; JigglypuffPokedexDescription:
+; 	dex_text_w "它会用圆溜溜的大眼睛盯着"
+; 	dex_line_w "对手唱起不可思议的歌曲，"
+; 	dex_line_w "舒服的歌曲会让对手睡着。"
+; 	dex
+
+; WigglytuffPokedexDescription:
+; 	dex_text_w "身体非常有弹性，"
+; 	dex_line_w "当它用力吸气时，"
+; 	dex_line_w "身体可以无限制地膨胀。"
+; 	dex
+
+; ZubatPokedexDescription:
+; 	dex_text_w "由于需要调查前方的状况，"
+; 	dex_line_w "它会一边从嘴里发出超音波"
+; 	dex_line_w "一边飞行。"
+; 	dex
+
+; GolbatPokedexDescription:
+; 	dex_text_w "难以察觉它会从哪里悄悄接近。"
+; 	dex_line_w "它会用尖锐的牙咬住对手，"
+; 	dex_line_w "同时使劲地吸血。"
+; 	dex
+
+; OddishPokedexDescription:
+; 	dex_text_w "若以为它是普通的草而将它拔起，"
+; 	dex_line_w "就会听到它的叫声。"
+; 	dex_line_w "这让人感到莫名的恐怖。"
+; 	dex
+
+; GloomPokedexDescription:
+; 	dex_text_w "奇臭无比！即使如此，"
+; 	dex_line_w "一千个人里总会出现"
+; 	dex_line_w "一个人喜欢闻这种味道。"
+; 	dex
+
+; VileplumePokedexDescription:
+; 	dex_text_w "为了散布有毒的花粉"
+; 	dex_line_w "而摇动其巨大的花瓣，"
+; 	dex_line_w "同时发出震耳的响声。"
+; 	dex
+
+; ParasPokedexDescription:
+; 	dex_text_w "它会通过挖洞来从树根里吸取营养，"
+; 	dex_line_w "但大部分营养"
+; 	dex_line_w "都会被背上的蘑菇抢走。"
+; 	dex
+
+; ParasectPokedexDescription:
+; 	dex_text_w "因虫子的精华不断被吸走，"
+; 	dex_line_w "在思考的似乎已经不是虫子，"
+; 	dex_line_w "而是背上的蘑菇了。"
+; 	dex
+
+; VenonatPokedexDescription:
+; 	dex_text_w "在明亮处你便能发现它具有"
+; 	dex_line_w "雷达功能的大眼其实是由"
+; 	dex_line_w "许多个小眼睛聚集而成的。"
+; 	dex
+
+; VenomothPokedexDescription:
+; 	dex_text_w "若失手把翅膀上的鳞粉沾到身上，"
+; 	dex_line_w "不但很难去除，"
+; 	dex_line_w "更糟的是毒素也会从那里渗入。"
+; 	dex
+
+; DiglettPokedexDescription:
+; 	dex_text_w "喜欢阴暗的地方。"
+; 	dex_line_w "大部分时间都待在地下，"
+; 	dex_line_w "只在洞窟里会常探头出来。"
+; 	dex
+
+; DugtrioPokedexDescription:
+; 	dex_text_w "三合一的力量能让它们"
+; 	dex_line_w "挖地深至１００公里，"
+; 	dex_line_w "甚至有报告说它们会引发地震。"
+; 	dex
+
+; MeowthPokedexDescription:
+; 	dex_text_w "貌似一到晚上就精力充沛。"
+; 	dex_line_w "喜欢又圆又亮的东西，"
+; 	dex_line_w "发现了就一定要捡走。"
+; 	dex
+
+; PersianPokedexDescription:
+; 	dex_text_w "额头上的宝石闪闪发亮！"
+; 	dex_line_w "走路的姿态也十分优美，"
+; 	dex_line_w "就像女王一样华丽高贵。"
+; 	dex
+
+; PsyduckPokedexDescription:
+; 	dex_text_w "一直被头痛困扰。"
+; 	dex_line_w "能使用念力，但不知道那"
+; 	dex_line_w "是否是出于它自己的意识。"
+; 	dex
+
+; GolduckPokedexDescription:
+; 	dex_text_w "它靠修长的四肢"
+; 	dex_line_w "和发达的大脚蹼"
+; 	dex_line_w "在湖里优雅地游泳。"
+; 	dex
+
+; MankeyPokedexDescription:
+; 	dex_text_w "身体轻盈，在树上生活。"
+; 	dex_line_w "常因鸡毛蒜皮的小事发火"
+; 	dex_line_w "而飞扑到周围的东西上。"
+; 	dex
+
+; PrimeapePokedexDescription:
+; 	dex_text_w "只有在"
+; 	dex_line_w "谁都不在身边的时候才不生气，"
+; 	dex_line_w "但几乎没有人目击过这种情况。"
+; 	dex
+
+; GrowlithePokedexDescription:
+; 	dex_text_w "性格很容易和人亲近，"
+; 	dex_line_w "但是会对进入自己领地的"
+; 	dex_line_w "敌人狂吠。"
+; 	dex
+
+; ArcaninePokedexDescription:
+; 	dex_text_w "中国古老传说中的宝可梦。"
+; 	dex_line_w "曾有不计其数的人为它"
+; 	dex_line_w "轻巧跑动的身姿而倾倒。"
+; 	dex
+
+; PoliwagPokedexDescription:
+; 	dex_text_w "漩涡的旋转方向"
+; 	dex_line_w "好像会因出生地区而不同。"
+; 	dex_line_w "比起走路，它更擅长游泳。"
+; 	dex
+
+; PoliwhirlPokedexDescription:
+; 	dex_text_w "据说它会在要被对手攻击时"
+; 	dex_line_w "用腹部的漩涡让对方睡着，"
+; 	dex_line_w "趁机逃跑。"
+; 	dex
+
+; PoliwrathPokedexDescription:
+; 	dex_text_w "他会用全身的肌肉奋力游泳，"
+; 	dex_line_w "连奥林匹克选手"
+; 	dex_line_w "都甘拜下风。"
+; 	dex
+
+; AbraPokedexDescription:
+; 	dex_text_w "它每天要睡１８个小时。"
+; 	dex_line_w "遇到危险时，即使在睡梦中"
+; 	dex_line_w "也可以用瞬间移动来逃脱。"
+; 	dex
+
+; KadabraPokedexDescription:
+; 	dex_text_w "当勇基拉在附近时，"
+; 	dex_line_w "似乎会发生像是时钟倒转"
+; 	dex_line_w "这样的怪事。"
+; 	dex
+
+; AlakazamPokedexDescription:
+; 	dex_text_w "什么事情都能记住。"
+; 	dex_line_w "只要是曾经体验过的事情就绝对"
+; 	dex_line_w "不会忘记，头脑非常聪明。"
+; 	dex
+
+; MachopPokedexDescription:
+; 	dex_text_w "它体格虽小却力大无比。"
+; 	dex_line_w "不但如此，它还精通各种"
+; 	dex_line_w "格斗技能，实力十分惊人。"
+; 	dex
+
+; MachokePokedexDescription:
+; 	dex_text_w "只要解开系在腰上的限制它"
+; 	dex_line_w "力量的腰带，豪力就会变得"
+; 	dex_line_w "势不可挡。"
+; 	dex
+
+; MachampPokedexDescription:
+; 	dex_text_w "仅靠１只手臂的力量便可"
+; 	dex_line_w "推动一座山。４只手一起"
+; 	dex_line_w "可以打出极为强力的拳击。"
+; 	dex
+
+; BellsproutPokedexDescription:
+; 	dex_text_w "喜欢温度高，有一定湿度的地方。"
+; 	dex_line_w "它会用身上的藤蔓"
+; 	dex_line_w "抓小虫来吃。"
+; 	dex
+
+; WeepinbellPokedexDescription:
+; 	dex_text_w "它在肚子饿的时候会吞掉"
+; 	dex_line_w "周围会动的东西，"
+; 	dex_line_w "分泌溶解液让其致命。"
+; 	dex
+
+; VictreebellPokedexDescription:
+; 	dex_text_w "用花蜜香味引诱猎物。"
+; 	dex_line_w "据说被它吞入嘴里的东西，"
+; 	dex_line_w "只要１天会溶解到骨头都不剩。"
+; 	dex
+
+; TentacoolPokedexDescription:
+; 	dex_text_w "有时能在沙滩上发现它"
+; 	dex_line_w "干巴巴的身体，"
+; 	dex_line_w "但是它只要沾到水就能复活。"
+; 	dex
+
+; TentacruelPokedexDescription:
+; 	dex_text_w "它能让８０条触手自由伸缩，"
+; 	dex_line_w "靠缠住猎物后"
+; 	dex_line_w "注入毒素来让其变弱。"
+; 	dex
+
+; GeodudePokedexDescription:
+; 	dex_text_w "大多栖息于山路。"
+; 	dex_line_w "由于不留神踩到它会使它大发雷霆，"
+; 	dex_line_w "得多加小心。"
+; 	dex
+
+; GravelerPokedexDescription:
+; 	dex_text_w "常在山路上滚来滚去。"
+; 	dex_line_w "滚动时从来不关心"
+; 	dex_line_w "前面的路上都有什么。"
+; 	dex
+
+; GolemPokedexDescription:
+; 	dex_text_w "刚蜕皮时浑身都白白的非常柔软，"
+; 	dex_line_w "但是接触到"
+; 	dex_line_w "空气之后会迅速变坚硬。"
+; 	dex
+
+; PonytaPokedexDescription:
+; 	dex_text_w "在用力跳跃之后，"
+; 	dex_line_w "会用蹄子和脚上的肌肉"
+; 	dex_line_w "来缓解着地时的撞击。"
+; 	dex
+
+; RapidashPokedexDescription:
+; 	dex_text_w "总之就是喜欢跑步。"
+; 	dex_line_w "如果发现有谁跑得比自己更快，"
+; 	dex_line_w "就会用尽全力去追赶。"
+; 	dex
+
+; SlowpokePokedexDescription:
+; 	dex_text_w "非常呆，动作也很缓慢。"
+; 	dex_line_w "从不在意时间的流逝，"
+; 	dex_line_w "过着悠闲的生活。"
+; 	dex
+
+; SlowbroPokedexDescription:
+; 	dex_text_w "在海边悠闲地生活。"
+; 	dex_line_w "如果尾巴上的大舌贝脱落了，"
+; 	dex_line_w "它就会变回呆呆兽。"
+; 	dex
+
+; MagnemitePokedexDescription:
+; 	dex_text_w "天生就拥有遮断重力的能力，"
+; 	dex_line_w "可以一边发出"
+; 	dex_line_w "电磁波一边在空中移动。"
+; 	dex
+
+; MagnetonPokedexDescription:
+; 	dex_text_w "一直在发射神秘的电波，"
+; 	dex_line_w "半径１公里内的气温"
+; 	dex_line_w "会升高２度。"
+; 	dex
+
+; FarfetchdPokedexDescription:
+; 	dex_text_w "居住在茎状植物生长之处，"
+; 	dex_line_w "由于这种植物稀少而罕见，"
+; 	dex_line_w "大葱鸭数量似乎也在减少。"
+; 	dex
+
+; DoduoPokedexDescription:
+; 	dex_text_w "羽毛较短所以不擅长飞行，"
+; 	dex_line_w "但是拥有发达的双脚，"
+; 	dex_line_w "能够以很快的速度奔跑。"
+; 	dex
+
+; DodrioPokedexDescription:
+; 	dex_text_w "由嘟嘟的某个头分裂出的变种。"
+; 	dex_line_w "以６０千米的时速"
+; 	dex_line_w "在草原上奔跑。"
+; 	dex
+
+; SeelPokedexDescription:
+; 	dex_text_w "喜欢天寒地冻的地方，"
+; 	dex_line_w "就算零下１０度"
+; 	dex_line_w "也能愉快地游泳。"
+; 	dex
+
+; DewgongPokedexDescription:
+; 	dex_text_w "全身像雪一样白。十分耐寒，"
+; 	dex_line_w "即使在有浮冰的大海"
+; 	dex_line_w "里也能很精神地游来游去。"
+; 	dex
+
+; GrimerPokedexDescription:
+; 	dex_text_w "它由囤积的淤泥而形成。"
+; 	dex_line_w "臭到让人无法碰触，"
+; 	dex_line_w "凡是它走过的地方都寸草不生。"
+; 	dex
+
+; MukPokedexDescription:
+; 	dex_text_w "非常难闻！气味臭到让人窒息，"
+; 	dex_line_w "但由于鼻子的退化，"
+; 	dex_line_w "它自己完全闻不到味道。"
+; 	dex
+
+; ShellderPokedexDescription:
+; 	dex_text_w "它的硬壳可以承受任何攻击，"
+; 	dex_line_w "但是一旦硬壳打开，"
+; 	dex_line_w "柔软的内部就会完全暴露。"
+; 	dex
+
+; CloysterPokedexDescription:
+; 	dex_text_w "不但有比钻石还要坚硬的外壳保护着，"
+; 	dex_line_w "还能发射壳上的刺，"
+; 	dex_line_w "不太好对付。"
+; 	dex
+
+; GastlyPokedexDescription:
+; 	dex_text_w "它似乎会在没人居住的"
+; 	dex_line_w "旧屋子里出现。"
+; 	dex_line_w "形状不清，仿佛就像是气体一样。"
+; 	dex
+
+; HaunterPokedexDescription:
+; 	dex_text_w "被它舔到时生命力会被吸走，"
+; 	dex_line_w "身体会不受控制地不停颤抖，"
+; 	dex_line_w "最后一命呜呼。"
+; 	dex
+
+; GengarPokedexDescription:
+; 	dex_text_w "如果你突然感到寒气逼近，"
+; 	dex_line_w "就说明耿鬼在你身边，"
+; 	dex_line_w "或许它已经在你身上下了诅咒。"
+; 	dex
+
+; OnixPokedexDescription:
+; 	dex_text_w "以惊人之势钻地觅食。"
+; 	dex_line_w "在它通过之后形成的洞穴会被"
+; 	dex_line_w "地鼠们当作自己的住处。"
+; 	dex
+
+; DrowzeePokedexDescription:
+; 	dex_text_w "如果你每晚与它一起睡觉，"
+; 	dex_line_w "它偶尔会让你梦见它以前"
+; 	dex_line_w "吃过的梦。"
+; 	dex
+
+; HypnoPokedexDescription:
+; 	dex_text_w "无意中遇到它的时候，"
+; 	dex_line_w "若意外和他对上视线会很危险。"
+; 	dex_line_w "它手上的钟摆会让人睡着。"
+; 	dex
+
+; KrabbyPokedexDescription:
+; 	dex_text_w "钳子是它强悍的武器，"
+; 	dex_line_w "但在攻击时钳子偶尔会脱落。"
+; 	dex_line_w "脱落后很快会长出新的来。"
+; 	dex
+
+; KinglerPokedexDescription:
+; 	dex_text_w "一边的钳子很是巨大，"
+; 	dex_line_w "虽说硬如钢铁还拥有１万马力，"
+; 	dex_line_w "但还是太重了。"
+; 	dex
+
+; VoltorbPokedexDescription:
+; 	dex_text_w "据说它与精灵球相似的外形"
+; 	dex_line_w "其实是保护色，但它很容易"
+; 	dex_line_w "自爆这一点也出人意料。"
+; 	dex
+
+; ElectrodePokedexDescription:
+; 	dex_text_w "只要受到一点撞击，"
+; 	dex_line_w "就会由于体内的电能溢出"
+; 	dex_line_w "导致爆炸。"
+; 	dex
+
+; ExeggcutePokedexDescription:
+; 	dex_text_w "每一个蛋都相互吸引着旋转。"
+; 	dex_line_w "６个蛋凑不齐时"
+; 	dex_line_w "它就无法保持平衡。"
+; 	dex
+
+; ExeggutorPokedexDescription:
+; 	dex_text_w "由于三个头各自都在思考"
+; 	dex_line_w "自己喜欢的事情，"
+; 	dex_line_w "所以它的叫声非常吵闹。"
+; 	dex
+
+; CubonePokedexDescription:
+; 	dex_text_w "它头上戴着死去母亲的头骨。"
+; 	dex_line_w "它的哭声会在头骨里"
+; 	dex_line_w "回响出悲伤的旋律。"
+; 	dex
+
+; MarowakPokedexDescription:
+; 	dex_text_w "身体曾经又小又弱，"
+; 	dex_line_w "在习惯了使用骨头战斗后"
+; 	dex_line_w "才变成了粗暴的性格。"
+; 	dex
+
+; HitmonleePokedexDescription:
+; 	dex_text_w "在踢中敌人的瞬间，"
+; 	dex_line_w "脚底会变得像钻石般坚硬，"
+; 	dex_line_w "将对手踢成碎片。"
+; 	dex
+
+; HitmonchanPokedexDescription:
+; 	dex_text_w "它的拳击好似钻头一般！"
+; 	dex_line_w "在它的攻击之下，"
+; 	dex_line_w "哪怕是水泥墙也会被钻出洞来。"
+; 	dex
+
+; LickitungPokedexDescription:
+; 	dex_text_w "它２米长的舌头比前肢更能"
+; 	dex_line_w "灵活地移动。不知为何，"
+; 	dex_line_w "被它舔到之后会觉得发麻。"
+; 	dex
+
+; KoffingPokedexDescription:
+; 	dex_text_w "在炎热的地方，它体内的"
+; 	dex_line_w "气体会由于膨胀而产生"
+; 	dex_line_w "爆炸的危险，需要注意。"
+; 	dex
+
+; WeezingPokedexDescription:
+; 	dex_text_w "它要靠吸收"
+; 	dex_line_w "垃圾里的毒气、"
+; 	dex_line_w "细菌和灰尘来维持生命。"
+; 	dex
+
+; RhyhornPokedexDescription:
+; 	dex_text_w "单细胞的脑子只能思考一件事情。"
+; 	dex_line_w "一旦它开始猛撞，"
+; 	dex_line_w "直到睡着前都不会停止。"
+; 	dex
+
+; RhydonPokedexDescription:
+; 	dex_text_w "可以只用后腿行走，"
+; 	dex_line_w "智力也发达了许多。"
+; 	dex_line_w "像盔甲一样的皮肤可以抵挡住岩浆。"
+; 	dex
+
+; ChanseyPokedexDescription:
+; 	dex_text_w "性格温柔的宝可梦，"
+; 	dex_line_w "当它看到受伤的宝可梦时，"
+; 	dex_line_w "会把营养丰富的蛋分给对方。"
+; 	dex
+
+; TangelaPokedexDescription:
+; 	dex_text_w "全身被蓝色的蔓藤覆盖，"
+; 	dex_line_w "真面目不为人知。"
+; 	dex_line_w "据说，它的蔓藤会持续不断地生长。"
+; 	dex
+
+; KangaskhanPokedexDescription:
+; 	dex_text_w "在腹部的袋子里养育自己的宝宝。"
+; 	dex_line_w "为了保护宝宝，"
+; 	dex_line_w "遇到什么样的敌人都不会退缩。"
+; 	dex
+
+; HorseaPokedexDescription:
+; 	dex_text_w "在感到危险时"
+; 	dex_line_w "会从嘴里用力地"
+; 	dex_line_w "喷出水或者特殊的墨汁。"
+; 	dex
+
+; SeadraPokedexDescription:
+; 	dex_text_w "摸它的背鳍会导致麻痹。"
+; 	dex_line_w "为避免在睡觉时被水冲走，"
+; 	dex_line_w "它会用尾巴缠住珊瑚。"
+; 	dex
+
+; GoldeenPokedexDescription:
+; 	dex_text_w "到了产卵期你就可以看到"
+; 	dex_line_w "成群的角金鱼逆流而行"
+; 	dex_line_w "或是攀登瀑布。"
+; 	dex
+
+; SeakingPokedexDescription:
+; 	dex_text_w "雄性的职责是"
+; 	dex_line_w "用头上的角"
+; 	dex_line_w "打穿河里的石头筑巢。"
+; 	dex
+
+; StaryuPokedexDescription:
+; 	dex_text_w "据说只要它身体的中心部分"
+; 	dex_line_w "还存活着，即使被切成小块"
+; 	dex_line_w "也能再生。"
+; 	dex
+
+; StarmiePokedexDescription:
+; 	dex_text_w "据说当被称为其核心的中心"
+; 	dex_line_w "部分闪烁着七色光芒时，"
+; 	dex_line_w "就代表着它正在传达信息。"
+; 	dex
+
+; MrMimePokedexDescription:
+; 	dex_text_w "擅长演哑剧，一直在练习。"
+; 	dex_line_w "即使空无一物，"
+; 	dex_line_w "也能让人觉得那里真的有东西存在。"
+; 	dex
+
+; ScytherPokedexDescription:
+; 	dex_text_w "突然从草丛里窜出来，"
+; 	dex_line_w "用锋利的镰刀斩砍的样子"
+; 	dex_line_w "仿佛就像是忍者。"
+; 	dex
+
+; JynxPokedexDescription:
+; 	dex_text_w "以独特的节奏悠然移动，"
+; 	dex_line_w "仿佛是在跳舞。"
+; 	dex_line_w "走路的姿势如同在扭腰一样。"
+; 	dex
+
+; ElectabuzzPokedexDescription:
+; 	dex_text_w "要是发生了大片的停电，"
+; 	dex_line_w "那一定是电击兽偷偷吃掉了"
+; 	dex_line_w "发电站的电能。"
+; 	dex
+
+; MagmarPokedexDescription:
+; 	dex_text_w "出生在火山口。"
+; 	dex_line_w "因为它的全身都在燃烧，"
+; 	dex_line_w "所以人们难以分辨它和火球的区别。"
+; 	dex
+
+; PinsirPokedexDescription:
+; 	dex_text_w "用犄角全力夹击！"
+; 	dex_line_w "由于低温会使它无法动弹，"
+; 	dex_line_w "所以它会选择在温暖的地方生活。"
+; 	dex
+
+; TaurosPokedexDescription:
+; 	dex_text_w "精力充沛且个性火暴。"
+; 	dex_line_w "一旦开始奔跑，在撞到东西之前"
+; 	dex_line_w "都不会停下脚步。"
+; 	dex
+
+; MagikarpPokedexDescription:
+; 	dex_text_w "因靠不住而出名的宝可梦。"
+; 	dex_line_w "它们会在海、河、池子、"
+; 	dex_line_w "水洼等各种地方游来游去。"
+; 	dex
+
+; GyaradosPokedexDescription:
+; 	dex_text_w "性格蛮横爱破坏。在古代，"
+; 	dex_line_w "这个恐怖的宝可梦曾有过把"
+; 	dex_line_w "整座城市烧成焦土的记录。"
+; 	dex
+
+; LaprasPokedexDescription:
+; 	dex_text_w "它拥有可以理解人类语言的温柔之心。"
+; 	dex_line_w "会把人载在背上"
+; 	dex_line_w "渡过大海。"
+; 	dex
+
+; DittoPokedexDescription:
+; 	dex_text_w "看到敌人的瞬间身体便如同"
+; 	dex_line_w "要融化一般开始转变，"
+; 	dex_line_w "几乎变身成和对方相同的样子。"
+; 	dex
+
+; EeveePokedexDescription:
+; 	dex_text_w "由于基因不稳定，"
+; 	dex_line_w "进化的可能多种多样。"
+; 	dex_line_w "只是生存数量很少。"
+; 	dex
+
+; VaporeonPokedexDescription:
+; 	dex_text_w "它的细胞与水分子相似，"
+; 	dex_line_w "在它溶入于水后，"
+; 	dex_line_w "你就完全看不见它了。"
+; 	dex
+
+; JolteonPokedexDescription:
+; 	dex_text_w "稍微受点刺激"
+; 	dex_line_w "就会大叫或生气，"
+; 	dex_line_w "每当心情变化时都会蓄电。"
+; 	dex
+
+; FlareonPokedexDescription:
+; 	dex_text_w "体内的火袋能让它将吸入的"
+; 	dex_line_w "气体转化为１７００度的"
+; 	dex_line_w "火焰，接着从口中喷出。"
+; 	dex
+
+; PorygonPokedexDescription:
+; 	dex_text_w "人们期待它能成为唯一能够"
+; 	dex_line_w "飞到宇宙的宝可梦，"
+; 	dex_line_w "然而至今也努力未果。"
+; 	dex
+
+; OmanytePokedexDescription:
+; 	dex_text_w "用化石复原出的宝可梦，"
+; 	dex_line_w "靠巧妙地弯曲它的１０条腿"
+; 	dex_line_w "在古代的大海里飘荡。"
+; 	dex
+
+; OmastarPokedexDescription:
+; 	dex_text_w "它拥有锋利的牙齿，"
+; 	dex_line_w "但据说它由于外壳过大，"
+; 	dex_line_w "不易移动而导致灭绝。"
+; 	dex
+
+; KabutoPokedexDescription:
+; 	dex_text_w "由化石复活而成的宝可梦。"
+; 	dex_line_w "在藏匿于海底时似乎会用背"
+; 	dex_line_w "上的眼睛观察周围的情况。"
+; 	dex
+
+; KabutopsPokedexDescription:
+; 	dex_text_w "用纤细的身体快速游动。"
+; 	dex_line_w "似乎会用镰刀撕裂猎物"
+; 	dex_line_w "吸取体液。"
+; 	dex
+
+; AerodactylPokedexDescription:
+; 	dex_text_w "通过研究从琥珀中"
+; 	dex_line_w "提取出来的基因复活而成，"
+; 	dex_line_w "是远古时期的凶恶宝可梦。"
+; 	dex
+
+; SnorlaxPokedexDescription:
+; 	dex_text_w "就算是有些发霉的食物"
+; 	dex_line_w "也能毫不在意地吃完，"
+; 	dex_line_w "并且完全不会吃坏肚子。"
+; 	dex
+
+; ArticunoPokedexDescription:
+; 	dex_text_w "传说的鸟宝可梦。它能将"
+; 	dex_line_w "日空中的空气中含有的"
+; 	dex_line_w "水分冻结，降下雪花。"
+; 	dex
+
+; ZapdosPokedexDescription:
+; 	dex_text_w "当天空黑暗，落雷不断时，"
+; 	dex_line_w "这只传说的宝可梦"
+; 	dex_line_w "就会出现。"
+; 	dex
+
+; MoltresPokedexDescription:
+; 	dex_text_w "传说的鸟宝可梦。"
+; 	dex_line_w "当它挥舞起剧烈燃烧着的双翅，"
+; 	dex_line_w "哪怕是夜空也会被点亮。"
+; 	dex
+
+; DratiniPokedexDescription:
+; 	dex_text_w "本被认为只存于幻想之中，"
+; 	dex_line_w "直到最近有人将它钓起，"
+; 	dex_line_w "它的存在才得到了证实。"
+; 	dex
+
+; DragonairPokedexDescription:
+; 	dex_text_w "根据目击者的描述，"
+; 	dex_line_w "哈克龙的身上"
+; 	dex_line_w "散发着一种神秘的气场。"
+; 	dex
+
+; DragonitePokedexDescription:
+; 	dex_text_w "据说它生活在无垠大海的"
+; 	dex_line_w "某个地方，靠飞行来移动。"
+; 	dex_line_w "但这也只是一个传言罢了。"
+; 	dex
+
+; MewtwoPokedexDescription:
+; 	dex_text_w "超梦的基因几乎和梦幻"
+; 	dex_line_w "完全一样，但是大小和性格"
+; 	dex_line_w "却迥异得让人吃惊。"
+; 	dex
+
+; MewPokedexDescription:
+; 	dex_text_w "用显微镜可以看到"
+; 	dex_line_w "它身上极短极细"
+; 	dex_line_w "且密集的体毛。"
+; 	dex

@@ -18,14 +18,15 @@ LoadPokedexScreen: ; 0x2800e
 	ld a, $e4
 	ld [wOBP1], a
 	xor a
+	ldh [hIfCombine], a
 	ldh [hSCX], a
 	ld a, $8
 	ldh [hSCY], a
 	ld a, $7
 	ldh [hWX], a
-	ld a, $8c
+	ld a, $89
 	ldh [hWY], a
-	ld a, $3b
+	ld a, $38 ;ld a, $3b
 	ldh [hLYC], a
 	ldh [hLastLYC], a
 	ldh [hNextLYCSub], a
@@ -942,13 +943,13 @@ DexScrollBarSpriteIds:
 	db SPRITE_DEX_SCROLLBAR_2
 	db SPRITE_DEX_SCROLLBAR_1
 
-DrawCornerInfoPokedexScreen: ; 0x2868b
+DrawCornerInfoPokedexScreen: ; 0x2868b ; 右上角
 ; If player is holding SELECT button, it draws the seen/own count in the top-right corner.
 ; Otherwise, it draws the word "POKeDEX".
 	ldh a, [hJoypadState]
 	bit BIT_SELECT, a
 	jr z, .asm_286c8
-	ld bc, $6d03
+	ld bc, $8203 ;ld bc, $6d03
 	ld a, [wNumPokemonSeen + 1]
 	call LoadSeenOwnDigitSprite
 	ld a, [wNumPokemonSeen]
@@ -956,10 +957,10 @@ DrawCornerInfoPokedexScreen: ; 0x2868b
 	call LoadSeenOwnDigitSprite
 	ld a, [wNumPokemonSeen]
 	call LoadSeenOwnDigitSprite
-	ld bc, $8202
+	ld bc, $9603
 	ld a, SPRITE_SLASH_CHARACTER
 	call LoadSpriteData  ; draws the "/" between the seen/owned numbers
-	ld bc, $8703
+	ld bc, $890B
 	ld a, [wNumPokemonOwned + 1]
 	call LoadSeenOwnDigitSprite
 	ld a, [wNumPokemonOwned]
@@ -970,8 +971,11 @@ DrawCornerInfoPokedexScreen: ; 0x2868b
 	ret
 
 .asm_286c8
-	ld bc, $6800
-	ld a, SPRITE_POKEDEX_TEXT
+	ld bc, $8200
+	ld a, SPRITE_POKE_TEXT
+	call LoadSpriteData
+	ld bc, $6a08
+	ld a, SPRITE_DEX_TEXT
 	call LoadSpriteData
 	ret
 
@@ -995,7 +999,7 @@ Func_286dd: ; 0x286dd
 	ld e, a
 	ld a, [wd864]
 	ld d, a
-	ld hl, wPokedexFontBuffer
+	ld hl, wPokedexFontBuffer ; 滚动列表的名称
 	xor a
 	ld bc, $00a0
 	call LoadOrCopyVRAMData
@@ -1150,22 +1154,22 @@ TileLocations_287b7:
 	dw vTilesOB tile $46
 
 BGMapLocations_287c7:
-	dw vBGWin + $7
-	dw vBGWin + $47
-	dw vBGWin + $87
-	dw vBGWin + $C7
-	dw vBGWin + $107
-	dw vBGWin + $147
-	dw vBGWin + $187
-	dw vBGWin + $1C7
-	dw vBGWin + $207
-	dw vBGWin + $247
-	dw vBGWin + $287
-	dw vBGWin + $2C7
-	dw vBGWin + $307
-	dw vBGWin + $347
-	dw vBGWin + $387
-	dw vBGWin + $3C7
+	dw vBGWin + $7 + $20
+	dw vBGWin + $47 + $20
+	dw vBGWin + $87 + $20
+	dw vBGWin + $C7 + $20
+	dw vBGWin + $107 + $20
+	dw vBGWin + $147 + $20
+	dw vBGWin + $187 + $20
+	dw vBGWin + $1C7 + $20
+	dw vBGWin + $207 + $20
+	dw vBGWin + $247 + $20
+	dw vBGWin + $287 + $20
+	dw vBGWin + $2C7 + $20
+	dw vBGWin + $307 + $20
+	dw vBGWin + $347 + $20
+	dw vBGWin + $387 + $20
+	dw vBGWin + $3C7 + $20
 
 Func_287e7: ; 0x287e7
 	ld a, [wd960]
@@ -1242,8 +1246,14 @@ Func_2885c: ; 0x2885c
 	ld bc, $8888
 	ld a, SPRITE_DEX_SCROLLBAR_TOPPER_2
 	call LoadSpriteData
-	ld bc, $6800
-	ld a, SPRITE_POKEDEX_TEXT
+	; ld bc, $6800
+	; ld a, SPRITE_POKEDEX_TEXT
+	; call LoadSpriteData
+	ld bc, $8200
+	ld a, SPRITE_POKE_TEXT
+	call LoadSpriteData
+	ld bc, $6a08
+	ld a, SPRITE_DEX_TEXT
 	call LoadSpriteData
 	ret
 
@@ -1284,7 +1294,7 @@ Func_288a2: ; 0x288a2
 	dec b
 	dec b
 	jr nz, .asm_288a4
-	ld a, $3b
+	ld a, $38
 	ldh [hLYC], a
 	ldh [hNextLYCSub], a
 	ld a, BANK(PokedexTilemap2)
@@ -1379,15 +1389,35 @@ Func_28931: ; 0x28931
 .asm_2895d
 	ld a, $ff
 	ld [wd860], a
+	; ldh [hFontStyle], a
 	xor a
 	ld [wd861], a
-	ld bc, $500a
+	ld bc, $5010
 	ld de, vTilesBG tile $50
-	call Func_28e09
+
+	IF DEF(_CHS)
+	ld a, 1
+	ldh [hIf12Px], a
+	ld a, 0
+	ldh [hIfCombine], a
+	ENDC
+
+
+	call Func_28e09 ; 宝可梦名称
+
+	IF DEF(_CHS)
+	ld a, 0
+	ldh [hIf12Px], a
+	ld a, 0
+	ldh [hIfCombine], a
+	ENDC
+
+
 	ret
 
 BlankDexName:
-	db " @"
+	; db " @"
+	db_w "　　　　　@"
 
 Func_28972: ; 0x28972
 	ld a, [wPokedexOffset]
@@ -1442,12 +1472,26 @@ Func_28993: ; 0x28993
 	ld [wd860], a
 	ld [wd861], a
 	ld bc, $500a ; not a pointer
-	call Func_28e09
+	
+	; ld a, 1
+	; ldh [hIf12Px], a
+	; ld a, 0
+	; ldh [hIfCombine], a
+
+
+	call Func_28e09 ; 宝可梦列表名
+
+	; ld a, 0
+	; ldh [hIf12Px], a
+	; ld a, 0
+	; ldh [hIfCombine], a
+
 	pop hl
 	ret
 
 BlankDexName2:
-	db " @"
+	; db " @"
+	db_w "　　　　　@"
 
 Func_289c8: ; 0x289c8
 	ld a, [wCurPokedexIndex]
@@ -1483,18 +1527,37 @@ Func_289c8: ; 0x289c8
 .pokemonNotOwned
 	ld a, $ff
 	ld [wd860], a
+	; ldh [hFontStyle], a
 	ld a, $4
 	ld [wd861], a
 	ld bc, $5816
-	ld de, vTilesBG tile $5a
-	call Func_28e09
+	; ld de, vTilesBG tile $5a
+	ld de, vTilesBG tile $60
+
+	IF DEF(_CHS)
+	ld a, 1
+	ldh [hIf12Px], a
+	ld a, 0
+	ldh [hIfCombine], a
+	ENDC
+
+
+	call Func_28e09 ; 宝可梦种类
+
+	IF DEF(_CHS)
+	ld a, 0
+	ldh [hIf12Px], a
+	ld a, 0
+	ldh [hIfCombine], a
+	ENDC
 	ret
 
 BlankSpeciesName:
-	dw $4081 ; variable-width font character
+	; dw $4081 ; variable-width font character
+	db_w "　　　　　　"
 	db $00
 
-Func_28a15: ; 0x28a15
+Func_28a15: ; 0x28a15 ; 打印身高体重
 	ld a, [wCurPokedexIndex]
 	ld c, a
 	ld b, $0
@@ -1517,7 +1580,7 @@ Func_28a15: ; 0x28a15
 	ld [wd865], a
 	push de
 	hlCoord 4, 2, vBGMap
-	call Func_28d71
+	call Func_28d71_PrintNum
 	pop de
 	inc de
 	inc de
@@ -1534,7 +1597,7 @@ Func_28a15: ; 0x28a15
 .asm_28a54
 	push de
 	hlCoord 8, 6, vBGMap
-	call Func_28d71
+	call Func_28d71_PrintNum_Height
 	pop de
 	inc de
 	inc de
@@ -1542,8 +1605,8 @@ Func_28a15: ; 0x28a15
 	inc de
 	inc de
 	push de
-	hlCoord 14, 6, vBGMap
-	call Func_28d71
+	hlCoord 13, 6, vBGMap
+	call Func_28d71_PrintNum
 	pop de
 	inc de
 	inc de
@@ -1564,7 +1627,7 @@ Func_28a15: ; 0x28a15
 	ret
 
 BlankPokemonTileData_28a7f:
-	db $FF, $FF, $72, $FF
+	db $4B, $FF, $72, $4c
 	db $00 ; terminator
 
 	db $FF, $FF, $FF, $FF
@@ -1619,7 +1682,7 @@ Func_28aaa: ; 0x28aaa
 	ld [wd865], a
 	pop hl
 	push hl
-	call Func_28d71
+	call Func_28d71_PrintNum
 	pop hl
 	ret
 
@@ -1627,7 +1690,7 @@ Func_28ad1: ; 0x28ad1
 	ld a, [wPokedexOffset]
 	swap a
 	and $f0
-	sub $3c
+	sub $39 ;sub $3c
 	ldh [hNextFrameHBlankSCX], a
 	ret
 
@@ -2024,7 +2087,7 @@ ClearPokedexData: ; 0x28d66
 	jr nz, .asm_28d6c
 	ret
 
-Func_28d71: ; 0x28d71
+Func_28d71_PrintNum: ; 0x28d71
 	ld a, [wd865]
 	ld c, a
 	ld a, [de]
@@ -2033,6 +2096,7 @@ Func_28d71: ; 0x28d71
 	ret z
 	cp $20
 	jr nz, .asm_28d81
+	; jr .finish
 	ld a, $ff
 	jr .asm_28d82
 
@@ -2040,8 +2104,30 @@ Func_28d71: ; 0x28d71
 	add c
 .asm_28d82
 	call Func_28d88
+.finish
 	inc hl
-	jr Func_28d71
+	jr Func_28d71_PrintNum
+
+Func_28d71_PrintNum_Height: ; 0x28d71
+	ld a, [wd865]
+	ld c, a
+	ld a, [de]
+	inc de
+	and a
+	ret z
+	cp $20
+	jr nz, .asm_28d81
+	jr .finish
+	ld a, $ff
+	jr .asm_28d82
+
+.asm_28d81
+	add c
+.asm_28d82
+	call Func_28d88
+.finish
+	inc hl
+	jr Func_28d71_PrintNum
 
 Func_28d88: ; 0x28d88
 	push af
@@ -2068,31 +2154,66 @@ Func_28d97: ; 0x28d97
 	ldh [hVariableWidthFontFF8E], a
 	ldh [hVariableWidthFontFF90], a
 	ldh [hVariableWidthFontFF91], a
+	ldh [hLine], a
 	call Func_28e73
 .asm_28daa
-	call Func_2957c
-	jr nc, .asm_28dcb
+	call Func_2957c_ReadDexDesc
+	jr nc, .asm_28dcb ; 遇到文本末尾，结束
 	push hl
 	ldh [hVariableWidthFontFF92], a
-	cp $ff
-	jr nz, .asm_28dbb
-	call Func_208c
+	cp $ff ; ff 意味着需要换行
+	jr nz, .asm_28dbb ; 不需要换行
+	; call Func_208c
+
+	push af
+	xor a
+	ldh [hIfCombine], a
+	ldh a, [hLine]
+	inc a
+	ldh [hLine], a
+	cp 1
+	jr z, .line2
+	cp 2
+	jr z, .line3
+	pop af
 	jr .asm_28dc8
+.line2
+	ld de, $c250
+	pop af
+	jr .asm_28dc8
+.line3
+	ld de, $c490
+	pop af
+	jr .asm_28dc8
+
 
 .asm_28dbb
 	ld c, a
-	ld b, $0
-	ld hl, CharacterWidths
-	add hl, bc
-	ld a, [hl]
-	ldh [hVariableWidthFontFF93], a
-	call LoadDexVWFCharacter
+	; ld b, $0
+	; ld hl, CharacterWidths
+	; add hl, bc
+	; ld a, [hl]
+	; ldh [hVariableWidthFontFF93], a
+	IF DEF(_CHS)
+	ld a, 1
+	ldh [hIf12Px], a
+	ENDC
+	call LoadDexVWFCharacter ; 宝可梦详情
+	IF DEF(_CHS)
+	ld a, 0
+	ldh [hIf12Px], a
+	ENDC
 .asm_28dc8
 	pop hl
-	jr nc, .asm_28daa
+	
+
+
+	jr .asm_28daa ;jr nc, .asm_28daa
 .asm_28dcb
 	pop de
 	push af
+	xor a
+	ldh [hIfCombine], a
 	ld a, e
 	ld [wd863], a
 	ld a, d
@@ -2111,7 +2232,7 @@ Func_28d97: ; 0x28d97
 	bit 7, c
 	jr z, .asm_28de9
 	dec b
-.asm_28de9
+.asm_28de9 ; 宝可梦详情
 	ld hl, wPokedexFontBuffer
 	add hl, bc
 	ldh a, [hVariableWidthFontFF8F]
@@ -2131,7 +2252,7 @@ Func_28d97: ; 0x28d97
 	pop af
 	ret
 
-Func_28e09: ; 0x28e09
+Func_28e09: ; 0x28e09 显示宝可梦列表
 	push de
 	ld a, b
 	ldh [hVariableWidthFontFF8C], a
@@ -2147,16 +2268,19 @@ Func_28e09: ; 0x28e09
 	call Func_295e1
 	jr nc, .asm_28e35
 	push hl
-	ldh [hVariableWidthFontFF92], a
-	ld c, a
-	ld b, $0
-	ld hl, CharacterWidths
-	add hl, bc
-	ld a, [hl]
-	ldh [hVariableWidthFontFF93], a
-	call LoadDexVWFCharacter
+	; ldh [hVariableWidthFontFF92], a
+	; ld c, a
+	; ld b, $0
+	; ld hl, CharacterWidths
+	; add hl, bc
+	; ld a, [hl]
+	; ldh [hVariableWidthFontFF93], a
+	
+
+
+	call LoadDexVWFCharacter ; 宝可梦列表
 	pop hl
-	jr nc, .asm_28e1c
+	jr .asm_28e1c ;jr nc, .asm_28e1c
 	nop
 .asm_28e35
 	pop de
@@ -2179,7 +2303,7 @@ Func_28e09: ; 0x28e09
 	bit 7, c
 	jr z, .asm_28e53
 	dec b
-.asm_28e53
+.asm_28e53 ; 初始界面宝可梦名字和上方信息
 	ld hl, wPokedexFontBuffer
 	add hl, bc
 	ldh a, [hVariableWidthFontFF8F]
@@ -2235,127 +2359,149 @@ ENDR
 	pop hl
 	ret
 
-Func_2957c: ; 0x2957c
+Func_2957c_ReadDexDesc: ; 0x2957c Read Pokemon Description
+	inc hl
+	ld a, BANK(PokedexDescriptionPointers)
+	call ReadByteFromBank
+	ld b, a
+	dec hl
 	ld a, BANK(PokedexDescriptionPointers)
 	call ReadByteFromBank
 	inc hl
+	inc hl
 	and a
-	ret z
-	cp $d ; carriage return
-	jr nz, .asm_2958c
+	jr z, .ret
+	cp $d ; carriage return 换行的时候设置 flag 并且 a = 0xFF
+	jr nz, .asm_2958c ; 遇到需要处理的编码
+	dec hl
 	ld a, $ff
-	scf
+	scf ; Carry Flag 的目的是为了告诉外部程序继续寻找文本
+	ret
+.ret 
+	dec hl
 	ret
 
 .asm_2958c
-	cp "0"
-	jr c, .asm_29594
-	cp "9" + 1
-	jr c, .asm_295be
-.asm_29594
-	cp "A"
-	jr c, .asm_2959c
-	cp "Z" + 1
-	jr c, .asm_295c2
-.asm_2959c
-	cp "a"
-	jr c, .asm_295a4
-	cp "z" + 1
-	jr c, .asm_295c6
-.asm_295a4
-	cp " "
-	jr z, .asm_295ca
-	cp ","
-	jr z, .asm_295cd
-	cp "."
-	jr z, .asm_295d1
-	cp "`"
-	jr z, .asm_295d5
-	cp "-"
-	jr z, .asm_295d9
-	cp "é"
-	jr z, .asm_295dd
-	and a
-	ret
-
-.asm_295be
-	sub $88
 	scf
 	ret
 
-.asm_295c2
-	sub $8e
-	scf
-	ret
+; 	cp "0"
+; 	jr c, .asm_29594
+; 	cp "9" + 1
+; 	jr c, .asm_295be
+; .asm_29594
+; 	cp "A"
+; 	jr c, .asm_2959c
+; 	cp "Z" + 1
+; 	jr c, .asm_295c2
+; .asm_2959c
+; 	cp "a"
+; 	jr c, .asm_295a4
+; 	cp "z" + 1
+; 	jr c, .asm_295c6
+; .asm_295a4
+; 	cp " "
+; 	jr z, .asm_295ca
+; 	cp ","
+; 	jr z, .asm_295cd
+; 	cp "."
+; 	jr z, .asm_295d1
+; 	cp "`"
+; 	jr z, .asm_295d5
+; 	cp "-"
+; 	jr z, .asm_295d9
+; 	cp "é"
+; 	jr z, .asm_295dd
+; 	and a
+; 	ret
 
-.asm_295c6
-	sub $94
-	scf
-	ret
+; .asm_295be
+; 	sub $88
+; 	scf
+; 	ret
 
-.asm_295ca
-	xor a
-	scf
-	ret
+; .asm_295c2
+; 	sub $8e
+; 	scf
+; 	ret
 
-.asm_295cd
-	ld a, $f3
-	scf
-	ret
+; .asm_295c6
+; 	sub $94
+; 	scf
+; 	ret
 
-.asm_295d1
-	ld a, $f4
-	scf
-	ret
+; .asm_295ca
+; 	xor a
+; 	scf
+; 	ret
 
-.asm_295d5
-	ld a, $fa
-	scf
-	ret
+; .asm_295cd
+; 	ld a, $f3
+; 	scf
+; 	ret
 
-.asm_295d9
-	ld a, $b2
-	scf
-	ret
+; .asm_295d1
+; 	ld a, $f4
+; 	scf
+; 	ret
 
-.asm_295dd
-	ld a, $f9
-	scf
-	ret
+; .asm_295d5
+; 	ld a, $fa
+; 	scf
+; 	ret
 
-Func_295e1: ; 0x295e1
+; .asm_295d9
+; 	ld a, $b2
+; 	scf
+; 	ret
+
+; .asm_295dd
+; 	ld a, $f9
+; 	scf
+; 	ret
+
+Func_295e1: ; 0x295e1 似乎是读取编码的函数，用于宝可梦列表
 	ld a, [hli]
 	and a
-	ret z
-	cp $80
-	jr nc, .asm_295ed
+	jr z, .ret
 	ld c, a
-	ld b, $0
-	jr .asm_295f0
-
-.asm_295ed
+	ld a, [hli]
 	ld b, a
-	ld a, [hli]
-	ld c, a
-.asm_295f0
-	ld a, b
-	and a
-	jr nz, .asm_295f9
 	ld a, c
-	sub $20
 	scf
+	ret
+	; cp $80
+	; jr nc, .asm_295ed
+	; ld c, a
+	; ld b, $0
+	; jr .asm_295f0
+.ret
 	ret
 
-.asm_295f9
-	push hl
-	call GetCharacterWidthIndex
-	ld c, a
-	ld b, $0
-	add hl, bc
-	ld a, [hl]
-	pop hl
-	scf
-	ret
+
+; .asm_295ed
+; 	ld b, a
+; 	ld a, [hli]
+; 	ld c, a
+; .asm_295f0
+; 	ld a, b
+; 	and a
+; 	jr nz, .asm_295f9
+; 	ld a, c
+; 	sub $20
+; 	scf
+; 	ret
+
+; .asm_295f9
+; 	push hl
+; 	call GetCharacterWidthIndex
+; 	ld c, a
+; 	ld b, $0
+; 	add hl, bc
+; 	ld a, [hl]
+; 	pop hl
+; 	scf
+; 	ret
 
 GetCharacterWidthIndex: ; 0x29605
 	ld a, b

@@ -119,7 +119,8 @@ HandleTitlescreenAnimations: ; 0xc0f7
 	ldh a, [hGameBoyColorFlag]
 	and a
 	jr z, .asm_c104
-	ld bc, $2040
+	; ld bc, $2040
+	ld bc, $0000
 	ld a, SPRITE_TITLESCREEN_BLANK  ; seemingly-unused sprite data for titlescreen. It's just blank tiles.
 	call LoadSpriteData
 .asm_c104
@@ -213,7 +214,8 @@ Func_c1b1: ; 0xc1b1
 	ldh a, [hGameBoyColorFlag]
 	and a
 	jr z, .asm_c1c1
-	ld bc, $2040
+	; ld bc, $2040
+	ld bc, $0000
 	ld a, SPRITE_TITLESCREEN_BLANK
 	call LoadSpriteData
 .asm_c1c1
@@ -400,8 +402,11 @@ TitleScreenPokeballAnimation: ; 0xc2cc
 	db $00  ; terminator
 
 TitleScreenPokeballCoordOffsets: ; 0xc2d9
-	db $67, $15
-	db $73, $15
+	; db $67, $15
+	; db $73, $15
+	; db $7F, $15
+	db $65, $15
+	db $72, $15
 	db $7F, $15
 
 HandleTitleScreenContinuePromptAnimation: ; 0xc2df

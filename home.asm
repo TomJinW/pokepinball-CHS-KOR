@@ -352,6 +352,32 @@ VBlank: ; 0x2f2
 	set 2, [hl]
 	ld a, $4
 	ld [rTAC], a ; Timer interrupt will fire ~60 times per second
+	
+; .skipTimerToggle
+; 	ld hl, MBC5SRamBank
+; 	ld a, [wd917]
+; 	and a
+; 	jr nz, .asm_3b5
+; 	ld a, [wRumblePattern]
+; 	rrca
+; 	ld [wRumblePattern], a
+; 	and $1
+; 	jr z, .asm_3b5
+; 	set 3, [hl]
+; 	jr .asm_3b7
+
+; .asm_3b5
+; 	res 3, [hl]
+; .asm_3b7
+; 	ld a, [wDrawBottomMessageBox]
+; 	and a
+; 	call nz, DrawBottomMessageBox
+; 	pop hl
+; 	pop de
+; 	pop bc
+; 	pop af
+; 	reti
+
 .skipTimerToggle
 	ld hl, MBC5SRamBank
 	ld a, [wd917]
@@ -362,12 +388,12 @@ VBlank: ; 0x2f2
 	ld [wRumblePattern], a
 	and $1
 	jr z, .asm_3b5
-	set 3, [hl]
+	ld a, %00001000 ; SRAM 启用振动
 	jr .asm_3b7
-
-.asm_3b5
-	res 3, [hl]
+.asm_3b5 ; SRAM 关闭振动
+	xor a
 .asm_3b7
+	ld [hl], a ; SRAM 应用振动
 	ld a, [wDrawBottomMessageBox]
 	and a
 	call nz, DrawBottomMessageBox
@@ -2096,7 +2122,15 @@ Main: ; 0x1ffc
 	ld [wPlayerName], a
 	ld [wPlayerName + 1], a
 	ld [wPlayerName + 2], a
+
+	; Enable GameBoy Target
+	IF DEF(_DEBUG)
+	; ld a, SCREEN_SELECT_GAMEBOY_TARGET
 	ld a, SCREEN_ERASE_ALL_DATA
+	ELSE
+	ld a, SCREEN_ERASE_ALL_DATA
+	ENDC
+	
 	ld [wCurrentScreen], a
 .master_loop
 	call TickRumbleDuration
@@ -2138,6 +2172,8 @@ LoadDexVWFCharacter: ; 0x206d
 ; Loads a single variable-width-font character used in various parts of the Pokedex screen.
 	ldh a, [hLoadedROMBank]
 	push af
+	; ld a, $b3
+	; ldh [hVariableWidthFontFF92], a
 	ld a, Bank(LoadDexVWFCharacter_)
 	ldh [hLoadedROMBank], a
 	ld [MBC5RomBank], a
@@ -3288,6 +3324,64 @@ INCLUDE "home/text.asm"
 INCLUDE "home/bcd.asm"
 INCLUDE "home/tilt.asm"
 
+FarCopyDataUsingwD860: ; 0x666 spooky
+; Copies data from any bank to either working RAM or video RAM
+; Input: hl = address of data to copy
+;        a  = bank of data to copy
+;        de = destination for data
+;        bc = number of bytes to copy
+	bit 7, h
+	; jr nz, .copyFromSRAM
+	ldh [hROMBankBuffer], a
+	ldh a, [hLoadedROMBank]
+	push af
+	ldh a, [hROMBankBuffer]
+	ldh [hLoadedROMBank], a
+	ld [MBC5RomBank], a
+	scf
+	jr .copyData
+
+; .copyFromSRAM
+; 	and %00001000 ; SRAM 保留振动
+; 	ld [MBC5SRamBank], a
+; 	and a ; $a7
+.copyData
+	push af
+.copyLoop
+	ld a, [hli]
+	push af
+	ld a, [wd860]
+	and a
+	jr z, .notBlackFont
+	pop af
+	cpl
+	jr .done
+.notBlackFont
+	pop af
+.done
+	ld [de], a
+	inc de
+	dec bc
+	ld a, c
+	or b
+	jr nz, .copyLoop
+	pop af
+	ret nc
+	pop af
+	ldh [hLoadedROMBank], a
+	ld [MBC5RomBank], a
+	ret
+
+LocalCopyData: ; 0x65d
+	ld a, [hli]
+	ld [de], a
+	inc de
+	dec bc
+	ld a, c
+	or b
+	jr nz, LocalCopyData
+	ret
+
 SECTION "bank0.2", ROM0
 
 BottomLeftCollisionMasks:
@@ -3312,4 +3406,5 @@ SquaresHigh:
 FOR X, 256
 	db (X * X) / $100
 ENDR
+
 

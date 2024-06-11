@@ -60,14 +60,22 @@ UpdateBallSaverState: ; 0x146a9
 	cp 154 ;if high? Byte of ball X pos is >= 154, don't update timers
 	jr nc, .SkipSecondsOrFramesUpdate
 	ld a, [wBallSaverTimerFrames]
+	IF DEF(_DEBUG)
+	nop
+	ELSE
 	dec a
+	ENDC
 	ld [wBallSaverTimerFrames], a
 	bit 7, a
 	jr z, .SkipSecondsOrFramesUpdate
 	ld a, 59 ;if frames underflowed, set to 59 and decrement second
 	ld [wBallSaverTimerFrames], a
 	ld a, [hl]
+	IF DEF(_DEBUG)
+	nop
+	ELSE
 	dec a
+	ENDC
 	bit 7, a
 	jr nz, .DontClampSeconds ;if seconds would underflow, keep it at 0
 	ld [hl], a
@@ -2253,6 +2261,26 @@ ResolveRedStagePinballLaunchCollision: ; 0x1652d
 	ld [wPinballLaunched], a
 	ret
 
+
+	; const PALLET_TOWN        ; $0
+	; const VIRIDIAN_CITY      ; $1
+	; const VIRIDIAN_FOREST    ; $2
+	; const PEWTER_CITY        ; $3
+	; const MT_MOON            ; $4
+	; const CERULEAN_CITY      ; $5
+	; const VERMILION_SEASIDE  ; $6
+	; const VERMILION_STREETS  ; $7
+	; const ROCK_MOUNTAIN      ; $8
+	; const LAVENDER_TOWN      ; $9
+	; const CELADON_CITY       ; $a
+	; const CYCLING_ROAD       ; $b
+	; const FUCHSIA_CITY       ; $c
+	; const SAFARI_ZONE        ; $d
+	; const SAFFRON_CITY       ; $e
+	; const SEAFOAM_ISLANDS    ; $f
+	; const CINNABAR_ISLAND    ; $10
+	; const INDIGO_PLATEAU     ; $11
+
 ChooseInitialMap_RedField: ; 0x1658f
 ; While waiting to launch the pinball, this quickly rotates the billboard with the initial
 ; maps the player can start on.
@@ -2271,7 +2299,13 @@ ChooseInitialMap_RedField: ; 0x1658f
 	ld b, $0
 	ld hl, RedStageInitialMaps
 	add hl, bc
+	IF DEF(_DEBUG)
+	; ld a, PEWTER_CITY
 	ld a, [hl]
+	ELSE
+	ld a, [hl]
+	ENDC
+	
 	ld [wCurrentMap], a
 	push af
 	lb de, $00, $48

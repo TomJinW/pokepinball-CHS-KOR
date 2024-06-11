@@ -279,6 +279,8 @@ SpriteDataPointers: ; 0x4000
 	SpriteDataPointer TimerGameboyTenSecondsBonusFieldSprite, SPRITE_TIMER_TENSECONDS_BONUS
 	SpriteDataPointer TimerGameboyOneSecondsBonusFieldSprite, SPRITE_TIMER_ONESECONDS_BONUS
 	SpriteDataPointer TimerGameboyColonBonusFieldSprite, SPRITE_TIMER_COLON_BONUS
+	SpriteDataPointer PokeTextSprite, SPRITE_POKE_TEXT
+	SpriteDataPointer DexTextSprite, SPRITE_DEX_TEXT
 
 BallSpin0Sprite: ; 0x41f2
 	db $08, $08, $42, $00
@@ -985,11 +987,11 @@ TitlescreenPokeball4Sprite: ; 0x489f
 
 TitlescreenBlankSprite: ; 0x48b0
 ; seemingly-unused sprite data for titlescreen. It's just blank tiles.
-	db $10, $20, $53, $11
-	db $10, $18, $52, $11
-	db $08, $20, $51, $11
-	db $18, $0c, $50, $11
-	db $10, $0c, $4f, $11
+	db 100,121, $53, $12
+	db 096,111, $52, $12
+	db 100, 65, $51, $11
+	db 097, 45, $50, $11
+	db 076, 44, $4f, $11
 	db $80 ; terminator
 
 DexArrowSprite: ; 0x48c5
@@ -1027,13 +1029,28 @@ DexScrollBarFrame2Sprite: ; 0x48f7
 
 PokeDexTextSprite: ; 0x48fc
 ; "POKeDEX" in the top-right corner of the Pokedex screen
-	db $12, $34, $7f, $11
-	db $12, $2c, $7e, $11
-	db $12, $24, $7d, $11
+	; db $12, $34, $7f, $11
+	; db $12, $2c, $7e, $11
+	; db $12, $24, $7d, $11
+	; db $12, $1c, $7c, $11
+	; db $12, $14, $7b, $11
+	; db $12, $0c, $7a, $11
+	; db $80 ; terminator
+
+PokeTextSprite: 
+; "POKeDEX" in the top-right corner of the Pokedex screen
 	db $12, $1c, $7c, $11
 	db $12, $14, $7b, $11
 	db $12, $0c, $7a, $11
 	db $80 ; terminator
+
+
+DexTextSprite:
+	db $12, $34, $7f, $11
+	db $12, $2c, $7e, $11
+	db $12, $24, $7d, $11
+	db $80
+	
 
 DexDownPointerSprite: ; 0x4915
 	db $10, $08, $6f, $11
@@ -3493,3 +3510,5 @@ SeelProgressSparkleFrame0: ; 0x6258
 SeelProgressSparkleFrame1: ; 0x625d
 	db $10, $08, $F2, $00
 	db $80  ; terminator
+
+

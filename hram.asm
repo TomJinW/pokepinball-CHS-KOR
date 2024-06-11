@@ -93,6 +93,12 @@ hFlipperState         :: db ; 0xFFC3
 
 hFFC4 :: db ; 0xFFC4
 
+hCodeBank:: db
+hIfCombine:: db
+hLine:: dw
+hIf12Px:: db
+; hFontStyle:: db
+
 SECTION "HRAM.2", HRAM
 
 hLoadedROMBank          :: db ; 0xFFF8  ; this is updated whenever the code switches ROM Banks

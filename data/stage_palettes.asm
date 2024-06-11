@@ -975,6 +975,7 @@ OptionMenuOBJPalette3: ; 0xdce58
 OptionMenuOBJPalette4: ; 0xdce60
 	RGB 31, 31, 31
 	RGB 23, 23, 27
+	; RGB 20, 20, 31 ; New Shadow Color
 	RGB 31, 0, 0
 	RGB 0, 0, 0
 OptionMenuOBJPalette5: ; 0xdce68
@@ -1167,7 +1168,7 @@ TitlescreenBGPalette0: ; 0xdcf80
 	RGB 0, 0, 0
 TitlescreenBGPalette1: ; 0xdcf88
 	RGB 31, 31, 31
-	RGB 0, 12, 26
+	RGB 0, 16, 22
 	RGB 31, 0, 0
 	RGB 0, 0, 0
 TitlescreenBGPalette2: ; 0xdcf90
@@ -1178,17 +1179,17 @@ TitlescreenBGPalette2: ; 0xdcf90
 TitlescreenBGPalette3: ; 0xdcf98
 	RGB 31, 31, 31
 	RGB 31, 29, 0
-	RGB 0, 12, 26
+	RGB 0, 16, 22
 	RGB 0, 0, 0
 TitlescreenBGPalette4: ; 0xdcfa0
 	RGB 31, 31, 31
 	RGB 20, 20, 31
-	RGB 0, 12, 26
+	RGB 0, 16, 22
 	RGB 0, 0, 0
 TitlescreenBGPalette5: ; 0xdcfa8
 	RGB 31, 31, 31
 	RGB 23, 31, 24
-	RGB 0, 12, 26
+	RGB 0, 16, 22
 	RGB 0, 0, 0
 TitlescreenBGPalette6: ; 0xdcfb0
 	RGB 31, 31, 31
@@ -1215,6 +1216,7 @@ TitlescreenOBJPalette2: ; 0xdcfd0
 	RGB 20, 20, 20
 	RGB 31, 31, 31
 	RGB 23, 23, 27
+	; RGB 20, 20, 31 ; New Shadow Color
 	RGB 0, 0, 0
 TitlescreenOBJPalette3: ; 0xdcfd8
 	RGB 0, 6, 0

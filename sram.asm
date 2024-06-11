@@ -14,6 +14,12 @@ ENDM
 	saved_data sKeyConfigs, $e    ; a244
 	saved_data sSaveGame, $4c3    ; a268
 ; abf6
+	ds $0A
+	; wtmp12pxFontBuffer::
+	ds $100
+	ds $100
 
-	ds $409
+	;
+	ds $209 - $0A
 sRNGMod:: ; afff
+

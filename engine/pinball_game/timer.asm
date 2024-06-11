@@ -40,7 +40,12 @@ DecrementTimer: ; 0x86a4
 
 .IfTimeLeft
 	ld a, [hl]
+	IF DEF(_DEBUG)
+	nop
+	ELSE
 	sub $1
+	ENDC
+	
 	daa ;take 1 from seconds
 	jr nc, .IfMinuteHasNotPassed ; if < 0, set to 59
 	ld a, $59

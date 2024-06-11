@@ -59,15 +59,17 @@ ClearData: ; 0x654
 	jr z, .clearLoop
 	ret
 
-LocalCopyData: ; 0x65d
-	ld a, [hli]
-	ld [de], a
-	inc de
-	dec bc
-	ld a, c
-	or b
-	jr nz, LocalCopyData
-	ret
+; LocalCopyData: ; 0x65d
+; 	ld a, [hli]
+; 	ld [de], a
+; 	inc de
+; 	dec bc
+; 	ld a, c
+; 	or b
+; 	jr nz, LocalCopyData
+; 	ret
+
+ds 1
 
 FarCopyData: ; 0x666 spooky
 ; Copies data from any bank to either working RAM or video RAM
@@ -87,6 +89,7 @@ FarCopyData: ; 0x666 spooky
 	jr .copyData
 
 .copyFromSRAM
+	and %00001000 ; SRAM 保留振动
 	ld [MBC5SRamBank], a
 	and a
 .copyData
@@ -273,6 +276,7 @@ LoadVRAMData: ; 0x73f
 	jr .asm_756
 
 .asm_752
+	and %00001000 ; SRAM 保留振动
 	ld [MBC5SRamBank], a
 	and a
 .asm_756
@@ -344,6 +348,7 @@ FarCopyPalettes: ; 0x790
 	jr .asm_7b1
 
 .asm_7ad
+	and %00001000 ; SRAM 保留振动
 	ld [MBC5SRamBank], a
 	and a
 .asm_7b1
@@ -394,6 +399,7 @@ Func_7dc: ; 0x7dc
 	jr .asm_7f3
 
 .asm_7ef
+	and %00001000 ; SRAM 保留振动
 	ld [MBC5SRamBank], a
 	and a
 .asm_7f3

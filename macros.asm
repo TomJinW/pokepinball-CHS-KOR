@@ -28,6 +28,11 @@ DEF ReadHalfword EQUS "$20"
 DEF dex_text   EQUS "db "     ; Start beginning of pokedex description
 DEF dex_line   EQUS "db $0d," ; Start new line in pokedex description
 DEF dex_end    EQUS "db $00"  ; Terminate the pokedex description
+DEF dex    EQUS "db $00"  ; Terminate the pokedex description
+
+DEF dex_text_w   EQUS "db_w "     ; Start beginning of pokedex description
+DEF dex_line_w   EQUS "db_w $0d," ; Start new line in pokedex description
+
 
 MACRO dbw
 	db \1

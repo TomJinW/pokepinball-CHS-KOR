@@ -602,10 +602,10 @@ HandleBellsproutEntriesBallBonus: ; 0xf952
 	ret
 
 HandleDugtrioTriplesBallBonus: ; 0xf97a
-	ld de, wBottomMessageText + $04
+	ld de, wBottomMessageText + $03
 	ld hl, DugtrioCounterText
 	call PlaceTextAlphanumericOnly
-	ld hl, wBottomMessageText + $04
+	ld hl, wBottomMessageText + $03
 	ld a, [wNumDugtrioTriples]
 	call Func_f78e
 	ld bc, $0040
@@ -662,10 +662,10 @@ HandleBallBonusBlueField: ; 0xf9f3
 	ret
 
 HandleCloysterEntriesBallBonus: ; 0xfa06
-	ld de, wBottomMessageText + $04
+	ld de, wBottomMessageText + $02
 	ld hl, CloysterCounterText
 	call PlaceTextAlphanumericOnly
-	ld hl, wBottomMessageText + $04
+	ld hl, wBottomMessageText + $02
 	ld a, [wNumCloysterEntries]
 	call Func_f78e
 	ld bc, $0040
@@ -678,10 +678,10 @@ HandleCloysterEntriesBallBonus: ; 0xfa06
 	ret
 
 HandleSlowpokeEntriesBallBonus: ; 0xfa2e
-	ld de, wBottomMessageText + $04
+	ld de, wBottomMessageText + $01
 	ld hl, SlowpokeCounterText
 	call PlaceTextAlphanumericOnly
-	ld hl, wBottomMessageText + $04
+	ld hl, wBottomMessageText + $01
 	ld a, [wNumSlowpokeEntries]
 	call Func_f78e
 	ld bc, $0040
@@ -694,10 +694,10 @@ HandleSlowpokeEntriesBallBonus: ; 0xfa2e
 	ret
 
 HandlePoliwagTriplesBallBonus: ; 0xfa56
-	ld de, wBottomMessageText + $04
+	ld de, wBottomMessageText + $01
 	ld hl, PoliwagCounterText
 	call PlaceTextAlphanumericOnly
-	ld hl, wBottomMessageText + $04
+	ld hl, wBottomMessageText + $01
 	ld a, [wNumPoliwagTriples]
 	call Func_f78e
 	ld bc, $0040
@@ -710,10 +710,10 @@ HandlePoliwagTriplesBallBonus: ; 0xfa56
 	ret
 
 HandlePsyduckTriplesBallBonus: ; 0xfa7e
-	ld de, wBottomMessageText + $04
+	ld de, wBottomMessageText + $03
 	ld hl, PsyduckCounterText
 	call PlaceTextAlphanumericOnly
-	ld hl, wBottomMessageText + $04
+	ld hl, wBottomMessageText + $03
 	ld a, [wNumPsyduckTriples]
 	call Func_f78e
 	ld bc, $0040

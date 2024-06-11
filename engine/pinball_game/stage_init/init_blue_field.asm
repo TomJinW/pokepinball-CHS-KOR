@@ -3,6 +3,11 @@ InitBlueField: ; 0x1c000
 	and a
 	ret nz
 	xor a
+
+	; IF DEF(_DEBUG)
+	; ld a, $8
+	; ENDC
+
 	ld hl, wScore + $5
 	ld [hld], a
 	ld [hld], a
@@ -10,6 +15,11 @@ InitBlueField: ; 0x1c000
 	ld [hld], a
 	ld [hld], a
 	ld [hl], a
+
+	; IF DEF(_DEBUG)
+	; xor a
+	; ENDC
+
 	ld [wNumPartyMons], a
 	ld [wExtraBalls], a
 	ld [wLostBall], a
@@ -27,8 +37,16 @@ InitBlueField: ; 0x1c000
 	ld [wCurBonusMultiplier], a
 	ld a, 2
 	ld [wRightAlleyCount], a
+IF DEF(_DEBUG)
+	ld a, 9
+	ld [wNumBallLives], a
+	ld a, 3
+ELSE
 	ld a, 3
 	ld [wNumBallLives], a
+	
+ENDC
+	
 	ld [wd610], a
 	ld a, BONUS_STAGE_ORDER_MEOWTH
 	ld [wNextBonusStage], a
@@ -38,6 +56,7 @@ InitBlueField: ; 0x1c000
 	ld [wIndicatorStates + 3], a
 	ld a, $82
 	ld [wIndicatorStates + 1], a
+
 	xor a
 	ld [wd648], a
 	ld [wd649], a

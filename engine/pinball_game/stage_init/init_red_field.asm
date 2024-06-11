@@ -27,11 +27,28 @@ InitRedField: ; 0x30000
 	ld [wCurBonusMultiplier], a
 	ld a, 2
 	ld [wRightAlleyCount], a
+
+IF DEF(_DEBUG)
+	ld a, 9
+	ld [wNumBallLives], a
+	ld a, 3
+ELSE
 	ld a, 3
 	ld [wNumBallLives], a
+ENDC
+	
 	ld [wd610], a
 	ld [wNextBonusStage], a ; BONUS_STAGE_ORDER_DIGLETT
 	ld [wInitialNextBonusStage], a ; BONUS_STAGE_ORDER_DIGLETT
+
+
+
+	; IF DEF(_DEBUG)
+	; ld a, $3
+	
+	; ENDC
+
+
 	ld a, $4
 	ld [wStageCollisionState], a
 	ld [wRedStageStructureBackup], a

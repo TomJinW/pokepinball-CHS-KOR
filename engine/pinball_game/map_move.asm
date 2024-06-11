@@ -65,6 +65,10 @@ LoadScrollingMapNameText: ; 0x3118f
 	call FillBottomMessageBufferWithBlackTile
 	call EnableBottomText
 	ld a, [wCurrentMap]
+
+	; ld a, 11
+	; ld [wCurrentMap], a
+	
 	sla a
 	ld c, a
 	ld b, $0
