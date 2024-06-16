@@ -35,7 +35,11 @@ StageGfxPointers_GameBoyColor: ; 0xe717
 	dw StageSeelBonusGfx_GameBoyColor
 
 StageRedFieldTopGfx_GameBoy: ; 0xe737
+IF DEF(_KOR)
 	VIDEO_DATA_TILES   Alphabet1Gfx, vTilesOB, $1a0
+ELSE
+	VIDEO_DATA_TILES   Alphabet1Gfx, vTilesOB, $140
+ENDC
 	VIDEO_DATA_TILES   StageRedFieldTopGfx1, vTilesOB + $1a0, $260
 	VIDEO_DATA_TILES   PinballPokeballGfx, vTilesOB + $400, $200
 	VIDEO_DATA_TILES   StageRedFieldTopGfx2, vTilesOB + $600, $200
@@ -46,7 +50,11 @@ StageRedFieldTopGfx_GameBoy: ; 0xe737
 	db $FF, $FF  ; terminators
 
 StageRedFieldTopGfx_GameBoyColor: ; 0xe771
+IF DEF(_KOR)
 	VIDEO_DATA_TILES         Alphabet2Gfx, vTilesOB, $1a0
+ELSE
+	VIDEO_DATA_TILES         Alphabet2Gfx, vTilesOB, $140
+ENDC
 	VIDEO_DATA_TILES         StageRedFieldTopGfx1, vTilesOB + $1a0, $260
 	VIDEO_DATA_TILES         PinballPokeballGfx, vTilesOB + $400, $200
 	VIDEO_DATA_TILES         StageRedFieldTopGfx2, vTilesOB + $600, $200
@@ -66,7 +74,11 @@ StageRedFieldTopGfx_GameBoyColor: ; 0xe771
 	db $FF, $FF  ; terminators
 
 StageRedFieldBottomGfx_GameBoy: ; 0xe7ea
+IF DEF(_KOR)
 	VIDEO_DATA_TILES    Alphabet1Gfx, vTilesOB, $1a0
+ELSE
+	VIDEO_DATA_TILES    Alphabet1Gfx, vTilesOB, $140
+ENDC
 	VIDEO_DATA_TILES    StageSharedBonusSlotGlowGfx, vTilesOB + $1a0, $160
 	VIDEO_DATA_TILES    StageSharedArrowsGfx, vTilesOB + $300, $80
 	VIDEO_DATA_TILES    StageSharedBonusSlotGlow2Gfx, vTilesOB + $380, $20
@@ -77,7 +89,11 @@ StageRedFieldBottomGfx_GameBoy: ; 0xe7ea
 	db $FF, $FF  ; terminators
 
 StageRedFieldBottomGfx_GameBoyColor: ; 0xe824
+IF DEF(_KOR)
 	VIDEO_DATA_TILES         Alphabet2Gfx, vTilesOB, $1a0
+ELSE
+	VIDEO_DATA_TILES         Alphabet2Gfx, vTilesOB, $140
+ENDC
 	VIDEO_DATA_TILES         StageSharedBonusSlotGlowGfx, vTilesOB + $1a0, $160
 	VIDEO_DATA_TILES         StageSharedArrowsGfx, vTilesOB + $300, $80
 	VIDEO_DATA_TILES         StageSharedBonusSlotGlow2Gfx, vTilesOB + $380, $20
@@ -120,7 +136,11 @@ VideoData_e8d4: ; 0xe8d4
 	db $FF, $FF  ; terminators
 
 StageBlueFieldTopGfx_GameBoy: ; 0xe8f2
+IF DEF(_KOR)
 	VIDEO_DATA_TILES   Alphabet1Gfx, vTilesOB, $1a0
+ELSE
+	VIDEO_DATA_TILES   Alphabet1Gfx, vTilesOB, $140
+ENDC
 	VIDEO_DATA_TILES   StageBlueFieldTopGfx1, vTilesOB + $1a0, $260
 	VIDEO_DATA_TILES   PinballPokeballGfx, vTilesOB + $400, $200
 	VIDEO_DATA_TILES   StageBlueFieldTopGfx2, vTilesOB + $600, $200
@@ -131,7 +151,11 @@ StageBlueFieldTopGfx_GameBoy: ; 0xe8f2
 	db $FF, $FF  ; terminators
 
 StageBlueFieldTopGfx_GameBoyColor: ; 0xe92c
+IF DEF(_KOR)
 	VIDEO_DATA_TILES         Alphabet2Gfx, vTilesOB, $1a0
+ELSE 
+	VIDEO_DATA_TILES         Alphabet2Gfx, vTilesOB, $140
+ENDC 
 	VIDEO_DATA_TILES         StageBlueFieldTopGfx1, vTilesOB + $1a0, $260
 	VIDEO_DATA_TILES         PinballPokeballGfx, vTilesOB + $400, $200
 	VIDEO_DATA_TILES         StageBlueFieldTopGfx2, vTilesOB + $600, $200
@@ -146,7 +170,11 @@ StageBlueFieldTopGfx_GameBoyColor: ; 0xe92c
 	db $FF, $FF  ; terminators
 
 StageBlueFieldBottomGfx_GameBoy: ; 0xe982
+IF DEF(_KOR)
 	VIDEO_DATA_TILES    Alphabet1Gfx, vTilesOB, $1a0
+ELSE
+	VIDEO_DATA_TILES    Alphabet1Gfx, vTilesOB, $140
+ENDC
 	VIDEO_DATA_TILES    StageSharedBonusSlotGlowGfx, vTilesOB + $1a0, $160
 	VIDEO_DATA_TILES    StageSharedArrowsGfx, vTilesOB + $300, $80
 	VIDEO_DATA_TILES    StageSharedBonusSlotGlow2Gfx, vTilesOB + $380, $20
@@ -157,7 +185,11 @@ StageBlueFieldBottomGfx_GameBoy: ; 0xe982
 	db $FF, $FF  ; terminators
 
 StageBlueFieldBottomGfx_GameBoyColor: ; 0xe9bc
+IF DEF(_KOR)
 	VIDEO_DATA_TILES         Alphabet2Gfx, vTilesOB, $1a0
+ELSE
+	VIDEO_DATA_TILES         Alphabet2Gfx, vTilesOB, $140
+ENDC
 	VIDEO_DATA_TILES         StageSharedBonusSlotGlowGfx, vTilesOB + $1a0, $160
 	VIDEO_DATA_TILES         StageSharedArrowsGfx, vTilesOB + $300, $80
 	VIDEO_DATA_TILES         StageSharedBonusSlotGlow2Gfx, vTilesOB + $380, $20

@@ -581,15 +581,22 @@ PointsPerSpinnerTurn: ; 0xf93f
 HandleBallBonusRedField: ; 0xf945
 	call HandleBellsproutEntriesBallBonus
 	call HandleDugtrioTriplesBallBonus
+	IF DEF(_CHS)
+	call ReLoadBottomFont
+	ENDC
 	call HandleCAVECompletionsBallBonus_RedField
 	call HandleSpinnerTurnsBallBonus_RedField
 	ret
 
 HandleBellsproutEntriesBallBonus: ; 0xf952
-	ld de, wBottomMessageText + $03
+IF DEF(_CHS)
+	ld hl, $5100
+	call LoadPokemonFontInWXYZ
+ENDC
+	ld de, wBottomMessageText + $05
 	ld hl, BellsproutCounterText
 	call PlaceTextAlphanumericOnly
-	ld hl, wBottomMessageText + $03
+	ld hl, wBottomMessageText + $05
 	ld a, [wNumBellsproutEntries]
 	call Func_f78e
 	ld bc, $0040
@@ -602,10 +609,14 @@ HandleBellsproutEntriesBallBonus: ; 0xf952
 	ret
 
 HandleDugtrioTriplesBallBonus: ; 0xf97a
-	ld de, wBottomMessageText + $03
+IF DEF(_CHS)
+	ld hl, $4C80
+	call LoadPokemonFontInWXYZ
+ENDC
+	ld de, wBottomMessageText + $05
 	ld hl, DugtrioCounterText
 	call PlaceTextAlphanumericOnly
-	ld hl, wBottomMessageText + $03
+	ld hl, wBottomMessageText + $05
 	ld a, [wNumDugtrioTriples]
 	call Func_f78e
 	ld bc, $0040
@@ -657,15 +668,22 @@ HandleBallBonusBlueField: ; 0xf9f3
 	call HandleSlowpokeEntriesBallBonus
 	call HandlePoliwagTriplesBallBonus
 	call HandlePsyduckTriplesBallBonus
+	IF DEF(_CHS)
+	call ReLoadBottomFont
+	ENDC
 	call HandleCAVECompletionsBallBonus_BlueField
 	call HandleSpinnerTurnsBallBonus_BlueField
 	ret
 
 HandleCloysterEntriesBallBonus: ; 0xfa06
-	ld de, wBottomMessageText + $02
+IF DEF(_CHS)
+	ld hl, $5680
+	call LoadPokemonFontInWXYZ
+ENDC
+	ld de, wBottomMessageText + $05
 	ld hl, CloysterCounterText
 	call PlaceTextAlphanumericOnly
-	ld hl, wBottomMessageText + $02
+	ld hl, wBottomMessageText + $05
 	ld a, [wNumCloysterEntries]
 	call Func_f78e
 	ld bc, $0040
@@ -678,10 +696,14 @@ HandleCloysterEntriesBallBonus: ; 0xfa06
 	ret
 
 HandleSlowpokeEntriesBallBonus: ; 0xfa2e
-	ld de, wBottomMessageText + $01
+IF DEF(_CHS)
+	ld hl, $5380
+	call LoadPokemonFontInWXYZ
+ENDC
+	ld de, wBottomMessageText + $05
 	ld hl, SlowpokeCounterText
 	call PlaceTextAlphanumericOnly
-	ld hl, wBottomMessageText + $01
+	ld hl, wBottomMessageText + $05
 	ld a, [wNumSlowpokeEntries]
 	call Func_f78e
 	ld bc, $0040
@@ -694,10 +716,14 @@ HandleSlowpokeEntriesBallBonus: ; 0xfa2e
 	ret
 
 HandlePoliwagTriplesBallBonus: ; 0xfa56
-	ld de, wBottomMessageText + $01
+IF DEF(_CHS)
+	ld hl, $4EC0
+	call LoadPokemonFontInWXYZ
+ENDC
+	ld de, wBottomMessageText + $05
 	ld hl, PoliwagCounterText
 	call PlaceTextAlphanumericOnly
-	ld hl, wBottomMessageText + $01
+	ld hl, wBottomMessageText + $05
 	ld a, [wNumPoliwagTriples]
 	call Func_f78e
 	ld bc, $0040
@@ -710,10 +736,14 @@ HandlePoliwagTriplesBallBonus: ; 0xfa56
 	ret
 
 HandlePsyduckTriplesBallBonus: ; 0xfa7e
-	ld de, wBottomMessageText + $03
+IF DEF(_CHS)
+	ld hl, $4D40
+	call LoadPokemonFontInWXYZ
+ENDC
+	ld de, wBottomMessageText + $05
 	ld hl, PsyduckCounterText
 	call PlaceTextAlphanumericOnly
-	ld hl, wBottomMessageText + $03
+	ld hl, wBottomMessageText + $05
 	ld a, [wNumPsyduckTriples]
 	call Func_f78e
 	ld bc, $0040
@@ -771,3 +801,17 @@ DoNothing_faf8: ; 0xfaf8
 
 ; XXX
 	ret
+
+IF DEF(_CHS)
+LoadPokemonFontInWXYZ:
+	ld de, $8160
+	ld bc, $40
+	ld a, [hGameBoyColorFlag]
+	and a
+	ld a, BANK(FooterFontCHS_CGB)
+	jr nz, .cgb
+	ld a, BANK(FooterFontCHS_DMG)
+.cgb
+	call LoadVRAMData
+	ret
+ENDC

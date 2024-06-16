@@ -70,8 +70,15 @@ StartCatchEmMode: ; 0x1003f
 	add hl, bc
 	ld a, [hl]  ; a contains mon id. overshoots by 1 if mew, causing mew to be loaded
 	dec a
+	if DEF(_DEBUG)
+	; ld a, MEWTWO - 1 ; 选择要哪只宝可梦
+	; ld [wCurrentCatchEmMon], a ;stores 1 less than ID
 	ld [wCurrentCatchEmMon], a ;stores 1 less than ID
 	ld a, [wCurrentCatchEmMon] ;wow gamefreak
+	ELSE
+	ld [wCurrentCatchEmMon], a ;stores 1 less than ID
+	ld a, [wCurrentCatchEmMon] ;wow gamefreak
+	ENDC
 	ld c, a
 	ld b, $0
 	ld hl, CatchemMonIds ; fetch the mon's catchem id
@@ -970,7 +977,82 @@ Func_106a6: ; 0x106a6
 	ret
 
 ShowCapturedPokemonText: ; 0x106b6
+
+	; IF DEF(_DEBUG)
+	; ld a, 23
+	; ENDC
+
+IF DEF(_CHS)
+	ld de, $8010
+	ld bc, $20
+	ld hl, $65C0
+	ld a, [hGameBoyColorFlag]
+	and a
+	ld a, BANK(FooterFontCHS_CGB)
+	jr nz, .cgb
+	ld a, BANK(FooterFontCHS_DMG)
+.cgb
+	call LoadVRAMData
 	ld a, [wCurrentCatchEmMon]
+
+
+	
+	ld c, a
+	ld b, a
+	srl b
+	srl b
+	sla c
+	sla c
+	sla c
+	sla c
+	sla c
+	sla c
+	ld hl, $4000
+	add hl, bc
+	ld de, $8070
+	ld bc, $40
+	ld a, [hGameBoyColorFlag]
+	and a
+	ld a, BANK(FooterFontCHS_CGB)
+	jr nz, .cgb2
+	ld a, BANK(FooterFontCHS_DMG)
+.cgb2
+	call LoadVRAMData
+ENDC
+
+	ld a, [wCurrentCatchEmMon]
+
+IF DEF(_CHS)
+	ld hl, PokemonNamesSMALL
+	ld b, 0
+	ld c, a
+	add hl, bc
+	ld a, [hl]
+	add a
+	ld c, a
+	ld hl, SmallPMNamesPointers
+	add hl, bc
+	ld d, h
+	ld e, l
+	ld a, [de]
+	ld l, a
+	inc de
+	ld a, [de]
+	ld h, a
+
+	ld de, YouGotAnText ; "You got a"
+	ld bc, Data_2a91
+	ld a, [hl]
+
+	ld a, [wCurrentCatchEmMon]
+
+
+	cp 22 ; 阿柏蛇
+	jr z, .asm_106f1
+	cp 23 ; 阿柏怪
+	jr z, .asm_106f1
+
+ELSE
 	ld c, a
 	ld b, $0
 	sla c
@@ -983,9 +1065,11 @@ ShowCapturedPokemonText: ; 0x106b6
 	rl b  ; bc was just multiplied by 16
 	ld hl, PokemonNames + 1
 	add hl, bc
-	ld de, YouGotAnText ; "You got an"
+
+	ld de, YouGotAnText ; "You got a"
 	ld bc, Data_2a91
 	ld a, [hl]
+
 	; check if mon's name starts with a vowel, so it can print "an", instead of "a"
 	cp "A"
 	jr z, .asm_106f1
@@ -997,6 +1081,8 @@ ShowCapturedPokemonText: ; 0x106b6
 	jr z, .asm_106f1
 	cp "O"
 	jr z, .asm_106f1
+ENDC
+
 	ld de, YouGotAText ; "You got a"
 	ld bc, Data_2a79
 .asm_106f1
@@ -1187,6 +1273,9 @@ ShowJackpotText: ; 0x10825
 	push bc ;store data on stack to bge read in by LoadScoreTextFromStack
 	push de
 	call AddBCDEToCurBufferValue
+IF DEF(_CHS)
+	call ReLoadBottomFont
+ENDC
 	call FillBottomMessageBufferWithBlackTile
 	call EnableBottomText
 	ld hl, wStationaryText2

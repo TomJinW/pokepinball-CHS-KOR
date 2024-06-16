@@ -458,3 +458,213 @@ ENDC
 ; db "*DRAGONITE@     "
 ; db "*MEWTWO@        "
 ; db "*MEW@           "
+
+
+PokemonNamesSMALL:: ; 0x11a4e
+; The first byte of each entry is the symbol displayed to the left of the mon's
+; name in the evolution menu. Fully-evolved pokemon have an asterisk next to their names.
+	db 4 ; 妙蛙种子
+	db 2 ; 妙蛙草
+	db 3 ; 妙蛙花
+	db 2 ; 小火龙
+	db 2 ; 火恐龙
+	db 3 ; 喷火龙
+	db 2 ; 杰尼龟
+	db 2 ; 卡咪龟
+	db 3 ; 水箭龟
+	db 2 ; 绿毛虫
+	db 2 ; 铁甲蛹
+	db 3 ; 巴大蝶
+	db 2 ; 独角虫
+	db 2 ; 铁壳蛹
+	db 3 ; 大针蜂
+	db 0 ; 波波
+	db 2 ; 比比鸟
+	db 3 ; 大比鸟
+	db 2 ; 小拉达
+	db 1 ; 拉达
+	db 0 ; 烈雀
+	db 3 ; 大嘴雀
+	db 2 ; 阿柏蛇
+	db 3 ; 阿柏怪
+	db 2 ; 皮卡丘
+	db 1 ; 雷丘
+	db 2 ; 穿山鼠
+	db 3 ; 穿山王
+	db 2 ; 尼多兰
+	db 2 ; 尼多娜
+	db 3 ; 尼多后
+	db 2 ; 尼多朗
+	db 4 ; 尼多力诺
+	db 3 ; 尼多王
+	db 0 ; 皮皮
+	db 3 ; 皮可西
+	db 0 ; 六尾
+	db 1 ; 九尾
+	db 0 ; 胖丁
+	db 3 ; 胖可丁
+	db 2 ; 超音蝠
+	db 3 ; 大嘴蝠
+	db 2 ; 走路草
+	db 2 ; 臭臭花
+	db 3 ; 霸王花
+	db 2 ; 派拉斯
+	db 5 ; 派拉斯特
+	db 0 ; 毛球
+	db 3 ; 摩鲁蛾
+	db 0 ; 地鼠
+	db 3 ; 三地鼠
+	db 0 ; 喵喵
+	db 3 ; 猫老大
+	db 2 ; 可达鸭
+	db 3 ; 哥达鸭
+	db 0 ; 猴怪
+	db 3 ; 火暴猴
+	db 2 ; 卡蒂狗
+	db 3 ; 风速狗
+	db 4 ; 蚊香蝌蚪
+	db 2 ; 蚊香君
+	db 5 ; 蚊香泳士
+	db 0 ; 凯西
+	db 2 ; 勇基拉
+	db 1 ; 胡地
+	db 0 ; 腕力
+	db 0 ; 豪力
+	db 1 ; 怪力
+	db 2 ; 喇叭芽
+	db 2 ; 口呆花
+	db 3 ; 大食花
+	db 4 ; 玛瑙水母
+	db 5 ; 毒刺水母
+	db 2 ; 小拳石
+	db 2 ; 隆隆石
+	db 3 ; 隆隆岩
+	db 2 ; 小火马
+	db 3 ; 烈焰马
+	db 2 ; 呆呆兽
+	db 3 ; 呆壳兽
+	db 2 ; 小磁怪
+	db 6 ; 三合一磁怪
+	db 3 ; 大葱鸭
+	db 0 ; 嘟嘟
+	db 3 ; 嘟嘟利
+	db 2 ; 小海狮
+	db 3 ; 白海狮
+	db 0 ; 臭泥
+	db 3 ; 臭臭泥
+	db 2 ; 大舌贝
+	db 3 ; 刺甲贝
+	db 0 ; 鬼斯
+	db 2 ; 鬼斯通
+	db 1 ; 耿鬼
+	db 3 ; 大岩蛇
+	db 2 ; 催眠貘
+	db 5 ; 引梦貘人
+	db 2 ; 大钳蟹
+	db 3 ; 巨钳蟹
+	db 4 ; 霹雳电球
+	db 5 ; 顽皮雷弹
+	db 0 ; 蛋蛋
+	db 3 ; 椰蛋树
+	db 4 ; 卡拉卡拉
+	db 5 ; 嘎啦嘎啦
+	db 3 ; 飞腿郎
+	db 3 ; 快拳郎
+	db 3 ; 大舌头
+	db 2 ; 瓦斯弹
+	db 5 ; 双弹瓦斯
+	db 4 ; 独角犀牛
+	db 5 ; 钻角犀兽
+	db 3 ; 吉利蛋
+	db 3 ; 蔓藤怪
+	db 1 ; 袋兽
+	db 2 ; 墨海马
+	db 3 ; 海刺龙
+	db 2 ; 角金鱼
+	db 3 ; 金鱼王
+	db 2 ; 海星星
+	db 5 ; 宝石海星
+	db 5 ; 魔墙人偶
+	db 5 ; 飞天螳螂
+	db 3 ; 迷唇姐
+	db 3 ; 电击兽
+	db 5 ; 鸭嘴火兽
+	db 3 ; 凯罗斯
+	db 3 ; 肯泰罗
+	db 2 ; 鲤鱼王
+	db 3 ; 暴鲤龙
+	db 5 ; 拉普拉斯
+	db 3 ; 百变怪
+	db 0 ; 伊布
+	db 3 ; 水伊布
+	db 3 ; 雷伊布
+	db 3 ; 火伊布
+	db 3 ; 多边兽
+	db 2 ; 菊石兽
+	db 7 ; 多刺菊石兽
+	db 2 ; 化石盔
+	db 3 ; 镰刀盔
+	db 5 ; 化石翼龙
+	db 3 ; 卡比兽
+	db 3 ; 急冻鸟
+	db 3 ; 闪电鸟
+	db 3 ; 火焰鸟
+	db 2 ; 迷你龙
+	db 2 ; 哈克龙
+	db 1 ; 快龙
+	db 1 ; 超梦
+	db 1 ; 梦幻
+
+SmallPMNamesPointers:
+	dw SmallPMNamesL2
+	dw SmallPMNamesL2E
+	dw SmallPMNamesL3
+	dw SmallPMNamesL3E
+	dw SmallPMNamesL4
+	dw SmallPMNamesL4E
+	dw SmallPMNamesL6
+	dw SmallPMNamesL7
+
+SmallPMNamesL2:
+	db "HI@"
+SmallPMNamesL2E:
+	db "HI@"
+SmallPMNamesL3:
+	db "HIJ@"
+SmallPMNamesL3E:
+	db "HIJ@"
+SmallPMNamesL4:
+	db "HIJK@"
+SmallPMNamesL4E:
+	db "HIJK@"
+SmallPMNamesL6:
+	db "HIJKB@"
+SmallPMNamesL7:
+	db "HIJKC@"
+
+SmallPMNamesPointersEVO:
+	dw SmallPMNamesL2EVO
+	dw SmallPMNamesL2EEVO
+	dw SmallPMNamesL3EVO
+	dw SmallPMNamesL3EEVO
+	dw SmallPMNamesL4EVO
+	dw SmallPMNamesL4EEVO
+	dw SmallPMNamesL6EVO
+	dw SmallPMNamesL7EVO
+
+SmallPMNamesL2EVO:
+	db "WX@"
+SmallPMNamesL2EEVO:
+	db "WX@"
+SmallPMNamesL3EVO:
+	db "WXY@"
+SmallPMNamesL3EEVO:
+	db "WXY@"
+SmallPMNamesL4EVO:
+	db "WXYZ@"
+SmallPMNamesL4EEVO:
+	db "WXYZ@"
+SmallPMNamesL6EVO:
+	db "WXYZB@"
+SmallPMNamesL7EVO:
+	db "WXYZC@"

@@ -2656,6 +2656,11 @@ DoSlotLogic_BlueField: ; 0x1e830
 	ret
 
 ShowScrollingGoToBonusText_BlueField: ; 0x1e8c3
+
+	IF DEF(_CHS)
+	call LoadBottomFont
+	ENDC
+
 	call FillBottomMessageBufferWithBlackTile
 	call EnableBottomText
 	ld hl, wScrollingText3

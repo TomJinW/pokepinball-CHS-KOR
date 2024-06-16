@@ -26,7 +26,7 @@ LoadPokedexScreen: ; 0x2800e
 	ldh [hWX], a
 	ld a, $89
 	ldh [hWY], a
-	ld a, $38 ;ld a, $3b
+	ld a, $3c ; ld a, $38 ; ld a, $3b
 	ldh [hLYC], a
 	ldh [hLastLYC], a
 	ldh [hNextLYCSub], a
@@ -1294,7 +1294,7 @@ Func_288a2: ; 0x288a2
 	dec b
 	dec b
 	jr nz, .asm_288a4
-	ld a, $38
+	ld a, $3c ;ld a, $38
 	ldh [hLYC], a
 	ldh [hNextLYCSub], a
 	ld a, BANK(PokedexTilemap2)

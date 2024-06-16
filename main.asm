@@ -1355,3 +1355,11 @@ SECTION "bank6f", ROMX
 
 SECTION "bank70", ROMX
 	INCBIN "font/chs12px/font_0x70.2bpp.bin"
+
+SECTION "bank71", ROMX
+FooterFontCHS_CGB::
+	INCBIN "gfx/footerfont_chs.2bpp"
+
+SECTION "bank72", ROMX
+FooterFontCHS_DMG::
+	INCBIN "gfx/footerfont_chs_dmg.2bpp"

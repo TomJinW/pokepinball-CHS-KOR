@@ -2117,6 +2117,19 @@ DoSlotLogic_RedField: ; 0x16352
 	ret
 
 ShowScrollingGoToBonusText_RedField: ; 0x163f2
+
+
+
+; LoadVRAMData: ; 0x73f
+	; This loads some data into VRAM. It waits for the LCD H-Blank to copy the data 4 bytes at a time.
+	; input:  hl = source of data
+	;          a = bank of data to load
+	;         de = destination of data
+	;         bc = number of bytes to copy
+	IF DEF(_CHS)
+	call LoadBottomFont
+	ENDC
+
 	call FillBottomMessageBufferWithBlackTile
 	call EnableBottomText
 	ld hl, wScrollingText3

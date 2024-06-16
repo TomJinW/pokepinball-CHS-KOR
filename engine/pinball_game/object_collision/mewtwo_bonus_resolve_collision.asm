@@ -349,6 +349,9 @@ Func_19638: ; 0x19638
 .asm_1965e
 	ld a, $1
 	ld [wCompletedBonusStage], a
+	IF DEF(_CHS)
+	call LoadBottomFont
+	ENDC
 	call FillBottomMessageBufferWithBlackTile
 	call EnableBottomText
 	ld hl, wScrollingText3

@@ -138,6 +138,19 @@ Func_c10e: ; 0xc10e
 	ldh a, [hNewlyPressedButtons]
 	bit 0, a
 	jr z, .asm_c17c
+
+	IF DEF(_CHS)
+	; push af
+	; push bc
+	; push de
+	; push hl
+	call ReLoadBottomFont
+	; pop hl
+	; pop de
+	; pop bc
+	; pop af
+	ENDC
+	
 	ld de, MUSIC_NOTHING
 	call PlaySong
 	rst AdvanceFrame

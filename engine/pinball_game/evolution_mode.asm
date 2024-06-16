@@ -134,6 +134,12 @@ InitEvolutionSelectionMenu: ; 0x10b59
 LoadMonNamesIntoEvolutionSelectionList: ; 0x10b8e
 ; Loads 6 pokemon names into the list that allows the player to select which pokemon to evolve.
 ; Input: hl = pointer to a list of pokemon ids. (an offset of wPartyMons)
+
+IF DEF(_CHS)
+	push hl
+	call ReLoadBottomFont
+	pop hl
+ENDC
 	ld a, [wNumPartyMons]
 	ld c, $0
 	ld b, a
@@ -515,9 +521,90 @@ InitEvolutionModeForMon: ; 0x10d1d
 	ret
 
 ShowMonEvolvedText: ; 0x10e0a
+
+	; IF DEF(_DEBUG)
+	; ld a, 150
+	; ld [wCurrentEvolutionMon], a
+	; ENDC
+
+
 	ld a, [wCurrentEvolutionMon]
 	cp $ff
 	jp z, EvolutionSpecialBonus
+
+IF DEF(_CHS)
+	ld de, $8010
+	ld bc, $20
+	ld hl, $65C0
+	ld a, [hGameBoyColorFlag]
+	and a
+	ld a, BANK(FooterFontCHS_CGB)
+	jr nz, .cgb
+	ld a, BANK(FooterFontCHS_DMG)
+.cgb
+	call LoadVRAMData
+	ld a, [wCurrentEvolutionMon]
+
+
+	
+	ld c, a
+	ld b, a
+	srl b
+	srl b
+	sla c
+	sla c
+	sla c
+	sla c
+	sla c
+	sla c
+	ld hl, $4000
+	add hl, bc
+	ld de, $8160
+	ld bc, $40
+	ld a, [hGameBoyColorFlag]
+	and a
+	ld a, BANK(FooterFontCHS_CGB)
+	jr nz, .cgb2
+	ld a, BANK(FooterFontCHS_DMG)
+.cgb2
+	call LoadVRAMData
+	ld a, [wCurrentEvolutionMon]
+ENDC
+	
+
+
+
+IF DEF(_CHS)
+	ld hl, PokemonNamesSMALL
+	ld b, 0
+	ld c, a
+	add hl, bc
+	ld a, [hl]
+	add a
+	ld c, a
+	ld hl, SmallPMNamesPointersEVO
+	add hl, bc
+	ld d, h
+	ld e, l
+	ld a, [de]
+	ld l, a
+	inc de
+	ld a, [de]
+	ld h, a
+
+	ld de, ItEvolvedIntoAnText ; "You got a"
+	ld bc, Data_2b34
+	ld a, [hl]
+
+	ld a, [wCurrentEvolutionMon]
+
+
+
+	cp 22 ; 阿柏蛇
+	jr z, .nameStartsWithVowel
+	cp 23 ; 阿柏怪
+	jr z, .nameStartsWithVowel
+ELSE
 	ld c, a
 	ld b, $0
 	sla c
@@ -530,6 +617,7 @@ ShowMonEvolvedText: ; 0x10e0a
 	rl b
 	ld hl, PokemonNames + 1
 	add hl, bc
+
 	ld de, ItEvolvedIntoAnText  ; "It evolved into an"
 	ld bc, Data_2b34
 	ld a, [hl]
@@ -544,6 +632,7 @@ ShowMonEvolvedText: ; 0x10e0a
 	jr z, .nameStartsWithVowel
 	cp "O"
 	jr z, .nameStartsWithVowel
+ENDC
 	ld de, ItEvolvedIntoAText  ; "It evolved into a"
 	ld bc, Data_2b1c
 .nameStartsWithVowel

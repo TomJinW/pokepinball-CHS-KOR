@@ -3,6 +3,13 @@ InitRedField: ; 0x30000
 	and a
 	ret nz
 	xor a
+
+	; IF DEF(_DEBUG)
+	; ld a, $8
+	; ENDC
+
+
+
 	ld hl, wScore + $5
 	ld [hld], a
 	ld [hld], a
@@ -10,6 +17,11 @@ InitRedField: ; 0x30000
 	ld [hld], a
 	ld [hld], a
 	ld [hl], a
+
+	; IF DEF(_DEBUG)
+	; xor a
+	; ENDC
+
 	ld [wNumPartyMons], a
 	ld [wExtraBalls], a
 	ld [wLostBall], a

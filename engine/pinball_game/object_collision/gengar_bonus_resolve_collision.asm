@@ -1003,6 +1003,9 @@ Func_189af: ; 0x189af
 	ld [wNextBonusStage], a
 	ld a, $1
 	ld [wCompletedBonusStage], a
+	IF DEF(_CHS)
+	call LoadBottomFont
+	ENDC
 	call FillBottomMessageBufferWithBlackTile
 	call EnableBottomText
 	ld hl, wScrollingText3

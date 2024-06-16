@@ -681,6 +681,9 @@ UpdateBottomText: ; 0x33e3
 	and a
 	ret nz ;if text has displayed, we are done, else
 	ld [wBottomTextEnabled], a ; disable bottom text
+IF DEF(_CHS)
+	call ReLoadBottomFont
+ENDC
 	call FillBottomMessageBufferWithBlackTile ;fill with default data?
 	ldh a, [hGameBoyColorFlag]
 	and a

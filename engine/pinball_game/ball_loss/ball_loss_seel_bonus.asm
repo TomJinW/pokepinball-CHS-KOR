@@ -48,6 +48,10 @@ HandleBallLossSeelBonus: ; 0xe08b
 	ld a, [wCompletedBonusStage]
 	and a
 	ret nz
+	IF DEF(_CHS)
+	call LoadBottomFont
+	ENDC
+
 	call FillBottomMessageBufferWithBlackTile
 	call EnableBottomText
 	ld hl, wScrollingText3

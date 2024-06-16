@@ -62,6 +62,61 @@ LoadScrollingMapNameText: ; 0x3118f
 ; Loads the scrolling message that displays the current map's name.
 ; Input: bc = pointer to prefix scrolling text
 	push bc
+
+; IF DEF(_DEBUG)
+; 	ld a, 17
+; 	ld [wCurrentMap], a
+; ENDC
+
+IF DEF(_CHS)
+	ld de, $8100
+	ld bc, $10
+	ld hl, $6FF0
+	ld a, [hGameBoyColorFlag]
+	and a
+	ld a, BANK(FooterFontCHS_CGB)
+	jr nz, .cgb3
+	ld a, BANK(FooterFontCHS_DMG)
+.cgb3
+	call LoadVRAMData
+
+	ld de, $8140 ; UV
+	ld bc, $20
+	ld hl, $7480 ; 岸道
+	ld a, [hGameBoyColorFlag]
+	and a
+	ld a, BANK(FooterFontCHS_CGB)
+	jr nz, .cgb
+	ld a, BANK(FooterFontCHS_DMG)
+.cgb
+	call LoadVRAMData
+	ld a, [wCurrentMap]
+
+	
+	ld c, a
+	ld b, a
+	srl b 
+	srl b
+	sla c
+	sla c
+	sla c
+	sla c
+	sla c
+	sla c
+	ld hl, $7000
+	add hl, bc
+	ld de, $8160 ; WXYZ
+	ld bc, $40
+	ld a, [hGameBoyColorFlag]
+	and a
+	ld a, BANK(FooterFontCHS_CGB)
+	jr nz, .cgb2
+	ld a, BANK(FooterFontCHS_DMG)
+.cgb2
+	call LoadVRAMData
+ENDC
+
+
 	call FillBottomMessageBufferWithBlackTile
 	call EnableBottomText
 	ld a, [wCurrentMap]

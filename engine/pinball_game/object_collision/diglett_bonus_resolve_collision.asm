@@ -747,6 +747,11 @@ Func_1ab30: ; 0x1ab30
 	ld [wNextBonusStage], a ; BONUS_STAGE_ORDER_GENGAR
 	ld a, $1
 	ld [wCompletedBonusStage], a
+	
+	IF DEF(_CHS)
+	call LoadBottomFont
+	ENDC
+
 	call FillBottomMessageBufferWithBlackTile
 	call EnableBottomText
 	ld hl, wScrollingText3

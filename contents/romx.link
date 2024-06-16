@@ -506,3 +506,11 @@ ROMX $6f
 ROMX $70
 	org $4000
 	"bank70"
+
+ROMX $71
+	org $4000
+	"bank71"
+
+ROMX $72
+	org $4000
+	"bank72"

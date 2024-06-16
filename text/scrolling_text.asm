@@ -83,7 +83,11 @@ CatchModeJackpotScoreStationaryTextHeader:
 
 YouGotAText:
 	scrolling_text_nopause 5, 30
+	IF DEF(_CHS)
+	db "YOU GOT A @" ; 捉到
+	ELSE
 	db "YOU GOT A @"
+	ENDC
 
 YouGotAnText:
 	scrolling_text_nopause 5, 31
@@ -196,7 +200,11 @@ MapMoveFailedText:
 
 ArrivedAtMapText:
 	scrolling_text_nopause 5, 31
+	IF DEF(_CHS)
+	db "ARRIQED AT @"
+	ELSE
 	db "ARRIVED AT @"
+	ENDC
 
 StartFromMapText:
 	scrolling_text_nopause 5, 31
@@ -248,76 +256,148 @@ MapNames:
 
 IF DEF(_CHS)
 PalletTownText:
-	scrolling_text 5, 31, 4, 20, 2, 17 ; 13 
-	db "ZHENXIN ZHEN @"
+	scrolling_text 5, 31, 8, 20, 2, 12
+	db "WXYZ @"
 
 ViridianCityText:
-	scrolling_text 5, 31, 3, 20, 2, 17 ; 14
-	db "CHANGQING SHI @"
+	scrolling_text 5, 31, 8, 20, 2, 12
+	db "WXYZ @"
 
 ViridianForestText:
-	scrolling_text 5, 31, 2, 20, 2, 18 ; 16 ？17
-	db "CHANGQING SENLIN @"
+	scrolling_text 5, 31, 8, 20, 2, 12
+	db "WXYZ @"
 
 PewterCityText:
-	scrolling_text 5, 31, 4, 20, 2, 16 ; 12
-	db "SHENHUI SHI @"
+	scrolling_text 5, 31, 8, 20, 2, 12
+	db "WXYZ @"
 
 MtMoonText:
-	scrolling_text 5, 31, 4, 20, 2, 17 ; 13 
-	db "YUEJIAN SHAN @"
+	scrolling_text 5, 31, 8, 20, 2, 12
+	db "WXYZ @"
 
 CeruleanCityText:
-	scrolling_text 5, 31, 4, 20, 2, 16 ; 12 ？11
-	db "HUALAN SHI @"
+	scrolling_text 5, 31, 8, 20, 2, 12
+	db "WXYZ @"
 
 VermilionSeasideText:
-	scrolling_text 5, 31, 0, 20, 2, 20 ; 20 ? 19
-	db " KUYE SHI : SEASIDE @"
+	scrolling_text 5, 31, 7, 20, 2, 12
+	db "WXYZU @"
 
 VermilionStreetsText:
-	scrolling_text 5, 31, 0, 20, 2, 20 ; 20 ? 19
-	db " KUYE SHI : STREETS @"
+	scrolling_text 5, 31, 7, 20, 2, 12
+	db "WXYZV @"
 
 RockMountainText:
-	scrolling_text 5, 31, 2, 20, 2, 18 ; 16 ？15
-	db "YANSHAN SUIDAO @"
+	scrolling_text 5, 31, 8, 20, 2, 12
+	db "WXYZ @"
 
 LavenderTownText:
-	scrolling_text 5, 31, 4, 20, 2, 16 ; 12
-	db "ZIYUAN ZHEN @"
+	scrolling_text 5, 31, 8, 20, 2, 12
+	db "WXYZ @"
 
 CeladonCityText:
-	scrolling_text 5, 31, 4, 20, 2, 16 ; 12 ？11
-	db "YUHONG SHI @"
+	scrolling_text 5, 31, 8, 20, 2, 12
+	db "WXYZ @"
 
 CyclingRoadText:
-	scrolling_text 5, 31, 3, 20, 2, 17 ; 14
-	db "ZIXINGCHE DAO @"
+	scrolling_text 5, 31, 8, 20, 2, 12
+	db "WXYZ @"
 
 FuchiaCityText:
-	scrolling_text 5, 31, 4, 20, 2, 17 ; 13
-	db "QIANHONG SHI @"
+	scrolling_text 5, 31, 8, 20, 2, 12
+	db "WXYZ @"
 
 SafariZoneText:
-	scrolling_text 5, 31, 3, 20, 2, 17 ; 14
-	db "SHOULIE DIDAI @"
+	scrolling_text 5, 31, 8, 20, 2, 12
+	db "WXYZ @"
 
 SaffronCityText:
-	scrolling_text 5, 31, 4, 20, 2, 17 ; 13
-	db "JINHUANG SHI @"
+	scrolling_text 5, 31, 8, 20, 2, 12
+	db "WXYZ @"
 
 SeafoamIslandsText:
-	scrolling_text 5, 31, 4, 20, 2, 17 ; 13
-	db "SHUANGZI DAO @"
+	scrolling_text 5, 31, 8, 20, 2, 12
+	db "WXYZ @"
 
 CinnabarIslandText:
-	scrolling_text 5, 31, 4, 20, 2, 17 ; 13
-	db "HONGLIAN DAO @"
+	scrolling_text 5, 31, 8, 20, 2, 12
+	db "WXYZ @"
 
 IndigoPlateauText:
-	scrolling_text 5, 31, 2, 20, 2, 18 ; 16
-	db "SHIYING GAOYUAN @"
+	scrolling_text 5, 31, 8, 20, 2, 12
+	db "WXYZ @"
+
+; PalletTownText:
+; 	scrolling_text 5, 31, 4, 20, 2, 17 ; 13 
+; 	db "ZHENXIN ZHEN @"
+
+; ViridianCityText:
+; 	scrolling_text 5, 31, 3, 20, 2, 17 ; 14
+; 	db "CHANGQING SHI @"
+
+; ViridianForestText:
+; 	scrolling_text 5, 31, 2, 20, 2, 18 ; 16 ？17
+; 	db "CHANGQING SENLIN @"
+
+; PewterCityText:
+; 	scrolling_text 5, 31, 4, 20, 2, 16 ; 12
+; 	db "SHENHUI SHI @"
+
+; MtMoonText:
+; 	scrolling_text 5, 31, 4, 20, 2, 17 ; 13 
+; 	db "YUEJIAN SHAN @"
+
+; CeruleanCityText:
+; 	scrolling_text 5, 31, 4, 20, 2, 16 ; 12 ？11
+; 	db "HUALAN SHI @"
+
+; VermilionSeasideText:
+; 	scrolling_text 5, 31, 0, 20, 2, 20 ; 20 ? 19
+; 	db " KUYE SHI : SEASIDE @"
+
+; VermilionStreetsText:
+; 	scrolling_text 5, 31, 0, 20, 2, 20 ; 20 ? 19
+; 	db " KUYE SHI : STREETS @"
+
+; RockMountainText:
+; 	scrolling_text 5, 31, 2, 20, 2, 18 ; 16 ？15
+; 	db "YANSHAN SUIDAO @"
+
+; LavenderTownText:
+; 	scrolling_text 5, 31, 4, 20, 2, 16 ; 12
+; 	db "ZIYUAN ZHEN @"
+
+; CeladonCityText:
+; 	scrolling_text 5, 31, 4, 20, 2, 16 ; 12 ？11
+; 	db "YUHONG SHI @"
+
+; CyclingRoadText:
+; 	scrolling_text 5, 31, 3, 20, 2, 17 ; 14
+; 	db "ZIXINGCHE DAO @"
+
+; FuchiaCityText:
+; 	scrolling_text 5, 31, 4, 20, 2, 17 ; 13
+; 	db "QIANHONG SHI @"
+
+; SafariZoneText:
+; 	scrolling_text 5, 31, 3, 20, 2, 17 ; 14
+; 	db "SHOULIE DIDAI @"
+
+; SaffronCityText:
+; 	scrolling_text 5, 31, 4, 20, 2, 17 ; 13
+; 	db "JINHUANG SHI @"
+
+; SeafoamIslandsText:
+; 	scrolling_text 5, 31, 4, 20, 2, 17 ; 13
+; 	db "SHUANGZI DAO @"
+
+; CinnabarIslandText:
+; 	scrolling_text 5, 31, 4, 20, 2, 17 ; 13
+; 	db "HONGLIAN DAO @"
+
+; IndigoPlateauText:
+; 	scrolling_text 5, 31, 2, 20, 2, 18 ; 16
+; 	db "SHIYING GAOYUAN @"
 
 ELSE
 ; Korean
@@ -467,8 +547,77 @@ ENDC
 ; 	scrolling_text 5, 31, 3, 20, 2, 18
 ; 	db "INDIGO PLATEAU @"
 
+; \1: Pause offset (number of tiles from the left of the screen)
+; \2: Number of steps to pause
+; \3: Text index the bottom text buffer (wBottomMessageText)
+; \4: Number of steps after the Pause (text disappears after these number of steps)
+; MACRO scrolling_text_normal
+; 	scrolling_text 5, 20, \1, \2, \3, \4
+; ENDM
 
-	
+IF DEF(_CHS)
+GoToDiglettStageText:
+	scrolling_text_normal 7, 20, 0, 20
+	db "TBGHFD @" ; 前往地鼠关卡
+
+GoToGengarStageText:
+	scrolling_text_normal 7, 20, 0, 20
+	db "TBIJFD @" ; 前往耿鬼关卡
+
+GoToMewtwoStageText:
+	scrolling_text_normal 7, 20, 0, 20
+	db "TBKWFD @" ; 前往超梦关卡
+
+GoToMeowthStageText:
+	scrolling_text_normal 7, 20, 0, 20
+	db "TBMMFD @" ; 前往喵喵关卡
+
+GoToSeelStageText:
+	scrolling_text_normal 7, 20, 0, 20
+	db "TBOPQFD @" ; 前往小海狮关卡
+
+EndGengarStageText:
+	scrolling_text_normal 7, 20, 0, 20
+	db "RXIJFD @" ; 结束耿鬼关卡
+
+EndMewtwoStageText:
+	scrolling_text_normal 7, 20, 0, 20
+	db "RXKWFD @" ; 结束超梦关卡
+
+EndDiglettStageText:
+	scrolling_text_normal 7, 20, 0, 20
+	db "RXGHFD @" ; 结束地鼠关卡
+
+EndMeowthStageText:
+	scrolling_text_normal 7, 20, 0, 20
+	db "RXMMFD @" ; 结束喵喵关卡
+
+EndSeelStageText:
+	scrolling_text_normal 7, 20, 0, 20
+	db "RXOPQFD @" ;结束小海狮关卡
+
+GengarStageClearedText:
+	scrolling_text_normal 7, 20, 0, 20
+	db "IJFDUF @" ; 耿鬼关卡过关
+
+MewtwoStageClearedText:
+	scrolling_text_normal 7, 20, 0, 20
+	db "KWFDUF @" ; 超梦关卡过关
+
+DiglettStageClearedText:
+	scrolling_text_normal 7, 20, 0, 20
+	db "GHFDUF @" ; 地鼠关卡过关
+
+MeowthStageClearedText:
+	scrolling_text_normal 7, 20, 0, 20
+	db "MMFDUF @" ; 喵喵关卡过关
+
+SeelStageClearedText:
+	scrolling_text_normal 7, 20, 0, 20
+	db "OPQFDUF @" ; 小海狮关卡过关
+
+ELSE
+
 GoToDiglettStageText:
 	scrolling_text_normal 0, 20, 0, 20
 	db "GO TO DIGLETT STAGE @"
@@ -528,6 +677,7 @@ MeowthStageClearedText:
 SeelStageClearedText:
 	scrolling_text_normal 1, 20, 0, 20
 	db "SEEL STAGE CLEARED @"
+ENDC
 
 NumPokemonCaughtText:
 	db "  0 POKEMON CAUGHT@"
@@ -537,10 +687,10 @@ NumPokemonEvolvedText:
 
 IF DEF(_CHS)
 BellsproutCounterText:
-	db "  0 LA BA YA@"
+	db "  0 WXYZ@"
 
 DugtrioCounterText:
-	db "  0 SAN DI SHU@"
+	db "  0 WXYZ@"
 
 ELSE
 BellsproutCounterText:
@@ -576,16 +726,16 @@ GameOverText:
 
 IF DEF(_CHS)
 PsyduckCounterText:
-	db "  0 KE DA YA@"
+	db "  0 WXYZ@"
 
 PoliwagCounterText:
-	db "  0 WENXIANGKEDOU@"
+	db "  0 WXYZ@"
 
 CloysterCounterText:
-	db "  0 CI JIA BEI@"
+	db "  0 WXYZ@"
 
 SlowpokeCounterText:
-	db "  0 DAI DAI SHOU@"
+	db "  0 WXYZ@"
 
 ELSE
 PsyduckCounterText:

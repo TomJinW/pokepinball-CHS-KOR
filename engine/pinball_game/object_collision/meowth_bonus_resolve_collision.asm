@@ -200,6 +200,9 @@ ResolveMeowthBonusGameObjectCollisions: ; 0x2442a
 	call PlaySong
 	ld a, $1
 	ld [wCompletedBonusStage], a
+	IF DEF(_CHS)
+	call LoadBottomFont
+	ENDC
 	call FillBottomMessageBufferWithBlackTile
 	call EnableBottomText
 	ld hl, wScrollingText3

@@ -42,6 +42,7 @@ DecrementTimer: ; 0x86a4
 	ld a, [hl]
 	IF DEF(_DEBUG)
 	nop
+	; sub $1
 	ELSE
 	sub $1
 	ENDC

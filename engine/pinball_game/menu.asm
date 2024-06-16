@@ -4,6 +4,18 @@ HandleInGameMenu: ; 0x86d7
 	push af
 	ld a, $1
 	ld [wd917], a
+IF DEF(_CHS)
+	ld de, $8000
+	ld bc, $70
+	ld hl, $6600
+	ld a, [hGameBoyColorFlag]
+	and a
+	ld a, BANK(FooterFontCHS_CGB)
+	jr nz, .cgb
+	ld a, BANK(FooterFontCHS_DMG)
+.cgb
+	call LoadVRAMData
+ENDC
 	call FillBottomMessageBufferWithBlackTile
 	xor a
 	ld [wDrawBottomMessageBox], a
@@ -79,6 +91,9 @@ HandleInGameMenu: ; 0x86d7
 	ld bc, $0010
 	call LoadVRAMData
 .asm_8786
+IF DEF(_CHS)
+	call ReLoadBottomFont
+ENDC
 	call FillBottomMessageBufferWithBlackTile
 	pop af
 	ld [wd917], a
@@ -97,11 +112,19 @@ Func_8797: ; 0x8797
 	inc de
 	jr Func_8797
 
+IF DEF(_CHS)
+SaveText: ; 0x87a0
+	db "AB@"
+
+CancelText: ; 0x87a5
+	db "CDEFG@"
+ELSE
 SaveText: ; 0x87a0
 	db "SAVE@"
 
 CancelText: ; 0x87a5
 	db "CANCEL@"
+ENDC
 
 HandleInGameMenuSelection: ; 0x87ac
 	ld a, $1

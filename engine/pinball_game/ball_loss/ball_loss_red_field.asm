@@ -9,6 +9,9 @@ HandleBallLossRedField: ; 0xdd76
 	dec a
 	ld [wNumTimesBallSavedTextWillDisplay], a
 	push af
+IF DEF(_CHS)
+	call ReLoadBottomFont
+ENDC
 	ld de, BallSavedText
 	call ShowBallLossText
 	pop af

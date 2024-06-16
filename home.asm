@@ -3382,6 +3382,45 @@ LocalCopyData: ; 0x65d
 	jr nz, LocalCopyData
 	ret
 
+LoadBottomFont:
+	ldh a, [hGameBoyColorFlag]
+	and a
+	ld hl, StageRedJapaneseCharactersGfx
+	jr nz, .cgb
+	ld hl, StageRedJapaneseCharactersGfx + $200
+.cgb
+	ld de, $8000
+	ld bc, $1A0
+	ld a, BANK(StageRedJapaneseCharactersGfx)
+	call LoadVRAMData
+	ret
+
+ReLoadBottomFont:
+	ldh a, [hGameBoyColorFlag]
+	and a
+	ld hl, Alphabet2Gfx
+	jr nz, .cgb
+	ld hl, Alphabet1Gfx
+.cgb
+	ld de, $8000
+	ld bc, $1A0
+	ld a, BANK(Alphabet1Gfx)
+	call LoadVRAMData
+	ret
+
+; ReLoadBottomPtoZFont:
+; 	ldh a, [hGameBoyColorFlag]
+; 	and a
+; 	ld hl, Alphabet2Gfx
+; 	jr nz, .cgb
+; 	ld hl, Alphabet1Gfx
+; .cgb
+; 	ld de, $80F0
+; 	ld bc, $B0
+; 	ld a, BANK(Alphabet1Gfx)
+; 	call LoadVRAMData
+; 	ret
+
 SECTION "bank0.2", ROM0
 
 BottomLeftCollisionMasks:
