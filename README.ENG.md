@@ -7,7 +7,7 @@ This disassembly project generates translated versions of the game [*Pokémon Pi
 
 ## General
 - Cartridge Specs: MBC5 + 2MiB ROM + 8KiB SRAM + Rumble (Optional)。
-- The translated games remove can use SRAM greater than 8KiB, the SRAM size limitation of the original games was removed.
+- The translated games can use SRAM greater than 8KiB, the SRAM size limitation of the original games was removed.
 - The rumble feature is tested and works. Creating a rumble catridge is out of the scope of this doc.
 - The weight and height in Pokédex were changed to metrics, and some images were changed into its' Japanese counterparts.
 
