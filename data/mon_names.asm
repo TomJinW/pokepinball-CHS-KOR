@@ -12,7 +12,7 @@ IF DEF(_CHS)
 	db " KAMIGUI@       "
 	db "*SHUIJIANGUI@   "
 	db " LVMAOCHONG@    "
-	db " BLASTOISE@     "
+	db " TIEJIAYONG@    "
 	db "*BADADIE@       "
 	db " DUJIAOCHONG@   "
 	db " TIEKEYONG@     "
