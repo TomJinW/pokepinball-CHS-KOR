@@ -30,6 +30,9 @@
 	charmap_w "垠", $D0, $29
 	charmap_w "迥", $D0, $2A
 
+	charmap_w "Ｃ", $D0, $2D
+	charmap_w "Ｇ", $D0, $2E
+
 	charmap_w "<♂>", $D0, $2B
 	charmap_w "<♀>", $D0, $2C
 	

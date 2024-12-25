@@ -2,6 +2,8 @@ rgbds/*
 # precompiled python
 *.pyc
 
+release/*
+
 # compiled object file
 *.o
 
